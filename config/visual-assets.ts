@@ -1,7 +1,9 @@
 /**
- * Editorial photography — luxury / architecture / global enterprise
- * Replace with owned assets before production launch.
+ * Editorial photography — luxury / architecture / global enterprise.
+ * Asset paths must match git-tracked files under public/Images/Home/ exactly.
  */
+
+export const HOME_IMAGES = "/Images/Home";
 
 export type DivisionSlug =
   | "growth-marketing"
@@ -11,41 +13,41 @@ export type DivisionSlug =
   | "investment-ventures"
   | "real-estate-hospitality";
 
-function unsplash(photoId: string, width = 2400): string {
-  return `https://images.unsplash.com/${photoId}?auto=format&fit=crop&w=${width}&q=90`;
+function homeImage(filename: string): string {
+  return `${HOME_IMAGES}/${filename}`;
 }
 
 export const homeVisuals = {
   hero: {
-    src: "/images/home/ChatGPT Image Jul 18, 2026, 04_23_05 PM.png",
+    src: homeImage("hero.png"),
     alt: {
       es: "Arquitectura corporativa contemporánea — perspectiva ascendente de torres de cristal",
       en: "Contemporary corporate architecture — upward view of glass towers",
     },
   },
   vision: {
-    src: "/images/home/2.png",
+    src: homeImage("vision.png"),
     alt: {
       es: "Espacio de trabajo minimalista con luz natural — entorno empresarial internacional",
       en: "Minimal workspace with natural light — international business environment",
     },
   },
   growth: {
-    src: "/images/home/3a.png",
+    src: homeImage("growth.png"),
     alt: {
       es: "Arquitectura angular contemporánea — planificación estratégica",
       en: "Contemporary angular architecture — strategic planning",
     },
   },
   methodology: {
-    src: "/images/home/99.png",
+    src: homeImage("methodology.png"),
     alt: {
       es: "Interior arquitectónico minimalista — rigor metodológico",
       en: "Minimal architectural interior — methodological rigor",
     },
   },
   cta: {
-    src: "/images/home/22 (2).png",
+    src: homeImage("cta.png"),
     alt: {
       es: "Mesa ejecutiva con estrategia de inversión — crecimiento empresarial",
       en: "Executive desk with investment strategy — business growth",
@@ -58,42 +60,42 @@ export const divisionVisuals: Record<
   { src: string; alt: { es: string; en: string } }
 > = {
   "growth-marketing": {
-    src: "/images/home/4a.png",
+    src: homeImage("marketing.png"),
     alt: {
       es: "Torre de cristal contemporánea — crecimiento y presencia de mercado",
       en: "Contemporary glass tower — growth and market presence",
     },
   },
   "artificial-intelligence": {
-    src: "/images/home/5a.png",
+    src: homeImage("ai.png"),
     alt: {
       es: "Visualización global abstracta — innovación e inteligencia aplicada",
       en: "Abstract global visualization — innovation and applied intelligence",
     },
   },
   "business-consulting": {
-    src: "/images/home/7b.png",
+    src: homeImage("consulting.png"),
     alt: {
       es: "Interior corporativo con luz natural — claridad estratégica",
       en: "Corporate interior with natural light — strategic clarity",
     },
   },
   "international-expansion": {
-    src: "/images/home/88.png",
+    src: homeImage("expansion.png"),
     alt: {
       es: "Horizonte urbano internacional — expansión global",
       en: "International city skyline — global expansion",
     },
   },
   "investment-ventures": {
-    src: "/images/home/22 (1).png",
+    src: homeImage("investment.png"),
     alt: {
       es: "Gráfico financiero abstracto — capital e inversión",
       en: "Abstract financial chart — capital and investment",
     },
   },
   "real-estate-hospitality": {
-    src: "/images/home/10.png",
+    src: homeImage("real-estate.png"),
     alt: {
       es: "Arquitectura residencial de lujo — real estate y hospitalidad",
       en: "Luxury residential architecture — real estate and hospitality",

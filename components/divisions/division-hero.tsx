@@ -15,23 +15,17 @@ const CINEMATIC_HERO_SLUGS = new Set([
   "international-expansion",
 ]);
 
-const DIVISION_HERO_IMAGE_OVERRIDES: Partial<Record<string, string>> = {
-  "international-expansion": "/images/home/88.png",
-};
-
 export function DivisionHero({ division, eyebrow }: DivisionHeroProps) {
   const visual = CINEMATIC_HERO_SLUGS.has(division.slug)
     ? getDivisionVisual(division.slug)
     : undefined;
 
   if (visual) {
-    const heroSrc = DIVISION_HERO_IMAGE_OVERRIDES[division.slug] ?? visual.src;
-
     return (
       <section className="relative overflow-hidden bg-ink py-32 md:py-48 lg:py-56">
         <div className="absolute inset-0">
           <Image
-            src={heroSrc}
+            src={visual.src}
             alt={visual.alt[division.locale]}
             fill
             priority
