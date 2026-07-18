@@ -1,74 +1,76 @@
 import type { CaseStudy } from "@/types";
 
-/** PLACEHOLDER — Replace with verified client data */
-export const techscaleGrowth: CaseStudy = {
-  id: "techscale-growth",
-  slug: "techscale-growth",
-  client: "[Placeholder] TechScale Inc.",
-  industry: "Technology / SaaS",
-  divisionId: "growth-marketing",
+export const edgarL: CaseStudy = {
+  id: "edgar-l",
+  slug: "edgar-l",
+  client: "Edgar L.",
+  industry: "Hospitality / Brand Development",
+  divisionId: "real-estate-hospitality",
   challenge:
-    "[Placeholder] A growth-stage SaaS company needed to accelerate enterprise client acquisition across European markets without losing CAC efficiency.",
+    "A hospitality project needed a stronger brand identity and a clearer growth direction in a competitive market.",
   approach:
-    "[Placeholder] We designed a multichannel growth strategy combining SEO positioning, conversion-focused Google Ads campaigns, and commercial funnel optimization.",
+    "Strategic positioning and digital transformation for a hospitality project, creating a stronger brand identity and a clearer growth direction.",
   results: [
-    { value: "+280%", label: "Qualified leads", status: "placeholder" },
-    { value: "6", label: "Markets activated", status: "placeholder" },
-    { value: "-35%", label: "CAC reduction", status: "placeholder" },
+    { value: "Brand Growth", label: "Hospitality Entrepreneur" },
+    { value: "Identity", label: "Stronger, differentiated brand" },
+    { value: "Direction", label: "Defined growth strategy" },
   ],
   featured: true,
   locale: "en",
-  status: "placeholder",
+  status: "published",
   seo: {
-    title: "Case Study — Growth Marketing [Placeholder]",
-    description: "[Placeholder] Business growth results through strategic growth marketing.",
+    title: "Case Study — Edgar L. · Hospitality",
+    description:
+      "Strategic positioning and digital transformation for a hospitality project.",
   },
 };
 
-export const meridianExpansion: CaseStudy = {
-  id: "meridian-expansion",
-  slug: "meridian-expansion",
-  client: "[Placeholder] Meridian Industries",
-  industry: "Industrial / B2B",
+export const dominicM: CaseStudy = {
+  id: "dominic-m",
+  slug: "dominic-m",
+  client: "Dominic M.",
+  industry: "Hospitality / Lifestyle",
+  divisionId: "real-estate-hospitality",
+  challenge:
+    "A hospitality and lifestyle concept needed to elevate its proposition, strengthen market presence, and build long-term value.",
+  approach:
+    "Strategic consulting and brand development focused on elevating the concept, strengthening its market presence and building long-term value.",
+  results: [
+    { value: "Premium Positioning", label: "Hospitality & Lifestyle Entrepreneur" },
+    { value: "Concept", label: "Elevated proposition with greater clarity" },
+    { value: "Value", label: "Strengthened market presence" },
+  ],
+  featured: true,
+  locale: "en",
+  status: "published",
+  seo: {
+    title: "Case Study — Dominic M. · Hospitality & Lifestyle",
+    description:
+      "Strategic consulting and brand development for premium hospitality positioning.",
+  },
+};
+
+export const franciscoSanchez: CaseStudy = {
+  id: "francisco-sanchez",
+  slug: "francisco-sanchez",
+  client: "Francisco Sánchez",
+  industry: "International / Expansion",
   divisionId: "international-expansion",
   challenge:
-    "[Placeholder] An industrial group with consolidated European operations sought entry into the UAE and United States with a low-risk strategy.",
+    "An international expansion project needed to prepare entry into new markets with solid foundations and clear positioning.",
   approach:
-    "[Placeholder] Market analysis, entry model selection, operational adaptation, and implementation support over the first 18 months.",
+    "Growth strategy and execution support designed to prepare international expansion, improve positioning and create scalable business foundations.",
   results: [
-    { value: "2", label: "New markets", status: "placeholder" },
-    { value: "18", label: "Months to implement", status: "placeholder" },
-    { value: "+120%", label: "International revenue", status: "placeholder" },
+    { value: "New Markets", label: "Founder / International Expansion Project" },
+    { value: "Positioning", label: "Clearer focus in target markets" },
+    { value: "Scale", label: "Scalable business foundations" },
   ],
   featured: true,
   locale: "en",
-  status: "placeholder",
+  status: "published",
   seo: {
-    title: "Case Study — International Expansion [Placeholder]",
-    description: "[Placeholder] International expansion to UAE and US with proven methodology.",
-  },
-};
-
-export const novaAi: CaseStudy = {
-  id: "nova-ai",
-  slug: "nova-ai",
-  client: "[Placeholder] Nova Logistics",
-  industry: "Logistics / Operations",
-  divisionId: "artificial-intelligence",
-  challenge:
-    "[Placeholder] A logistics operator with critical manual processes needed to reduce decision times and operational errors without rebuilding entire infrastructure.",
-  approach:
-    "[Placeholder] Process diagnosis, applied AI automation implementation, and internal team training for sustainable adoption.",
-  results: [
-    { value: "-45%", label: "Processing time", status: "placeholder" },
-    { value: "+60%", label: "Operational accuracy", status: "placeholder" },
-    { value: "4", label: "Automated processes", status: "placeholder" },
-  ],
-  featured: false,
-  locale: "en",
-  status: "placeholder",
-  seo: {
-    title: "Case Study — Artificial Intelligence [Placeholder]",
-    description: "[Placeholder] AI automation applied to logistics operations.",
+    title: "Case Study — Francisco Sánchez · International Expansion",
+    description:
+      "Growth strategy and execution support to prepare international expansion.",
   },
 };

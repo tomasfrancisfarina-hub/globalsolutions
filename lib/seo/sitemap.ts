@@ -56,7 +56,7 @@ export function generateSitemapEntries(locale: Locale): SitemapEntry[] {
   }
 
   // Service pages — SEO/SEM landing targets
-  for (const slug of getAllServiceSlugs()) {
+  for (const slug of getAllServiceSlugs(locale)) {
     entries.push({
       url: `${base}${localizedPath(`/services/${slug}`, locale)}`,
       changeFrequency: "weekly",

@@ -155,7 +155,7 @@ const servicesEs: Service[] = [
 const servicesEn: Service[] = [
   {
     id: "marketing-digital",
-    slug: "marketing-digital",
+    slug: "digital-marketing",
     name: "Digital Marketing",
     shortDescription: "Integrated digital marketing strategies focused on business growth.",
     fullDescription:
@@ -240,7 +240,7 @@ const servicesEn: Service[] = [
   },
   {
     id: "inteligencia-artificial",
-    slug: "inteligencia-artificial",
+    slug: "artificial-intelligence",
     name: "Artificial Intelligence",
     shortDescription: "AI applied to business processes and decisions.",
     fullDescription:
@@ -260,7 +260,7 @@ const servicesEn: Service[] = [
   },
   {
     id: "consultoria-empresarial",
-    slug: "consultoria-empresarial",
+    slug: "business-consulting",
     name: "Business Consulting",
     shortDescription: "Strategic advisory for executives.",
     fullDescription:
@@ -280,7 +280,7 @@ const servicesEn: Service[] = [
   },
   {
     id: "expansion-internacional",
-    slug: "expansion-internacional",
+    slug: "international-expansion",
     name: "International Expansion",
     shortDescription: "International market entry consulting.",
     fullDescription:
@@ -306,8 +306,8 @@ export function getAllServices(locale: Locale): Service[] {
   return [...(servicesByLocale[locale] ?? servicesByLocale.en)].sort((a, b) => a.order - b.order);
 }
 
-export function getServiceBySlug(slug: string, locale: Locale): Service | undefined {
-  return getAllServices(locale).find((s) => s.slug === slug);
+export function getServiceBySlug(slugOrId: string, locale: Locale): Service | undefined {
+  return getAllServices(locale).find((s) => s.slug === slugOrId || s.id === slugOrId);
 }
 
 export function getServicesByDivision(divisionId: string, locale: Locale): Service[] {
@@ -320,14 +320,14 @@ export function getServiceSummaries(locale: Locale): ServiceSummary[] {
   }));
 }
 
-export function getAllServiceSlugs(): string[] {
-  return servicesEn.map((s) => s.slug);
+export function getAllServiceSlugs(locale: Locale): string[] {
+  return getAllServices(locale).map((s) => s.slug);
 }
 
 export function getAllServiceParams(): { locale: Locale; slug: string }[] {
   const params: { locale: Locale; slug: string }[] = [];
   for (const locale of ["es", "en"] as Locale[]) {
-    for (const slug of getAllServiceSlugs()) {
+    for (const slug of getAllServiceSlugs(locale)) {
       params.push({ locale, slug });
     }
   }

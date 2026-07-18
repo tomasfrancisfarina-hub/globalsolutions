@@ -67,11 +67,11 @@ export const homeContent: HomeContent = {
     eyebrow: "Results",
     headline: "Measurable impact",
     metrics: [
-      { value: "+340%", label: "Average growth", status: "placeholder" as const },
-      { value: "12", label: "International markets", status: "placeholder" as const },
-      { value: "$50M+", label: "Capital managed", status: "placeholder" as const },
+      { value: "Brand", label: "Strategic positioning" },
+      { value: "Markets", label: "International expansion" },
+      { value: "Growth", label: "Execution with clarity" },
     ],
-    status: "placeholder" as const,
+    status: "published" as const,
   },
   methodology: {
     eyebrow: "Methodology",

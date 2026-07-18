@@ -66,11 +66,13 @@ export function CaseStudyDetail({ caseStudy, locale, labels }: CaseStudyDetailPr
               {labels.results}
             </Heading>
           </SlideUp>
-          <StaggerContainer className="mt-12 grid gap-12 md:mt-16 md:grid-cols-3">
+          <StaggerContainer className="mt-12 grid min-w-0 grid-cols-1 gap-12 md:mt-16 md:grid-cols-3 md:gap-x-10 md:gap-y-12 lg:gap-x-16">
             {caseStudy.results.map((metric) => (
-              <StaggerItem key={metric.label}>
-                <p className="font-mono text-5xl font-medium tracking-tight">{metric.value}</p>
-                <p className="mt-3 text-muted">{metric.label}</p>
+              <StaggerItem key={metric.label} className="min-w-0">
+                <p className="max-w-full break-words font-mono text-5xl font-medium leading-[1.1] tracking-tight">
+                  {metric.value}
+                </p>
+                <p className="mt-3 max-w-full break-words text-muted">{metric.label}</p>
               </StaggerItem>
             ))}
           </StaggerContainer>

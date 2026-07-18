@@ -23,5 +23,5 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ContactPage({ params }: Props) {
   const { locale } = await params;
   const content = getContactContent(locale as Locale);
-  return <ContactPageContent content={content} />;
+  return <ContactPageContent content={content} locale={locale as Locale} />;
 }

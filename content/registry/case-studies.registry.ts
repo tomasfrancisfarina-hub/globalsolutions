@@ -1,25 +1,24 @@
 /**
  * Case Studies Registry — locale-aware
- * Replace content files when real cases are available.
  */
 
 import type { CaseStudy, CaseStudySummary, Locale } from "@/types";
 
 import {
-  techscaleGrowth as techscaleEs,
-  meridianExpansion as meridianEs,
-  novaAi as novaEs,
+  edgarL as edgarLEs,
+  dominicM as dominicMEs,
+  franciscoSanchez as franciscoSanchezEs,
 } from "@/content/locales/es/case-studies/index";
 
 import {
-  techscaleGrowth as techscaleEn,
-  meridianExpansion as meridianEn,
-  novaAi as novaEn,
+  edgarL as edgarLEn,
+  dominicM as dominicMEn,
+  franciscoSanchez as franciscoSanchezEn,
 } from "@/content/locales/en/case-studies/index";
 
 const byLocale: Record<Locale, CaseStudy[]> = {
-  es: [techscaleEs, meridianEs, novaEs],
-  en: [techscaleEn, meridianEn, novaEn],
+  es: [edgarLEs, dominicMEs, franciscoSanchezEs],
+  en: [edgarLEn, dominicMEn, franciscoSanchezEn],
 };
 
 export function getAllCaseStudies(locale: Locale): CaseStudy[] {

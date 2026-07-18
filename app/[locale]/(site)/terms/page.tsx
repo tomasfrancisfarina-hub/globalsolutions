@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Container, Section, Eyebrow, Heading, Text } from "@/components/ui";
-import { PlaceholderBadge } from "@/components/shared/placeholder-badge";
 import { createBrandingMetadata } from "@/lib/seo/metadata";
 import type { Locale } from "@/types";
 
@@ -29,17 +28,14 @@ export default async function TermsPage({ params }: Props) {
   return (
     <Section spacing="hero">
       <Container>
-        <div className="flex flex-wrap items-center gap-4">
-          <Eyebrow>{isEs ? "Legal" : "Legal"}</Eyebrow>
-          <PlaceholderBadge status="placeholder" locale={loc} />
-        </div>
+        <Eyebrow>{isEs ? "Legal" : "Legal"}</Eyebrow>
         <Heading as="h1" size="h2" className="mt-6">
           {isEs ? "Términos de uso" : "Terms of Use"}
         </Heading>
         <Text className="mt-8 max-w-2xl">
           {isEs
-            ? "[Placeholder] Términos de uso pendientes de contenido legal definitivo."
-            : "[Placeholder] Terms of use pending final legal content."}
+            ? "Esta página se actualizará con el contenido legal definitivo antes del lanzamiento oficial."
+            : "This page will be updated with final legal content before the official launch."}
         </Text>
       </Container>
     </Section>

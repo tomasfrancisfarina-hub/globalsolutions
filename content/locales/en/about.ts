@@ -28,22 +28,22 @@ export const aboutContent: AboutContent = {
   ],
   testimonials: [
     {
-      id: "testimonial-1",
+      id: "testimonial-edgar-l",
       quote:
-        "[Placeholder] Global Solutions transformed how we approach international growth. Their methodology gave us the clarity we needed to make decisions with confidence.",
-      author: "[Placeholder] James Whitfield",
-      role: "[Placeholder] CEO",
-      company: "[Placeholder] Meridian Industries",
-      status: "placeholder",
+        "Global Solutions helped us define a stronger brand identity and a clearer growth direction for our hospitality project.",
+      author: "Edgar L.",
+      role: "Hospitality Entrepreneur",
+      company: "Brand development",
+      status: "published",
     },
     {
-      id: "testimonial-2",
+      id: "testimonial-dominic-m",
       quote:
-        "[Placeholder] What sets Global Solutions apart is they don't sell services — they deliver results. Every phase of the engagement was oriented toward measurable impact.",
-      author: "[Placeholder] Sarah Chen",
-      role: "[Placeholder] Managing Director",
-      company: "[Placeholder] TechScale Inc.",
-      status: "placeholder",
+        "Global Solutions' strategic approach elevated our concept, strengthened our market presence, and brought a clear long-term value perspective.",
+      author: "Dominic M.",
+      role: "Hospitality & Lifestyle Entrepreneur",
+      company: "Premium positioning",
+      status: "published",
     },
   ],
 };

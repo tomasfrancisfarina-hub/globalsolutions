@@ -1,74 +1,76 @@
 import type { CaseStudy } from "@/types";
 
-/** PLACEHOLDER — Replace with verified client data */
-export const techscaleGrowth: CaseStudy = {
-  id: "techscale-growth",
-  slug: "techscale-growth",
-  client: "[Placeholder] TechScale SA",
-  industry: "Technology / SaaS",
-  divisionId: "growth-marketing",
+export const edgarL: CaseStudy = {
+  id: "edgar-l",
+  slug: "edgar-l",
+  client: "Edgar L.",
+  industry: "Hospitalidad / Desarrollo de marca",
+  divisionId: "real-estate-hospitality",
   challenge:
-    "[Placeholder] Una empresa SaaB en fase de expansión necesitaba acelerar la captación de clientes enterprise en mercados europeos sin perder eficiencia en el CAC.",
+    "Un proyecto de hospitalidad necesitaba reforzar su identidad de marca y definir una dirección de crecimiento más clara en un mercado competitivo.",
   approach:
-    "[Placeholder] Diseñamos una estrategia de growth multicanal combinando posicionamiento SEO, campañas de Google Ads orientadas a conversión y optimización del funnel comercial.",
+    "Posicionamiento estratégico y transformación digital para crear una identidad de marca más sólida y una dirección de crecimiento más clara.",
   results: [
-    { value: "+280%", label: "Leads cualificados", status: "placeholder" },
-    { value: "6", label: "Mercados activados", status: "placeholder" },
-    { value: "-35%", label: "Reducción CAC", status: "placeholder" },
+    { value: "Crecimiento de marca", label: "Emprendedor en hospitalidad" },
+    { value: "Identidad", label: "Marca más sólida y diferenciada" },
+    { value: "Dirección", label: "Estrategia de crecimiento definida" },
   ],
   featured: true,
   locale: "es",
-  status: "placeholder",
+  status: "published",
   seo: {
-    title: "Caso de éxito — Growth Marketing [Placeholder]",
-    description: "[Placeholder] Resultados de crecimiento empresarial con estrategia de growth marketing.",
+    title: "Caso de éxito — Edgar L. · Hospitalidad",
+    description:
+      "Posicionamiento estratégico y transformación digital para un proyecto de hospitalidad.",
   },
 };
 
-export const meridianExpansion: CaseStudy = {
-  id: "meridian-expansion",
-  slug: "meridian-expansion",
-  client: "[Placeholder] Meridian Industries",
-  industry: "Industrial / B2B",
+export const dominicM: CaseStudy = {
+  id: "dominic-m",
+  slug: "dominic-m",
+  client: "Dominic M.",
+  industry: "Hospitalidad / Lifestyle",
+  divisionId: "real-estate-hospitality",
+  challenge:
+    "Un concepto de hospitalidad y lifestyle requería elevar su propuesta, fortalecer su presencia en el mercado y construir valor sostenible.",
+  approach:
+    "Consultoría estratégica y desarrollo de marca enfocados en elevar el concepto, fortalecer su presencia en el mercado y construir valor a largo plazo.",
+  results: [
+    { value: "Posicionamiento premium", label: "Emprendedor en hospitalidad y lifestyle" },
+    { value: "Concepto", label: "Propuesta elevada con mayor claridad" },
+    { value: "Valor", label: "Presencia de mercado fortalecida" },
+  ],
+  featured: true,
+  locale: "es",
+  status: "published",
+  seo: {
+    title: "Caso de éxito — Dominic M. · Hospitalidad & Lifestyle",
+    description:
+      "Consultoría estratégica y desarrollo de marca para posicionamiento premium en hospitalidad.",
+  },
+};
+
+export const franciscoSanchez: CaseStudy = {
+  id: "francisco-sanchez",
+  slug: "francisco-sanchez",
+  client: "Francisco Sánchez",
+  industry: "Internacional / Expansión",
   divisionId: "international-expansion",
   challenge:
-    "[Placeholder] Grupo industrial con operaciones consolidadas en Europa buscaba entrar en EAU y Estados Unidos con una estrategia de bajo riesgo.",
+    "Un proyecto de expansión internacional necesitaba preparar la entrada a nuevos mercados con bases sólidas y un posicionamiento claro.",
   approach:
-    "[Placeholder] Análisis de mercado, selección de modelo de entrada, adaptación operativa y acompañamiento en la implementación durante los primeros 18 meses.",
+    "Estrategia de crecimiento y apoyo en la ejecución diseñados para preparar la expansión internacional, mejorar el posicionamiento y crear bases de negocio escalables.",
   results: [
-    { value: "2", label: "Mercados nuevos", status: "placeholder" },
-    { value: "18", label: "Meses de implementación", status: "placeholder" },
-    { value: "+120%", label: "Ingresos internacionales", status: "placeholder" },
+    { value: "Nuevos mercados", label: "Fundador / Proyecto de expansión internacional" },
+    { value: "Posicionamiento", label: "Mayor claridad en mercados objetivo" },
+    { value: "Escala", label: "Bases de negocio preparadas para crecer" },
   ],
   featured: true,
   locale: "es",
-  status: "placeholder",
+  status: "published",
   seo: {
-    title: "Caso de éxito — Expansión Internacional [Placeholder]",
-    description: "[Placeholder] Expansión internacional a EAU y EE.UU. con metodología probada.",
-  },
-};
-
-export const novaAi: CaseStudy = {
-  id: "nova-ai",
-  slug: "nova-ai",
-  client: "[Placeholder] Nova Logistics",
-  industry: "Logistics / Operations",
-  divisionId: "artificial-intelligence",
-  challenge:
-    "[Placeholder] Operador logístico con procesos manuales críticos necesitaba reducir tiempos de decisión y errores operativos sin rediseñar toda la infraestructura.",
-  approach:
-    "[Placeholder] Diagnóstico de procesos, implementación de automatizaciones con IA aplicada y formación del equipo interno para adopción sostenible.",
-  results: [
-    { value: "-45%", label: "Tiempo de procesamiento", status: "placeholder" },
-    { value: "+60%", label: "Precisión operativa", status: "placeholder" },
-    { value: "4", label: "Procesos automatizados", status: "placeholder" },
-  ],
-  featured: false,
-  locale: "es",
-  status: "placeholder",
-  seo: {
-    title: "Caso de éxito — Inteligencia Artificial [Placeholder]",
-    description: "[Placeholder] Automatización e IA aplicada a operaciones logísticas.",
+    title: "Caso de éxito — Francisco Sánchez · Expansión Internacional",
+    description:
+      "Estrategia de crecimiento y ejecución para preparar la expansión internacional.",
   },
 };

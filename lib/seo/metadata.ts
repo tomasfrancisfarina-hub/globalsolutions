@@ -49,11 +49,12 @@ export function createBrandingMetadata({
   path,
   locale,
 }: BrandingMetadataOptions): Metadata {
+  const branding = seoConfig.defaultBranding[locale];
   const fullTitle = title
-    ? seoConfig.defaultBranding.titleTemplate.replace("%s", title)
-    : seoConfig.defaultBranding.defaultTitle;
+    ? branding.titleTemplate.replace("%s", title)
+    : branding.defaultTitle;
 
-  const desc = description ?? seoConfig.defaultBranding.defaultDescription;
+  const desc = description ?? branding.defaultDescription;
 
   return {
     title: fullTitle,

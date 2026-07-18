@@ -72,11 +72,11 @@ export const homeContent: HomeContent = {
     eyebrow: "Resultados",
     headline: "Impacto medible",
     metrics: [
-      { value: "+340%", label: "Crecimiento medio", status: "placeholder" as const },
-      { value: "12", label: "Mercados internacionales", status: "placeholder" as const },
-      { value: "€50M+", label: "Capital gestionado", status: "placeholder" as const },
+      { value: "Marca", label: "Posicionamiento estratégico" },
+      { value: "Mercados", label: "Expansión internacional" },
+      { value: "Crecimiento", label: "Ejecución con claridad" },
     ],
-    status: "placeholder" as const,
+    status: "published" as const,
   },
   methodology: {
     eyebrow: "Metodología",

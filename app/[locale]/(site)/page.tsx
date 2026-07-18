@@ -22,11 +22,12 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {
   const { locale } = await params;
-  const { home } = getDictionary(locale as Locale);
+  const loc = locale as Locale;
+  const { home } = getDictionary(loc);
   return createBrandingMetadata({
     description: home.hero.subheadline,
     path: "/",
-    locale: locale as Locale,
+    locale: loc,
   });
 }
 
