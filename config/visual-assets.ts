@@ -17,28 +17,28 @@ function unsplash(photoId: string, width = 2400): string {
 
 export const homeVisuals = {
   hero: {
-    src: unsplash("photo-1486406146926-c627a92ad1ab", 2800),
+    src: "/images/home/ChatGPT Image Jul 18, 2026, 04_23_05 PM.png",
     alt: {
       es: "Arquitectura corporativa contemporánea — perspectiva ascendente de torres de cristal",
       en: "Contemporary corporate architecture — upward view of glass towers",
     },
   },
   vision: {
-    src: unsplash("photo-1497366216548-37526070297c", 2400),
+    src: "/images/home/2.png",
     alt: {
       es: "Espacio de trabajo minimalista con luz natural — entorno empresarial internacional",
       en: "Minimal workspace with natural light — international business environment",
     },
   },
   growth: {
-    src: unsplash("photo-1545324418-cc1a3fa10c00", 2400),
+    src: "/images/home/3a.png",
     alt: {
       es: "Arquitectura angular contemporánea — planificación estratégica",
       en: "Contemporary angular architecture — strategic planning",
     },
   },
   methodology: {
-    src: unsplash("photo-1497366754035-f200968a6e72", 2400),
+    src: "/images/home/99.png",
     alt: {
       es: "Interior arquitectónico minimalista — rigor metodológico",
       en: "Minimal architectural interior — methodological rigor",
@@ -58,21 +58,21 @@ export const divisionVisuals: Record<
   { src: string; alt: { es: string; en: string } }
 > = {
   "growth-marketing": {
-    src: unsplash("photo-1545324418-cc1a3fa10c00", 2000),
+    src: "/images/home/4a.png",
     alt: {
       es: "Torre de cristal contemporánea — crecimiento y presencia de mercado",
       en: "Contemporary glass tower — growth and market presence",
     },
   },
   "artificial-intelligence": {
-    src: unsplash("photo-1451187580459-43490279c0fa", 2000),
+    src: "/images/home/5a.png",
     alt: {
       es: "Visualización global abstracta — innovación e inteligencia aplicada",
       en: "Abstract global visualization — innovation and applied intelligence",
     },
   },
   "business-consulting": {
-    src: unsplash("photo-1497366754035-f200968a6e72", 2000),
+    src: "/images/home/7b.png",
     alt: {
       es: "Interior corporativo con luz natural — claridad estratégica",
       en: "Corporate interior with natural light — strategic clarity",
