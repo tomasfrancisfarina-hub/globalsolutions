@@ -32,8 +32,12 @@ export function DivisionCard({
   const viewLabel = locale === "es" ? "Ver división" : "View division";
   const visual = getDivisionVisual(division.slug);
   const number = String(index + 1).padStart(2, "0");
+  const isAiVideoCard = division.slug === "artificial-intelligence";
 
   if (!visual) return null;
+
+  const mediaClassName =
+    "absolute inset-0 h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]";
 
   return (
     <Link
@@ -41,17 +45,31 @@ export function DivisionCard({
       className={cn("group block min-w-0", className)}
     >
       <article className={cn("relative overflow-hidden bg-ink", heights[variant])}>
-        <Image
-          src={visual.src}
-          alt={visual.alt[locale]}
-          fill
-          sizes={
-            variant === "cinematic"
-              ? "100vw"
-              : "(max-width: 768px) 100vw, 50vw"
-          }
-          className="object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]"
-        />
+        {isAiVideoCard ? (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            aria-label={visual.alt[locale]}
+            className={mediaClassName}
+          >
+            <source src="/videos/77a.mp4" type="video/mp4" />
+          </video>
+        ) : (
+          <Image
+            src={visual.src}
+            alt={visual.alt[locale]}
+            fill
+            sizes={
+              variant === "cinematic"
+                ? "100vw"
+                : "(max-width: 768px) 100vw, 50vw"
+            }
+            className={mediaClassName}
+          />
+        )}
 
         <div
           className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/25 to-transparent"

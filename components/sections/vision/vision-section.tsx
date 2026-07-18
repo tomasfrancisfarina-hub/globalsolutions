@@ -25,7 +25,7 @@ export function VisionSection({ content, locale }: VisionSectionProps) {
               alt={visionImage.alt[locale]}
               fill
               sizes="(max-width: 1024px) 100vw, 48vw"
-              imageClassName="opacity-92"
+              imageClassName="object-right opacity-92"
             />
           </SlideUp>
         </div>

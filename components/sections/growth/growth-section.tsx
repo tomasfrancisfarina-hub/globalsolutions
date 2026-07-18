@@ -32,6 +32,7 @@ export function GrowthSection({ content, locale }: GrowthSectionProps) {
                 alt={image.alt[locale]}
                 aspect="aspect-[3/4] lg:aspect-[4/5]"
                 sizes="(max-width: 1024px) 100vw, 38vw"
+                imageClassName="object-center"
               />
             </SlideUp>
           </div>

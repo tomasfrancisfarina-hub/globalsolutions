@@ -45,10 +45,10 @@ export const homeVisuals = {
     },
   },
   cta: {
-    src: unsplash("photo-1472851294608-062f824d29cc", 2800),
+    src: "/images/home/22 (2).png",
     alt: {
-      es: "Metrópoli global desde altura — consultoría internacional",
-      en: "Global metropolis from above — international consulting",
+      es: "Mesa ejecutiva con estrategia de inversión — crecimiento empresarial",
+      en: "Executive desk with investment strategy — business growth",
     },
   },
 } as const;
@@ -79,14 +79,14 @@ export const divisionVisuals: Record<
     },
   },
   "international-expansion": {
-    src: unsplash("photo-1472851294608-062f824d29cc", 2000),
+    src: "/images/home/88.png",
     alt: {
       es: "Horizonte urbano internacional — expansión global",
       en: "International city skyline — global expansion",
     },
   },
   "investment-ventures": {
-    src: unsplash("photo-1611974789855-9c2a0a7236a3", 2000),
+    src: "/images/home/22 (1).png",
     alt: {
       es: "Gráfico financiero abstracto — capital e inversión",
       en: "Abstract financial chart — capital and investment",

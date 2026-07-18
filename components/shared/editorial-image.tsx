@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { CSSProperties } from "react";
 import { cn } from "@/lib/utils";
 
 interface EditorialImageProps {
@@ -8,6 +9,7 @@ interface EditorialImageProps {
   priority?: boolean;
   className?: string;
   imageClassName?: string;
+  imageStyle?: CSSProperties;
   sizes?: string;
   /** Fill parent — for cinematic / full-bleed layouts */
   fill?: boolean;
@@ -20,6 +22,7 @@ export function EditorialImage({
   priority = false,
   className,
   imageClassName,
+  imageStyle,
   sizes = "(max-width: 768px) 100vw, 50vw",
   fill = false,
 }: EditorialImageProps) {
@@ -43,6 +46,7 @@ export function EditorialImage({
           "group-hover/image:scale-[1.03]",
           imageClassName,
         )}
+        style={imageStyle}
       />
     </div>
   );

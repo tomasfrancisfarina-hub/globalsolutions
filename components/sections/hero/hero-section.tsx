@@ -67,7 +67,7 @@ export function HeroSection({ content, locale }: HeroSectionProps) {
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 56vw"
-              imageClassName="scale-105 lg:scale-100"
+              imageClassName="scale-105 object-right lg:scale-100"
             />
             <div
               className="pointer-events-none absolute inset-0 bg-gradient-to-r from-background via-background/20 to-transparent lg:via-transparent"

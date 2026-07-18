@@ -24,7 +24,8 @@ export function CtaSection({ content, locale }: CtaSectionProps) {
           alt={image.alt[locale]}
           fill
           sizes="100vw"
-          className="object-cover opacity-50"
+          className="object-cover opacity-[0.42]"
+          style={{ objectPosition: "52% 32%" }}
         />
         <div className="absolute inset-0 bg-ink/70" aria-hidden />
       </div>
