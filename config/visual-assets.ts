@@ -93,7 +93,7 @@ export const divisionVisuals: Record<
     },
   },
   "real-estate-hospitality": {
-    src: unsplash("photo-1512917774080-9991f1c4c750", 2000),
+    src: "/images/home/10.png",
     alt: {
       es: "Arquitectura residencial de lujo — real estate y hospitalidad",
       en: "Luxury residential architecture — real estate and hospitality",
