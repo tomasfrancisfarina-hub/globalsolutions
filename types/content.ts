@@ -26,6 +26,10 @@ export interface SeoMetadata {
   markets?: Market[];
   /** Canonical path override */
   canonical?: string;
+  /** Open Graph title override */
+  ogTitle?: string;
+  /** Open Graph description override */
+  ogDescription?: string;
   /** Open Graph image path */
   ogImage?: string;
   /** Prevent indexing (for drafts or SEM test pages) */

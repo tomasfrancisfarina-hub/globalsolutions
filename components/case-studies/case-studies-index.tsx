@@ -12,6 +12,8 @@ interface CaseStudyCardProps {
 }
 
 export function CaseStudyCard({ caseStudy, locale, viewLabel }: CaseStudyCardProps) {
+  const highlight = caseStudy.teaser ?? caseStudy.results[0];
+
   return (
     <Link
       href={localizedPath(`/case-studies/${caseStudy.slug}`, locale)}
@@ -26,13 +28,13 @@ export function CaseStudyCard({ caseStudy, locale, viewLabel }: CaseStudyCardPro
       <Heading as="h3" size="h3" className="mt-6">
         {caseStudy.client}
       </Heading>
-      {caseStudy.results[0] && (
+      {highlight && (
         <p className="mt-6 break-words font-mono text-2xl font-medium tracking-tight sm:text-3xl">
-          {caseStudy.results[0].value}
+          {highlight.value}
         </p>
       )}
-      {caseStudy.results[0] && (
-        <p className="mt-2 text-sm text-muted">{caseStudy.results[0].label}</p>
+      {highlight && (
+        <p className="mt-2 text-sm text-muted">{highlight.label}</p>
       )}
       <span className="mt-8 inline-block text-sm text-subtle transition-colors duration-300 group-hover:text-foreground">
         {viewLabel} →

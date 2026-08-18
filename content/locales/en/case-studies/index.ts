@@ -50,27 +50,44 @@ export const dominicM: CaseStudy = {
   },
 };
 
-export const franciscoSanchez: CaseStudy = {
-  id: "francisco-sanchez",
-  slug: "francisco-sanchez",
-  client: "Francisco Sánchez",
-  industry: "International / Expansion",
-  divisionId: "international-expansion",
+export const david: CaseStudy = {
+  id: "david",
+  slug: "david",
+  client: "David",
+  industry: "Real Estate / Positioning",
+  divisionId: "real-estate-hospitality",
   challenge:
-    "An international expansion project needed to prepare entry into new markets with solid foundations and clear positioning.",
+    "A new real estate proposition needed to build a solid, professional digital presence capable of positioning itself in the premium segment and generating trust among both property owners and international buyers.",
   approach:
-    "Growth strategy and execution support designed to prepare international expansion, improve positioning and create scalable business foundations.",
+    "We developed a web platform focused on positioning, presenting high-value properties, and capturing new real estate opportunities. The strategy connected web development, premium branding, and a commercial focus to turn digital presence into a real growth tool.",
   results: [
-    { value: "New Markets", label: "Founder / International Expansion Project" },
-    { value: "Positioning", label: "Clearer focus in target markets" },
-    { value: "Scale", label: "Scalable business foundations" },
+    {
+      value: "High-value property acquisition",
+      label: "Incorporation of properties valued at several million euros",
+    },
+    {
+      value: "Positioning",
+      label: "Digital presence aligned with the premium real estate market",
+    },
+    {
+      value: "Web development",
+      label: "Platform ready to present assets and generate new opportunities",
+    },
   ],
+  teaser: {
+    value: "High-value properties",
+    label:
+      "Web development and positioning to capture properties worth several million euros",
+  },
   featured: true,
   locale: "en",
   status: "published",
   seo: {
-    title: "Case Study — Francisco Sánchez · International Expansion",
+    title: "Case Study — David · Real Estate and Positioning",
     description:
-      "Growth strategy and execution support to prepare international expansion.",
+      "Web development and positioning strategy focused on capturing and presenting real estate properties worth several million euros.",
+    ogTitle: "David — Real Estate and Positioning",
+    ogDescription:
+      "A premium digital presence designed to capture high-value properties and generate new real estate opportunities.",
   },
 };

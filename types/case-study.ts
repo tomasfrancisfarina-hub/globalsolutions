@@ -18,12 +18,16 @@ export interface CaseStudy {
   challenge: string;
   approach: string;
   results: Metric[];
+  /** Optional index-card highlight when different from results[0] */
+  teaser?: Metric;
   featured: boolean;
   locale: Locale;
   status: ContentStatus;
   seo: {
     title: string;
     description: string;
+    ogTitle?: string;
+    ogDescription?: string;
   };
 }
 
@@ -35,6 +39,7 @@ export interface CaseStudySummary {
   divisionId: string;
   featured: boolean;
   results: Metric[];
+  teaser?: Metric;
   status: ContentStatus;
 }
 

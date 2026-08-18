@@ -92,6 +92,9 @@ export function createSeoMetadata({
   const fullTitle = seoConfig.seoTitleTemplate.replace("%s", seo.title);
   const robots = globalRobots(getContentRobots(contentStatus, seo.noIndex));
 
+  const ogTitle = seo.ogTitle ?? fullTitle;
+  const ogDescription = seo.ogDescription ?? seo.description;
+
   return {
     title: fullTitle,
     description: seo.description,
@@ -99,15 +102,15 @@ export function createSeoMetadata({
     metadataBase: new URL(siteConfig.url),
     alternates: buildAlternates({ path, locale }),
     openGraph: {
-      title: fullTitle,
-      description: seo.description,
+      title: ogTitle,
+      description: ogDescription,
       url: `${siteConfig.url}${localizedPath(path, locale)}`,
       siteName: siteConfig.name,
       locale: locale === "es" ? "es_ES" : "en_US",
       type,
       ...(seo.ogImage && { images: [{ url: seo.ogImage }] }),
     },
-    twitter: { card: "summary_large_image", title: fullTitle, description: seo.description },
+    twitter: { card: "summary_large_image", title: ogTitle, description: ogDescription },
     robots,
   };
 }

@@ -7,18 +7,18 @@ import type { CaseStudy, CaseStudySummary, Locale } from "@/types";
 import {
   edgarL as edgarLEs,
   dominicM as dominicMEs,
-  franciscoSanchez as franciscoSanchezEs,
+  david as davidEs,
 } from "@/content/locales/es/case-studies/index";
 
 import {
   edgarL as edgarLEn,
   dominicM as dominicMEn,
-  franciscoSanchez as franciscoSanchezEn,
+  david as davidEn,
 } from "@/content/locales/en/case-studies/index";
 
 const byLocale: Record<Locale, CaseStudy[]> = {
-  es: [edgarLEs, dominicMEs, franciscoSanchezEs],
-  en: [edgarLEn, dominicMEn, franciscoSanchezEn],
+  es: [edgarLEs, dominicMEs, davidEs],
+  en: [edgarLEn, dominicMEn, davidEn],
 };
 
 export function getAllCaseStudies(locale: Locale): CaseStudy[] {
@@ -35,7 +35,7 @@ export function getCaseStudyBySlug(slug: string, locale: Locale): CaseStudy | un
 
 export function getCaseStudySummaries(locale: Locale): CaseStudySummary[] {
   return getAllCaseStudies(locale).map(
-    ({ id, slug, client, industry, divisionId, featured, results, status }) => ({
+    ({ id, slug, client, industry, divisionId, featured, results, teaser, status }) => ({
       id,
       slug,
       client,
@@ -43,6 +43,7 @@ export function getCaseStudySummaries(locale: Locale): CaseStudySummary[] {
       divisionId,
       featured,
       results,
+      teaser,
       status,
     }),
   );

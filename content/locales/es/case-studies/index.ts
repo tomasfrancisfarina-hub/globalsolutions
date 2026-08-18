@@ -50,27 +50,44 @@ export const dominicM: CaseStudy = {
   },
 };
 
-export const franciscoSanchez: CaseStudy = {
-  id: "francisco-sanchez",
-  slug: "francisco-sanchez",
-  client: "Francisco Sánchez",
-  industry: "Internacional / Expansión",
-  divisionId: "international-expansion",
+export const david: CaseStudy = {
+  id: "david",
+  slug: "david",
+  client: "David",
+  industry: "Real Estate / Posicionamiento",
+  divisionId: "real-estate-hospitality",
   challenge:
-    "Un proyecto de expansión internacional necesitaba preparar la entrada a nuevos mercados con bases sólidas y un posicionamiento claro.",
+    "Una nueva propuesta inmobiliaria necesitaba construir una presencia digital sólida y profesional, capaz de posicionarse en el segmento premium y generar confianza tanto entre propietarios como entre compradores internacionales.",
   approach:
-    "Estrategia de crecimiento y apoyo en la ejecución diseñados para preparar la expansión internacional, mejorar el posicionamiento y crear bases de negocio escalables.",
+    "Desarrollamos una plataforma web orientada al posicionamiento, la presentación de propiedades de alto valor y la captación de nuevas oportunidades inmobiliarias. La estrategia conectó desarrollo web, imagen premium y enfoque comercial para convertir la presencia digital en una herramienta real de crecimiento.",
   results: [
-    { value: "Nuevos mercados", label: "Fundador / Proyecto de expansión internacional" },
-    { value: "Posicionamiento", label: "Mayor claridad en mercados objetivo" },
-    { value: "Escala", label: "Bases de negocio preparadas para crecer" },
+    {
+      value: "Captación de propiedades de alto valor",
+      label: "Incorporación de propiedades valoradas en varios millones de euros",
+    },
+    {
+      value: "Posicionamiento",
+      label: "Presencia digital alineada con el mercado inmobiliario premium",
+    },
+    {
+      value: "Desarrollo web",
+      label: "Plataforma preparada para presentar activos y generar nuevas oportunidades",
+    },
   ],
+  teaser: {
+    value: "Propiedades de alto valor",
+    label:
+      "Desarrollo web y posicionamiento para captar propiedades de varios millones de euros",
+  },
   featured: true,
   locale: "es",
   status: "published",
   seo: {
-    title: "Caso de éxito — Francisco Sánchez · Expansión Internacional",
+    title: "Caso de éxito — David · Real Estate y Posicionamiento",
     description:
-      "Estrategia de crecimiento y ejecución para preparar la expansión internacional.",
+      "Desarrollo web y estrategia de posicionamiento orientados a la captación y presentación de propiedades inmobiliarias de varios millones de euros.",
+    ogTitle: "David — Real Estate y Posicionamiento",
+    ogDescription:
+      "Una presencia digital premium diseñada para captar propiedades de alto valor y generar nuevas oportunidades inmobiliarias.",
   },
 };
