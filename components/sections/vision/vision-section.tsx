@@ -16,40 +16,40 @@ export function VisionSection({ content, locale }: VisionSectionProps) {
   return (
     <section className="bg-ink text-white">
       <SectionRule className="border-white/10" />
-      <div className={`${sectionPad} lg:grid lg:grid-cols-[minmax(0,48%)_minmax(0,52%)] lg:gap-0`}>
+      <div className={`${sectionPad} overflow-x-clip lg:grid lg:grid-cols-[minmax(0,48%)_minmax(0,52%)] lg:gap-0`}>
         {/* Image bleeds left */}
-        <div className="relative min-h-[480px] lg:min-h-[720px]">
+        <div className="relative min-h-[300px] sm:min-h-[380px] lg:min-h-[720px]">
           <SlideUp className="absolute inset-0 lg:-left-8 xl:-left-16">
             <EditorialImage
               src={visionImage.src}
               alt={visionImage.alt[locale]}
               fill
               sizes="(max-width: 1024px) 100vw, 48vw"
-              imageClassName="object-right opacity-92"
+              imageClassName="object-cover object-[58%_center] opacity-92 sm:object-right"
             />
           </SlideUp>
         </div>
 
-        <Container size="wide" className="flex flex-col justify-center px-4 py-20 sm:px-6 lg:px-16 xl:px-24 lg:py-0">
+        <Container size="wide" className="flex flex-col justify-center px-5 py-14 sm:px-8 sm:py-20 lg:px-16 xl:px-24 lg:py-0">
           <SlideUp>
             <Eyebrow className="text-white/40">{content.eyebrow}</Eyebrow>
             <Heading
               as="h2"
               size="h2"
-              className="mt-10 max-w-xl whitespace-pre-line text-white"
+              className="mt-8 max-w-xl whitespace-pre-line text-balance text-white sm:mt-10"
             >
               {content.headline}
             </Heading>
-            <Text variant="lead" className="mt-10 max-w-lg text-white/45">
+            <Text variant="lead" className="mt-6 max-w-lg text-white/45 sm:mt-10">
               {content.description}
             </Text>
           </SlideUp>
 
-          <StaggerContainer className="mt-20 space-y-0">
+          <StaggerContainer className="mt-12 space-y-0 sm:mt-16 md:mt-20">
             {content.pillars.map((pillar, index) => (
               <StaggerItem
                 key={pillar.title}
-                className="border-t border-white/10 py-10 first:border-t-0 first:pt-0 md:py-12"
+                className="border-t border-white/10 py-8 first:border-t-0 first:pt-0 sm:py-10 md:py-12"
               >
                 <span className="font-mono text-[11px] tracking-[0.3em] text-white/30">
                   {String(index + 1).padStart(2, "0")}

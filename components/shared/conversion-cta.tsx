@@ -13,9 +13,9 @@ interface ConversionCtaProps {
 /** Reusable conversion block — trust + meeting booking on every SEO page */
 export function ConversionCta({ block, locale, className }: ConversionCtaProps) {
   return (
-    <section className={cn("rounded-2xl border border-border p-8 md:p-10", className)}>
-      <h2 className="text-2xl font-medium md:text-3xl">{block.headline}</h2>
-      <p className="mt-3 max-w-xl text-lg text-muted">{block.description}</p>
+    <section className={cn("rounded-2xl border border-border p-6 sm:p-8 md:p-10", className)}>
+      <h2 className="text-xl font-medium sm:text-2xl md:text-3xl">{block.headline}</h2>
+      <p className="mt-3 max-w-xl text-base text-muted sm:text-lg">{block.description}</p>
       {block.proofPoints && (
         <ul className="mt-6 space-y-2">
           {block.proofPoints.map((point) => (
@@ -25,8 +25,8 @@ export function ConversionCta({ block, locale, className }: ConversionCtaProps) 
           ))}
         </ul>
       )}
-      <Link href={localizedPath(block.cta.href, locale)} className="mt-8 inline-block">
-        <Button size="lg">{block.cta.label}</Button>
+      <Link href={localizedPath(block.cta.href, locale)} className="mt-8 inline-block w-full sm:w-auto">
+        <Button size="lg" className="w-full sm:w-auto">{block.cta.label}</Button>
       </Link>
     </section>
   );

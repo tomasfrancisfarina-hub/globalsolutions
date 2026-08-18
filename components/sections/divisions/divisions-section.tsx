@@ -19,7 +19,7 @@ export function DivisionsSection({ content, locale }: DivisionsSectionProps) {
     <section className="bg-pearl">
       <SectionRule />
       <div className={sectionPad}>
-        <Container size="wide" className="mb-20 md:mb-28 lg:mb-32">
+        <Container size="wide" className="mb-10 sm:mb-16 md:mb-28 lg:mb-32">
           <SlideUp>
             <SectionHeader
               eyebrow={content.eyebrow}
@@ -30,7 +30,7 @@ export function DivisionsSection({ content, locale }: DivisionsSectionProps) {
           </SlideUp>
         </Container>
 
-        <StaggerContainer className="space-y-5 px-4 sm:px-6 lg:space-y-6 lg:px-8">
+        <StaggerContainer className="space-y-4 px-5 sm:space-y-5 sm:px-8 lg:space-y-6 lg:px-12">
           {/* 01 — cinematic full bleed */}
           <StaggerItem>
             <DivisionCard

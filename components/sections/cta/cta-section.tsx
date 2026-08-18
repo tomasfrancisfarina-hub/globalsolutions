@@ -30,18 +30,18 @@ export function CtaSection({ content, locale }: CtaSectionProps) {
         <div className="absolute inset-0 bg-ink/70" aria-hidden />
       </div>
 
-      <Container size="wide" className="relative py-32 md:py-44 lg:py-56 xl:py-64">
+      <Container size="wide" className="relative py-20 sm:py-28 md:py-44 lg:py-56 xl:py-64">
         <SlideUp>
-          <div className="mx-auto max-w-3xl text-center">
-            <Heading as="h2" size="h2" className="whitespace-pre-line text-white">
+          <div className="mx-auto max-w-3xl px-1 text-center">
+            <Heading as="h2" size="h2" className="whitespace-pre-line text-balance text-white">
               {content.headline}
             </Heading>
-            <Text variant="lead" className="mx-auto mt-10 max-w-xl text-white/45">
+            <Text variant="lead" className="mx-auto mt-6 max-w-xl text-white/45 sm:mt-10">
               {content.description}
             </Text>
-            <div className="mt-14">
-              <Link href={localizedPath(content.button.href, locale)}>
-                <Button size="lg" className="min-w-[240px]">
+            <div className="mt-10 sm:mt-14">
+              <Link href={localizedPath(content.button.href, locale)} className="inline-flex w-full justify-center sm:w-auto">
+                <Button size="lg" className="w-full min-w-0 sm:w-auto sm:min-w-[240px]">
                   {content.button.label}
                 </Button>
               </Link>

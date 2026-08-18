@@ -108,6 +108,7 @@ export interface ContactContent {
     companyLabel: string;
     messageLabel: string;
     submitLabel: string;
+    submittingLabel: string;
     successMessage: string;
     errorMessage: string;
   };

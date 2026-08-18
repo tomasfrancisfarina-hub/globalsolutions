@@ -9,7 +9,7 @@ interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
 const sizes = {
   hero: "text-display font-normal",
   h2: "text-display-sm font-normal",
-  h3: "text-xl md:text-2xl font-normal tracking-[-0.02em]",
+  h3: "text-lg sm:text-xl md:text-2xl font-normal tracking-[-0.02em]",
 };
 
 export function Heading({ as = "h2", size = "h2", className, children, ...props }: HeadingProps) {

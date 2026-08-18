@@ -43,7 +43,7 @@ export function EditorialImage({
         sizes={sizes}
         className={cn(
           "object-cover transition-[transform,opacity] duration-[1.2s] ease-out",
-          "group-hover/image:scale-[1.03]",
+          "max-lg:group-hover/image:scale-100 lg:group-hover/image:scale-[1.03]",
           imageClassName,
         )}
         style={imageStyle}

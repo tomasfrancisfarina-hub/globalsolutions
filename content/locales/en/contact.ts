@@ -13,6 +13,7 @@ export const contactContent: ContactContent = {
     companyLabel: "Company",
     messageLabel: "Message",
     submitLabel: "Send message",
+    submittingLabel: "Sending…",
     successMessage: "Message received. We'll be in touch within 24 hours.",
     errorMessage: "Could not send your message. Please try again or email us directly.",
   },

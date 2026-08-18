@@ -34,7 +34,7 @@ export function DivisionsIndex({
           <SlideUp>
             <div className="max-w-3xl">
               <Eyebrow>{eyebrow}</Eyebrow>
-              <Heading as="h1" size="hero" className="mt-6">
+              <Heading as="h1" size="hero" className="mt-6 text-balance">
                 {title}
               </Heading>
               <Text variant="lead" className="mt-6">
@@ -43,10 +43,15 @@ export function DivisionsIndex({
             </div>
           </SlideUp>
 
-          <StaggerContainer className="mt-16 grid gap-6 md:mt-24 md:grid-cols-2 lg:grid-cols-3">
+          <StaggerContainer className="mt-12 grid gap-4 sm:gap-6 md:mt-24 md:grid-cols-2 lg:grid-cols-3">
             {divisions.map((division, index) => (
               <StaggerItem key={division.id}>
-                <DivisionCard division={division} locale={locale} index={index} />
+                <DivisionCard
+                  division={division}
+                  locale={locale}
+                  index={index}
+                  variant="standard"
+                />
               </StaggerItem>
             ))}
           </StaggerContainer>
@@ -56,7 +61,7 @@ export function DivisionsIndex({
       <Section spacing="compact">
         <Container>
           <SlideUp>
-            <div className="mx-auto max-w-2xl border-t border-border pt-16 text-center md:pt-24">
+            <div className="mx-auto max-w-2xl border-t border-border pt-10 text-center sm:pt-16 md:pt-24">
               <Heading as="h2" size="h3">
                 {ctaHeadline}
               </Heading>

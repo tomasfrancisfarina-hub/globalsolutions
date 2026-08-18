@@ -1,4 +1,4 @@
-import { Container, Section, Eyebrow, Heading, Text } from "@/components/ui";
+import { Container, Section, Heading, Text } from "@/components/ui";
 import { PlaceholderBadge } from "@/components/shared/placeholder-badge";
 import { SectionHeader } from "@/components/shared/section-header";
 import { SlideUp, StaggerContainer, StaggerItem } from "@/components/motion";
@@ -34,7 +34,7 @@ export function AboutPageContent({
       <Section spacing="compact">
         <Container>
           <SlideUp>
-            <div className="max-w-3xl border-t border-border pt-16 md:pt-24">
+            <div className="max-w-3xl border-t border-border pt-10 sm:pt-16 md:pt-24">
               <Heading as="h2" size="h3">
                 {content.mission.headline}
               </Heading>
@@ -70,7 +70,7 @@ export function AboutPageContent({
           <StaggerContainer className="mt-12 space-y-8 md:mt-16">
             {content.testimonials.map((t) => (
               <StaggerItem key={t.id}>
-                <blockquote className="rounded-2xl border border-border p-8 md:p-10">
+                <blockquote className="rounded-2xl border border-border p-6 sm:p-8 md:p-10">
                   <div className="mb-6">
                     <PlaceholderBadge status={t.status} locale={locale} />
                   </div>

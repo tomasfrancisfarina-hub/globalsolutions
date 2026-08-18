@@ -29,7 +29,7 @@ export function Header({ locale, navigation, ctaLabel }: HeaderProps) {
       )}
     >
       <div className="mx-auto flex h-20 max-w-[90rem] items-center justify-between px-5 sm:px-8 lg:px-12">
-        <Logo locale={locale} />
+        <Logo locale={locale} priority />
 
         <nav className="hidden items-center gap-12 xl:flex" aria-label="Main navigation">
           {navigation.map((item) => (
@@ -43,9 +43,9 @@ export function Header({ locale, navigation, ctaLabel }: HeaderProps) {
           ))}
         </nav>
 
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-3 sm:gap-5">
           <LocaleSwitcher currentLocale={locale} className="hidden sm:flex" />
-          <Link href={localizedPath("/contact", locale)} className="hidden md:block">
+          <Link href={localizedPath("/contact", locale)} className="hidden xl:block">
             <Button size="sm">{ctaLabel}</Button>
           </Link>
           <MobileMenu locale={locale} navigation={navigation} ctaLabel={ctaLabel} />

@@ -7,7 +7,7 @@ interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
 
 const variants = {
   body: "text-base md:text-[17px] font-normal leading-[1.75] text-muted",
-  lead: "text-lg md:text-xl font-normal leading-[1.7] tracking-[-0.01em] text-muted",
+  lead: "text-base sm:text-lg md:text-xl font-normal leading-[1.7] tracking-[-0.01em] text-muted",
   caption: "text-[13px] font-normal leading-relaxed text-subtle",
 };
 

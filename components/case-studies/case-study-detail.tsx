@@ -41,7 +41,7 @@ export function CaseStudyDetail({ caseStudy, locale, labels }: CaseStudyDetailPr
       <Section spacing="compact">
         <Container>
           <SlideUp>
-            <div className="max-w-3xl space-y-16 border-t border-border pt-16 md:pt-24">
+            <div className="max-w-3xl space-y-10 border-t border-border pt-10 sm:space-y-16 sm:pt-16 md:pt-24">
               <div>
                 <Heading as="h2" size="h3">
                   {labels.challenge}
@@ -69,7 +69,7 @@ export function CaseStudyDetail({ caseStudy, locale, labels }: CaseStudyDetailPr
           <StaggerContainer className="mt-12 grid min-w-0 grid-cols-1 gap-12 md:mt-16 md:grid-cols-3 md:gap-x-10 md:gap-y-12 lg:gap-x-16">
             {caseStudy.results.map((metric) => (
               <StaggerItem key={metric.label} className="min-w-0">
-                <p className="max-w-full break-words font-mono text-5xl font-medium leading-[1.1] tracking-tight">
+                <p className="max-w-full break-words font-mono text-4xl font-medium leading-[1.1] tracking-tight sm:text-5xl">
                   {metric.value}
                 </p>
                 <p className="mt-3 max-w-full break-words text-muted">{metric.label}</p>

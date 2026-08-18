@@ -2,7 +2,7 @@ import { MethodologyPageContent } from "@/components/methodology/methodology-pag
 import { getMethodologyContent } from "@/lib/content/get-dictionary";
 import { getPageLabels } from "@/lib/content/page-labels";
 import { createBrandingMetadata } from "@/lib/seo";
-import { locales, type Locale } from "@/types/locale";
+import { type Locale } from "@/types/locale";
 import type { Metadata } from "next";
 
 interface Props {

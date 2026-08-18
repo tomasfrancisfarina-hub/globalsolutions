@@ -22,13 +22,13 @@ export function ProofSection({ content, locale }: ProofSectionProps) {
           </div>
         </SlideUp>
 
-        <StaggerContainer className="mt-24 grid gap-16 md:mt-32 md:grid-cols-3 md:gap-12 lg:gap-20">
+        <StaggerContainer className="mt-12 grid gap-10 sm:mt-16 md:mt-32 md:grid-cols-3 md:gap-12 lg:gap-20">
           {content.metrics.map((metric) => (
-            <StaggerItem key={metric.label} className="border-t border-foreground/10 pt-10 md:pt-12">
-              <p className="font-mono text-[clamp(2.5rem,5vw,4.5rem)] font-normal leading-none tracking-[-0.03em]">
+            <StaggerItem key={metric.label} className="min-w-0 border-t border-foreground/10 pt-8 md:pt-12">
+              <p className="break-words font-mono text-[clamp(2rem,8vw,4.5rem)] font-normal leading-none tracking-[-0.03em]">
                 {metric.value}
               </p>
-              <p className="mt-6 text-[11px] font-medium uppercase tracking-[0.22em] text-muted">
+              <p className="mt-4 text-[11px] font-medium uppercase tracking-[0.14em] text-muted sm:mt-6 sm:tracking-[0.22em]">
                 {metric.label}
               </p>
             </StaggerItem>

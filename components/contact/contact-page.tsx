@@ -15,16 +15,16 @@ export function ContactPageContent({ content, locale }: ContactPageContentProps)
   return (
     <Section spacing="hero">
       <Container>
-        <div className="grid gap-16 md:grid-cols-2 md:gap-24">
+        <div className="grid gap-10 md:grid-cols-2 md:gap-16 lg:gap-24">
           <SlideUp>
             <Eyebrow>{content.hero.eyebrow}</Eyebrow>
-            <Heading as="h1" size="hero" className="mt-6 whitespace-pre-line">
+            <Heading as="h1" size="hero" className="mt-6 whitespace-pre-line text-balance">
               {content.hero.headline}
             </Heading>
             <Text variant="lead" className="mt-6">
               {content.hero.description}
             </Text>
-            <div className="mt-10 space-y-3 text-[15px] text-muted">
+            <div className="mt-8 space-y-3 break-words text-[15px] text-muted sm:mt-10">
               <p>
                 <span className="text-subtle">{isEs ? "Email" : "Email"}:</span>{" "}
                 <a
@@ -52,7 +52,7 @@ export function ContactPageContent({ content, locale }: ContactPageContentProps)
             </div>
           </SlideUp>
           <SlideUp delay={0.1}>
-            <ContactForm content={content.form} />
+            <ContactForm content={content.form} locale={locale} />
           </SlideUp>
         </div>
       </Container>

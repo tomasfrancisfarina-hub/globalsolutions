@@ -17,9 +17,9 @@ interface DivisionCardProps {
 }
 
 const heights: Record<DivisionCardVariant, string> = {
-  cinematic: "min-h-[min(75vh,680px)] lg:min-h-[min(82vh,760px)]",
-  large: "min-h-[480px] lg:min-h-[560px]",
-  standard: "min-h-[400px] lg:min-h-[480px]",
+  cinematic: "min-h-[min(52vh,440px)] sm:min-h-[min(60vh,560px)] lg:min-h-[min(82vh,760px)]",
+  large: "min-h-[340px] sm:min-h-[420px] lg:min-h-[560px]",
+  standard: "min-h-[300px] sm:min-h-[360px] lg:min-h-[480px]",
 };
 
 export function DivisionCard({
@@ -80,26 +80,26 @@ export function DivisionCard({
           {number}
         </span>
 
-        <div className="absolute inset-x-0 bottom-0 p-8 md:p-12 lg:p-14">
+        <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 md:p-12 lg:p-14">
           <h3
             className={cn(
               "max-w-2xl font-normal tracking-[-0.025em] text-white",
               variant === "cinematic"
-                ? "text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-[1.08]"
-                : "text-2xl md:text-3xl",
+                ? "text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-[1.08]"
+                : "text-xl sm:text-2xl md:text-3xl",
             )}
           >
             {division.name}
           </h3>
           <p
             className={cn(
-              "mt-4 max-w-lg leading-relaxed text-white/55",
-              variant === "cinematic" ? "text-base md:text-lg" : "text-[15px] md:text-base",
+              "mt-3 max-w-lg leading-relaxed text-white/55 sm:mt-4",
+              variant === "cinematic" ? "text-[15px] sm:text-base md:text-lg" : "text-sm sm:text-[15px] md:text-base",
             )}
           >
             {division.tagline}
           </p>
-          <span className="mt-8 inline-flex items-center gap-3 text-[13px] font-medium tracking-wide text-white/70 transition-colors duration-500 group-hover:text-white">
+          <span className="mt-6 inline-flex items-center gap-3 text-[13px] font-medium tracking-wide text-white/70 transition-colors duration-500 group-hover:text-white sm:mt-8">
             {viewLabel}
             <span
               className="transition-transform duration-500 group-hover:translate-x-1.5"

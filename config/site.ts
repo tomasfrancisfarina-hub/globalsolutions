@@ -7,7 +7,7 @@
 
 export const siteConfig = {
   name: "Global Solutions",
-  legalName: "Global Solutions",
+  legalName: "Global Solutions Worldwide",
   tagline: "Consultoría de crecimiento empresarial",
   description:
     "Firma internacional de consultoría especializada en crecimiento empresarial. Estrategia, inteligencia artificial, automatización y ejecución.",
@@ -16,13 +16,25 @@ export const siteConfig = {
   defaultLocale: "en" as const,
   locales: ["es", "en"] as const,
   contact: {
-    email: "hello@globalsolutions.com",
+    email: "info@globalsolutionsworldwide.com",
     phone: "",
   },
   social: {
-    linkedin: "https://linkedin.com/company/global-solutions",
+    linkedin: "https://www.linkedin.com/company/109008349",
     twitter: "",
     instagram: "",
+  },
+  /** German legal entity details (Impressum / Datenschutz) */
+  legal: {
+    tradeName: "Global Solutions Worldwide",
+    owner: "Tomás Francisco Fariña",
+    legalForm: "Einzelunternehmen",
+    address: {
+      street: "Bachstraße 145",
+      postalCode: "22083",
+      city: "Hamburg",
+      country: "Deutschland",
+    },
   },
   /** Organization schema data */
   organization: {

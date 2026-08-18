@@ -15,17 +15,19 @@ export function CaseStudyCard({ caseStudy, locale, viewLabel }: CaseStudyCardPro
   return (
     <Link
       href={localizedPath(`/case-studies/${caseStudy.slug}`, locale)}
-      className="group block h-full rounded-2xl border border-border p-8 transition-colors duration-300 hover:border-border-hover md:p-10"
+      className="group block h-full rounded-2xl border border-border p-6 transition-colors duration-300 hover:border-border-hover sm:p-8 md:p-10"
     >
-      <div className="flex items-start justify-between gap-4">
-        <Eyebrow>{caseStudy.industry}</Eyebrow>
+      <div className="flex min-w-0 items-start justify-between gap-3 sm:gap-4">
+        <div className="min-w-0 flex-1">
+          <Eyebrow>{caseStudy.industry}</Eyebrow>
+        </div>
         <PlaceholderBadge status={caseStudy.status} locale={locale} />
       </div>
       <Heading as="h3" size="h3" className="mt-6">
         {caseStudy.client}
       </Heading>
       {caseStudy.results[0] && (
-        <p className="mt-6 font-mono text-3xl font-medium tracking-tight">
+        <p className="mt-6 break-words font-mono text-2xl font-medium tracking-tight sm:text-3xl">
           {caseStudy.results[0].value}
         </p>
       )}

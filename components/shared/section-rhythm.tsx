@@ -6,4 +6,4 @@ export function SectionRule({ className }: { className?: string }) {
 }
 
 /** Consistent luxury section vertical rhythm */
-export const sectionPad = "py-28 md:py-40 lg:py-48 xl:py-56";
+export const sectionPad = "py-16 sm:py-24 md:py-36 lg:py-48 xl:py-56";

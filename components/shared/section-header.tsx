@@ -28,12 +28,12 @@ export function SectionHeader({
       <Heading
         as="h2"
         size="h2"
-        className={cn("whitespace-pre-line", eyebrow && "mt-8 md:mt-10")}
+        className={cn("whitespace-pre-line text-balance", eyebrow && "mt-6 sm:mt-8 md:mt-10")}
       >
         {headline}
       </Heading>
       {description && (
-        <Text variant="lead" className="mt-8 max-w-2xl">
+        <Text variant="lead" className="mt-5 max-w-2xl sm:mt-8">
           {description}
         </Text>
       )}

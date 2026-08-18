@@ -31,6 +31,8 @@ export const navigation: Navigation = {
     {
       title: "Legal",
       links: [
+        { label: "Impressum", href: "/impressum" },
+        { label: "Datenschutz", href: "/datenschutz" },
         { label: "Política de privacidad", href: "/privacy" },
         { label: "Términos de uso", href: "/terms" },
       ],

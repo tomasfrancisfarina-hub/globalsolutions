@@ -13,9 +13,9 @@ export function Footer({ locale, footer }: FooterProps) {
 
   return (
     <footer className="border-t border-border">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 py-16 md:py-24">
-        <div className="grid min-w-0 gap-12 sm:grid-cols-2 md:grid-cols-4">
-          <div className="md:col-span-1">
+      <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-16 md:py-24 pb-[max(3.5rem,env(safe-area-inset-bottom))]">
+        <div className="grid min-w-0 gap-10 sm:grid-cols-2 sm:gap-12 md:grid-cols-4">
+          <div className="sm:col-span-2 md:col-span-1">
             <Logo locale={locale} />
             <p className="mt-4 text-sm text-muted">
               {locale === "es"
@@ -45,11 +45,25 @@ export function Footer({ locale, footer }: FooterProps) {
           ))}
         </div>
 
-        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-border pt-8 md:flex-row md:items-center">
+        <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-border pt-8 sm:mt-16 md:flex-row md:items-center">
           <p className="text-sm text-subtle">
             © {currentYear} Global Solutions.{" "}
             {locale === "es" ? "Todos los derechos reservados." : "All rights reserved."}
           </p>
+          <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-subtle" aria-label="Legal">
+            <Link
+              href={localizedPath("/impressum", locale)}
+              className="transition-opacity duration-150 hover:text-foreground"
+            >
+              Impressum
+            </Link>
+            <Link
+              href={localizedPath("/datenschutz", locale)}
+              className="transition-opacity duration-150 hover:text-foreground"
+            >
+              Datenschutz
+            </Link>
+          </nav>
         </div>
       </div>
     </footer>

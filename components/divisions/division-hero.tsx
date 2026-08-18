@@ -22,7 +22,7 @@ export function DivisionHero({ division, eyebrow }: DivisionHeroProps) {
 
   if (visual) {
     return (
-      <section className="relative overflow-hidden bg-ink py-32 md:py-48 lg:py-56">
+      <section className="relative overflow-hidden bg-ink py-20 sm:py-28 md:py-40 lg:py-56">
         <div className="absolute inset-0">
           <Image
             src={visual.src}
@@ -30,10 +30,10 @@ export function DivisionHero({ division, eyebrow }: DivisionHeroProps) {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-[48%_center] sm:object-center"
           />
           <div
-            className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/55 to-ink/20"
+            className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-ink/45 sm:from-ink/95 sm:via-ink/55 sm:to-ink/20"
             aria-hidden
           />
         </div>
