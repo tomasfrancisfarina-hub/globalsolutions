@@ -23,8 +23,46 @@ img,video{max-width:100%}
   h2{font-size:clamp(24px,6.6vw,40px)!important}
   .sub,.lead,.founder-copy{font-size:clamp(17px,4.3vw,22px)!important}
   .page{padding:12vw 5vw}
-  .hero.page{padding-top:118px}
-  .hero-play{left:5vw;right:auto;top:124px;bottom:auto;transform:none}
+  .hero.page{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:flex-start;
+    padding:148px 5vw 48px;
+    min-height:100svh;
+    overflow:visible;
+  }
+  .hero .section{display:contents}
+  .hero .kicker{
+    order:1;
+    position:relative;
+    z-index:5;
+    display:block;
+    max-width:100%;
+    margin:8px 0 18px;
+    padding-bottom:12px;
+    white-space:normal;
+    overflow-wrap:break-word;
+    line-height:1.55;
+    letter-spacing:.14em;
+  }
+  .hero-play{
+    order:2;
+    position:relative!important;
+    z-index:4;
+    top:auto!important;
+    left:auto!important;
+    right:auto!important;
+    bottom:auto!important;
+    transform:none!important;
+    align-self:flex-start;
+    margin:4px 0 24px;
+  }
+  .hero h1,.hero .sub,.hero .hero-summary,.hero .hero-actions{position:relative;z-index:4}
+  .hero h1{order:3}
+  .hero .sub{order:4}
+  .hero .hero-summary{order:5}
+  .hero .hero-actions{order:6}
   .gain-banner{flex-wrap:wrap}
   .gain-banner b{white-space:normal;font-size:clamp(22px,7vw,36px);line-height:1.1}
   .brand{left:auto!important;right:12px!important;max-width:min(240px,70vw)!important;width:min(240px,70vw)!important;height:auto!important;max-height:96px;object-fit:contain}
@@ -37,16 +75,17 @@ img,video{max-width:100%}
 }
 @media(max-width:430px){
   .page{padding:88px 16px 48px}
-  .hero.page{padding:100px 16px 40px}
+  .hero.page{padding:148px 16px 40px}
   .card,.calc-card,.security-panel{padding:22px}
-  .hero-play{top:112px;left:16px;padding:12px 16px}
+  .hero-play{padding:12px 16px}
   .brand{width:min(188px,62vw)!important;right:12px!important;left:auto!important}
 }
 @media(max-width:360px){
   h1{font-size:clamp(24px,8vw,34px)!important}
   .hero-topbar{height:84px}
   .hero-video,.hero:after{top:84px;height:calc(100% - 84px)}
-  .hero-play{top:100px}
+  .hero.page{padding:124px 16px 36px}
+  .hero .kicker{letter-spacing:.12em}
 }
 </style>`;
 
