@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "generate:samana-share": "node dominicana-share/generate.mjs",
+    "check:routes": "node scripts/check-required-routes.mjs",
+    "prebuild": "npm run generate:samana-share && npm run check:routes"
   },
   "dependencies": {
     "clsx": "^2.1.1",

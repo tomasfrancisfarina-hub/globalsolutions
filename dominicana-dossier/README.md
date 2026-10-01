@@ -7,6 +7,11 @@ Módulo aislado y temporal. No está enlazado desde la navegación, el home ni e
 - ES: `/es/inversiones/republica-dominicana`
 - EN: `/en/investments/dominican-republic`
 
+Versión pública para intermediarios (sin contraseña, HTML estático):
+
+- ES: `/es/inversiones/samana`
+- EN: `/en/investments/samana`
+
 ## Variable de entorno
 
 `DOMINICANA_DOSSIER_PASSWORD` (Vercel → Project → Settings → Environment Variables).

@@ -4,6 +4,7 @@ import {
   DivisionVision,
   DivisionCapabilities,
   DivisionRelatedServices,
+  DivisionOpportunity,
   DivisionCta,
 } from "@/components/divisions";
 import { getAllDivisionParams, getDivisionBySlug } from "@/content/registry/divisions.registry";
@@ -76,6 +77,9 @@ export default async function DivisionPage({ params }: Props) {
         locale={loc}
         learnMoreLabel={labels.learnMore}
       />
+      {slug === "real-estate-hospitality" && (loc === "es" || loc === "en") ? (
+        <DivisionOpportunity locale={loc} />
+      ) : null}
       <DivisionCta block={division.conversion} locale={loc} />
     </>
   );
