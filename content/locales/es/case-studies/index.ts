@@ -136,3 +136,70 @@ export const mTwoClubMallorca: CaseStudy = {
       "Cómo la publicidad de temporada conectó promoción, colaboraciones y programación en la discoteca más exclusiva de Mallorca.",
   },
 };
+
+export const tecnologiaDrones: CaseStudy = {
+  id: "tecnologia-drones",
+  slug: "tecnologia-drones",
+  client: "Tecnología y drones internacional",
+  industry: "Tecnología industrial / Soluciones aéreas",
+  divisionId: "growth-marketing",
+  headings: {
+    challenge: "Contexto",
+    approach: "Trabajo realizado",
+  },
+  challenge:
+    "Una empresa de tecnología industrial, especializada en drones y soluciones aéreas profesionales, necesitaba hacer visible un producto y llevar usuarios a su página. El trabajo sostuvo esa presencia con campañas continuas en Meta Ads, Google Ads y LinkedIn Ads, junto con otras acciones. Como ejemplo, una campaña de Meta Ads de agosto de 2026 concentró el producto y el tráfico hacia la web.",
+  approach:
+    "Esa campaña se centró en el producto drone. La distribución pagada y la comunicación en vídeo llevaron el mensaje hasta la página de producto, dentro de un programa más amplio de captación y posicionamiento.",
+  results: [
+    {
+      value: "749",
+      label: "Visitas confirmadas a la landing page",
+      emphasis: true,
+    },
+    {
+      value: "0,07 €",
+      label: "Coste por visita a la landing",
+      emphasis: true,
+    },
+    { value: "24.723", label: "Impresiones de la campaña" },
+    { value: "20.949", label: "Reproducciones de vídeo" },
+    { value: "3 s", label: "Tiempo medio de reproducción" },
+    { value: "26 %", label: "Captura inicial del vídeo" },
+    { value: "46,7 %", label: "Retención de vídeo reportada" },
+  ],
+  teaser: {
+    value: "749",
+    label: "Visitas confirmadas a la landing, a 0,07 € por visita",
+  },
+  reading: {
+    title: "Lectura estratégica",
+    body: "La campaña combinó visibilidad, consumo de vídeo y visitas al sitio con un coste por visita reducido. La landing recibió 749 visitas confirmadas a 0,07 €, sobre 24.723 impresiones y 20.949 reproducciones de vídeo.",
+  },
+  nextStep: {
+    title: "Siguiente etapa",
+    body: "El siguiente paso mide las acciones posteriores a la visita con Meta Pixel y prepara la landing para registrar consultas comerciales de forma medible. Desde ahí se escala la medición y el desarrollo comercial, a partir de un tráfico que ya llega a la página.",
+  },
+  conversion: {
+    headline: "Hablemos de captación para drones y tecnología industrial",
+    description:
+      "Si tu empresa desarrolla drones o soluciones industriales, conversemos sobre campañas de captación y posicionamiento digital.",
+    cta: { label: "Agendar una conversación", href: "/contact" },
+    proofPoints: [
+      "Captación y posicionamiento para tecnología B2B",
+      "Consulta inicial sin compromiso",
+      "Respuesta en 24 horas",
+    ],
+  },
+  featured: true,
+  locale: "es",
+  status: "published",
+  seo: {
+    title: "Caso de éxito — Tecnología y drones internacional",
+    description:
+      "Campaña de Meta Ads para una empresa de tecnología industrial especializada en drones: 749 visitas confirmadas a la landing a 0,07 € por visita.",
+    ogTitle: "Tecnología y drones internacional",
+    ogDescription:
+      "Visibilidad, vídeo y 749 visitas a la página de producto, con un coste por visita de 0,07 €.",
+  },
+};

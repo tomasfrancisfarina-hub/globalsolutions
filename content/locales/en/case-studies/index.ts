@@ -136,3 +136,70 @@ export const mTwoClubMallorca: CaseStudy = {
       "How seasonal advertising connected promotion, collaborations, and programming at Mallorca’s most exclusive nightclub.",
   },
 };
+
+export const tecnologiaDrones: CaseStudy = {
+  id: "tecnologia-drones",
+  slug: "tecnologia-drones",
+  client: "International drone technology",
+  industry: "Industrial technology / Aerial solutions",
+  divisionId: "growth-marketing",
+  headings: {
+    challenge: "Context",
+    approach: "Work delivered",
+  },
+  challenge:
+    "An industrial technology company specialized in drones and professional aerial solutions needed to make a product visible and bring users to its page. The work sustained that presence through ongoing Meta Ads, Google Ads, and LinkedIn Ads campaigns, alongside further actions. As one example, a Meta Ads campaign in August 2026 focused the product and the traffic on the website.",
+  approach:
+    "That campaign centered on the drone product. Paid distribution and video communication carried the message to the product page, within a broader acquisition and positioning program.",
+  results: [
+    {
+      value: "749",
+      label: "Confirmed landing-page visits",
+      emphasis: true,
+    },
+    {
+      value: "€0.07",
+      label: "Cost per landing-page visit",
+      emphasis: true,
+    },
+    { value: "24,723", label: "Campaign impressions" },
+    { value: "20,949", label: "Video plays" },
+    { value: "3 sec", label: "Average play time" },
+    { value: "26%", label: "Initial video capture rate" },
+    { value: "46.7%", label: "Reported video retention" },
+  ],
+  teaser: {
+    value: "749",
+    label: "Confirmed landing-page visits, at €0.07 per visit",
+  },
+  reading: {
+    title: "Strategic reading",
+    body: "The campaign combined visibility, video consumption, and site visits at a low cost per visit. The landing page received 749 confirmed visits at €0.07, from 24,723 impressions and 20,949 video plays.",
+  },
+  nextStep: {
+    title: "Next stage",
+    body: "The next step measures post-visit actions with the Meta Pixel and prepares the landing page to record commercial inquiries in a measurable way. From there, measurement and business development scale on traffic that already reaches the page.",
+  },
+  conversion: {
+    headline: "Let’s talk acquisition for drones and industrial technology",
+    description:
+      "If your company builds drones or industrial solutions, let’s discuss acquisition and digital positioning campaigns.",
+    cta: { label: "Schedule a conversation", href: "/contact" },
+    proofPoints: [
+      "Acquisition and positioning for B2B technology",
+      "No-obligation initial consultation",
+      "Response within 24 hours",
+    ],
+  },
+  featured: true,
+  locale: "en",
+  status: "published",
+  seo: {
+    title: "Case Study — International drone technology",
+    description:
+      "Meta Ads campaign for an industrial technology company specialized in drones: 749 confirmed landing-page visits at €0.07 per visit.",
+    ogTitle: "International drone technology",
+    ogDescription:
+      "Visibility, video, and 749 visits to the product page, at €0.07 per visit.",
+  },
+};

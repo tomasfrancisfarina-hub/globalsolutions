@@ -136,3 +136,70 @@ export const mTwoClubMallorca: CaseStudy = {
       "Wie saisonale Werbung Promotion, Kooperationen und Programm im exklusivsten Club Mallorcas verbunden hat.",
   },
 };
+
+export const tecnologiaDrones: CaseStudy = {
+  id: "tecnologia-drones",
+  slug: "tecnologia-drones",
+  client: "Internationale Drohnentechnologie",
+  industry: "Industrietechnologie / Professionelle Luftlösungen",
+  divisionId: "growth-marketing",
+  headings: {
+    challenge: "Kontext",
+    approach: "Umsetzung",
+  },
+  challenge:
+    "Ein Unternehmen der Industrietechnologie, spezialisiert auf Drohnen und professionelle Luftlösungen, musste ein Produkt sichtbar machen und Nutzer auf seine Seite führen. Die Arbeit hielt diese Präsenz mit fortlaufenden Kampagnen in Meta Ads, Google Ads und LinkedIn Ads sowie weiteren Maßnahmen. Als Beispiel konzentrierte eine Meta-Ads-Kampagne im August 2026 Produkt und Traffic auf die Website.",
+  approach:
+    "Diese Kampagne stellte das Drohnenprodukt in den Mittelpunkt. Bezahlte Verteilung und Videokommunikation führten die Botschaft auf die Produktseite, innerhalb eines breiteren Programms für Gewinnung und Positionierung.",
+  results: [
+    {
+      value: "749",
+      label: "Bestätigte Besuche der Landingpage",
+      emphasis: true,
+    },
+    {
+      value: "0,07 €",
+      label: "Kosten pro Besuch der Landingpage",
+      emphasis: true,
+    },
+    { value: "24.723", label: "Impressionen der Kampagne" },
+    { value: "20.949", label: "Videoaufrufe" },
+    { value: "3 Sek.", label: "Durchschnittliche Wiedergabezeit" },
+    { value: "26 %", label: "Initiale Video-Capture-Rate" },
+    { value: "46,7 %", label: "Berichtete Videoretention" },
+  ],
+  teaser: {
+    value: "749",
+    label: "Bestätigte Landingpage-Besuche, zu 0,07 € pro Besuch",
+  },
+  reading: {
+    title: "Strategische Einordnung",
+    body: "Die Kampagne verband Sichtbarkeit, Videokonsum und Seitenbesuche bei niedrigen Kosten pro Besuch. Die Landingpage erhielt 749 bestätigte Besuche zu 0,07 €, bei 24.723 Impressionen und 20.949 Videoaufrufen.",
+  },
+  nextStep: {
+    title: "Nächste Stufe",
+    body: "Der nächste Schritt misst die Aktionen nach dem Besuch mit dem Meta Pixel und bereitet die Landingpage darauf vor, kommerzielle Anfragen messbar zu erfassen. Darauf lassen sich Messung und Geschäftsentwicklung skalieren, ausgehend von Traffic, der die Seite bereits erreicht.",
+  },
+  conversion: {
+    headline: "Sprechen wir über Gewinnung für Drohnen und Industrietechnologie",
+    description:
+      "Wenn Ihr Unternehmen Drohnen oder industrielle Lösungen entwickelt, sprechen wir über Kampagnen zur Gewinnung und digitalen Positionierung.",
+    cta: { label: "Gespräch vereinbaren", href: "/contact" },
+    proofPoints: [
+      "Gewinnung und Positionierung für B2B-Technologie",
+      "Unverbindliches Erstgespräch",
+      "Antwort innerhalb von 24 Stunden",
+    ],
+  },
+  featured: true,
+  locale: "de",
+  status: "published",
+  seo: {
+    title: "Fallstudie — Internationale Drohnentechnologie",
+    description:
+      "Meta-Ads-Kampagne für ein Industrietechnologie-Unternehmen mit Schwerpunkt Drohnen: 749 bestätigte Landingpage-Besuche zu 0,07 € pro Besuch.",
+    ogTitle: "Internationale Drohnentechnologie",
+    ogDescription:
+      "Sichtbarkeit, Video und 749 Besuche der Produktseite, zu 0,07 € pro Besuch.",
+  },
+};

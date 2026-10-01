@@ -1,3 +1,4 @@
+import type { ConversionBlock } from "./content";
 import type { Locale } from "./locale";
 import type { ContentStatus } from "./content-status";
 
@@ -6,6 +7,8 @@ export interface Metric {
   label: string;
   /** Mark temporary credibility data */
   status?: ContentStatus;
+  /** Larger treatment in the results grid. Omitted metrics keep the standard size. */
+  emphasis?: boolean;
 }
 
 /** Case study — social proof for branding and SEO */
@@ -25,6 +28,21 @@ export interface CaseStudy {
     href: string;
     label: string;
   };
+  /** Optional heading overrides. Absent values keep the shared case-study labels. */
+  headings?: {
+    challenge?: string;
+    approach?: string;
+  };
+  reading?: {
+    title: string;
+    body: string;
+  };
+  nextStep?: {
+    title: string;
+    body: string;
+  };
+  /** Page-specific close. Absent values use the shared conversion block. */
+  conversion?: ConversionBlock;
   featured: boolean;
   locale: Locale;
   status: ContentStatus;

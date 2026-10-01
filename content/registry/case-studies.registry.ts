@@ -10,6 +10,7 @@ import {
   dominicM as dominicMEs,
   moralesEstates as moralesEstatesEs,
   mTwoClubMallorca as mTwoClubMallorcaEs,
+  tecnologiaDrones as tecnologiaDronesEs,
 } from "@/content/locales/es/case-studies/index";
 
 import {
@@ -17,6 +18,7 @@ import {
   dominicM as dominicMEn,
   moralesEstates as moralesEstatesEn,
   mTwoClubMallorca as mTwoClubMallorcaEn,
+  tecnologiaDrones as tecnologiaDronesEn,
 } from "@/content/locales/en/case-studies/index";
 
 import {
@@ -24,12 +26,13 @@ import {
   dominicM as dominicMDe,
   moralesEstates as moralesEstatesDe,
   mTwoClubMallorca as mTwoClubMallorcaDe,
+  tecnologiaDrones as tecnologiaDronesDe,
 } from "@/content/locales/de/case-studies/index";
 
 const byLocale: Record<Locale, CaseStudy[]> = {
-  es: [edgarLEs, dominicMEs, moralesEstatesEs, mTwoClubMallorcaEs],
-  en: [edgarLEn, dominicMEn, moralesEstatesEn, mTwoClubMallorcaEn],
-  de: [edgarLDe, dominicMDe, moralesEstatesDe, mTwoClubMallorcaDe],
+  es: [edgarLEs, dominicMEs, moralesEstatesEs, mTwoClubMallorcaEs, tecnologiaDronesEs],
+  en: [edgarLEn, dominicMEn, moralesEstatesEn, mTwoClubMallorcaEn, tecnologiaDronesEn],
+  de: [edgarLDe, dominicMDe, moralesEstatesDe, mTwoClubMallorcaDe, tecnologiaDronesDe],
 };
 
 export function getAllCaseStudies(locale: Locale): CaseStudy[] {
