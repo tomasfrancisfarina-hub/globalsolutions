@@ -5,7 +5,7 @@
   "regions": ["iad1"],
   "redirects": [
     {
-      "source": "/:locale(es|en)/case-studies/francisco-sanchez",
+      "source": "/:locale(es|en|de)/case-studies/francisco-sanchez",
       "destination": "/:locale/case-studies/morales-estates",
       "permanent": true
     },
@@ -15,7 +15,7 @@
       "permanent": true
     },
     {
-      "source": "/:locale(es|en)/case-studies/david",
+      "source": "/:locale(es|en|de)/case-studies/david",
       "destination": "/:locale/case-studies/morales-estates",
       "permanent": true
     },

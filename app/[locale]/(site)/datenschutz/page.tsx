@@ -202,6 +202,12 @@ export default async function DatenschutzPage() {
               </a>
             </p>
           </section>
+
+          <p className="pt-4 text-sm text-subtle">
+            [Rechtliche Prüfung empfohlen] Diese Erklärung beschreibt die im Projekt
+            tatsächlich vorhandenen Dienste. Sie ersetzt keine individuell geprüfte
+            Rechtsberatung.
+          </p>
         </div>
       </Container>
     </Section>

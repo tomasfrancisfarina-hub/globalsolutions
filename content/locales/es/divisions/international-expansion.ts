@@ -4,7 +4,7 @@ import { getDefaultConversion } from "@/content/shared/conversion";
 export const internationalExpansion: Division = {
   id: "international-expansion",
   slug: "international-expansion",
-  name: "International Expansion",
+  name: "Expansión Internacional",
   tagline: "Entrada a mercados globales con metodología probada",
   description:
     "Guiamos a empresas en su expansión internacional, desde el análisis de mercados objetivo hasta la implementación operativa. Minimizamos riesgos y aceleramos la entrada en nuevos territorios.",

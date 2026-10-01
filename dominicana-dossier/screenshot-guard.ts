@@ -1,4 +1,5 @@
 import type { Locale } from "@/types/locale";
+import { toDossierLocale } from "@/dominicana-dossier/copy";
 
 const COPY = {
   es: {
@@ -90,7 +91,7 @@ img,video{max-width:100%}
 </style>`;
 
 export function applyScreenshotGuard(html: string, locale: Locale): string {
-  const copy = COPY[locale];
+  const copy = COPY[toDossierLocale(locale)];
   const block = `
 ${RESPONSIVE_CSS}
 <style id="dossier-capture-guard">

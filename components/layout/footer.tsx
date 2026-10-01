@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Logo } from "@/components/shared/logo";
 import { localizedPath } from "@/lib/i18n/config";
+import { getUiCopy } from "@/lib/i18n/ui-copy";
 import type { Locale, FooterColumn } from "@/types";
 
 interface FooterProps {
@@ -10,6 +11,7 @@ interface FooterProps {
 
 export function Footer({ locale, footer }: FooterProps) {
   const currentYear = new Date().getFullYear();
+  const ui = getUiCopy(locale);
 
   return (
     <footer className="border-t border-border">
@@ -17,11 +19,7 @@ export function Footer({ locale, footer }: FooterProps) {
         <div className="grid min-w-0 gap-10 sm:grid-cols-2 sm:gap-12 md:grid-cols-4">
           <div className="sm:col-span-2 md:col-span-1">
             <Logo locale={locale} />
-            <p className="mt-4 text-sm text-muted">
-              {locale === "es"
-                ? "Consultoría de crecimiento empresarial"
-                : "Business growth consulting"}
-            </p>
+            <p className="mt-4 text-sm text-muted">{ui.tagline}</p>
           </div>
 
           {footer.map((column) => (
@@ -47,8 +45,7 @@ export function Footer({ locale, footer }: FooterProps) {
 
         <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-border pt-8 sm:mt-16 md:flex-row md:items-center">
           <p className="text-sm text-subtle">
-            © {currentYear} Global Solutions.{" "}
-            {locale === "es" ? "Todos los derechos reservados." : "All rights reserved."}
+            © {currentYear} Global Solutions. {ui.rights}
           </p>
           <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-subtle" aria-label="Legal">
             <Link

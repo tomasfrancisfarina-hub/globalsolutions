@@ -3,6 +3,7 @@
  */
 
 import type { CaseStudy, CaseStudySummary, Locale } from "@/types";
+import { locales } from "@/types/locale";
 
 import {
   edgarL as edgarLEs,
@@ -16,9 +17,16 @@ import {
   moralesEstates as moralesEstatesEn,
 } from "@/content/locales/en/case-studies/index";
 
+import {
+  edgarL as edgarLDe,
+  dominicM as dominicMDe,
+  moralesEstates as moralesEstatesDe,
+} from "@/content/locales/de/case-studies/index";
+
 const byLocale: Record<Locale, CaseStudy[]> = {
   es: [edgarLEs, dominicMEs, moralesEstatesEs],
   en: [edgarLEn, dominicMEn, moralesEstatesEn],
+  de: [edgarLDe, dominicMDe, moralesEstatesDe],
 };
 
 export function getAllCaseStudies(locale: Locale): CaseStudy[] {
@@ -55,7 +63,7 @@ export function getAllCaseStudySlugs(): string[] {
 
 export function getAllCaseStudyParams(): { locale: Locale; slug: string }[] {
   const params: { locale: Locale; slug: string }[] = [];
-  for (const locale of ["es", "en"] as Locale[]) {
+  for (const locale of locales) {
     for (const slug of getAllCaseStudySlugs()) {
       params.push({ locale, slug });
     }

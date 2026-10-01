@@ -1,5 +1,12 @@
 import type { Locale } from "@/types/locale";
 
+/** Dominican dossier is currently published in ES/EN only. */
+export type DossierLocale = "es" | "en";
+
+export function toDossierLocale(locale: Locale): DossierLocale {
+  return locale === "es" ? "es" : "en";
+}
+
 export const dossierGateCopy = {
   es: {
     title: "Acceso privado para inversores",
@@ -26,5 +33,5 @@ export const dossierGateCopy = {
 } as const;
 
 export function getDossierGateCopy(locale: Locale) {
-  return dossierGateCopy[locale];
+  return dossierGateCopy[toDossierLocale(locale)];
 }

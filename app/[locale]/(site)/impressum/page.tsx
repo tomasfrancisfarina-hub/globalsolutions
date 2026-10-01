@@ -85,6 +85,12 @@ export default async function ImpressumPage() {
               {address.country}
             </p>
           </section>
+
+          <p className="pt-4 text-sm text-subtle">
+            [Rechtliche Prüfung empfohlen] Dieses Impressum enthält nur bestätigte
+            Angaben. Es wurden keine Handelsregister-, Steuer- oder Aufsichtsdaten
+            ergänzt, die nicht im Projekt dokumentiert sind.
+          </p>
         </div>
       </Container>
     </Section>

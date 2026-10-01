@@ -52,7 +52,9 @@ export async function POST(request: NextRequest) {
     const company = typeof raw.company === "string" ? raw.company.trim() : "";
     const message = typeof raw.message === "string" ? raw.message.trim() : "";
     const locale =
-      raw.locale === "en" || raw.locale === "es" ? raw.locale : undefined;
+      raw.locale === "en" || raw.locale === "es" || raw.locale === "de"
+        ? raw.locale
+        : undefined;
 
     if (!name || !email || !message) {
       return NextResponse.json(

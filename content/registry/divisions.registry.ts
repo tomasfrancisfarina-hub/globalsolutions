@@ -1,11 +1,12 @@
 /**
  * Divisions Registry — locale-aware
  *
- * To add a division: create ES + EN content files, import in locale maps below.
+ * To add a division: create ES + EN + DE content files, import in locale maps below.
  * @see docs/ADDING-A-DIVISION.md
  */
 
 import type { Division, DivisionSummary, Locale } from "@/types";
+import { locales } from "@/types/locale";
 
 import { growthMarketing as growthMarketingEs } from "@/content/locales/es/divisions/growth-marketing";
 import { artificialIntelligence as artificialIntelligenceEs } from "@/content/locales/es/divisions/artificial-intelligence";
@@ -20,6 +21,13 @@ import { businessConsulting as businessConsultingEn } from "@/content/locales/en
 import { internationalExpansion as internationalExpansionEn } from "@/content/locales/en/divisions/international-expansion";
 import { investmentVentures as investmentVenturesEn } from "@/content/locales/en/divisions/investment-ventures";
 import { realEstateHospitality as realEstateHospitalityEn } from "@/content/locales/en/divisions/real-estate-hospitality";
+
+import { growthMarketing as growthMarketingDe } from "@/content/locales/de/divisions/growth-marketing";
+import { artificialIntelligence as artificialIntelligenceDe } from "@/content/locales/de/divisions/artificial-intelligence";
+import { businessConsulting as businessConsultingDe } from "@/content/locales/de/divisions/business-consulting";
+import { internationalExpansion as internationalExpansionDe } from "@/content/locales/de/divisions/international-expansion";
+import { investmentVentures as investmentVenturesDe } from "@/content/locales/de/divisions/investment-ventures";
+import { realEstateHospitality as realEstateHospitalityDe } from "@/content/locales/de/divisions/real-estate-hospitality";
 
 const divisionsByLocale: Record<Locale, Division[]> = {
   es: [
@@ -37,6 +45,14 @@ const divisionsByLocale: Record<Locale, Division[]> = {
     internationalExpansionEn,
     investmentVenturesEn,
     realEstateHospitalityEn,
+  ],
+  de: [
+    growthMarketingDe,
+    artificialIntelligenceDe,
+    businessConsultingDe,
+    internationalExpansionDe,
+    investmentVenturesDe,
+    realEstateHospitalityDe,
   ],
 };
 
@@ -74,7 +90,7 @@ export function getAllDivisionSlugs(): string[] {
 /** Generate static params for all locale + slug combinations */
 export function getAllDivisionParams(): { locale: Locale; slug: string }[] {
   const params: { locale: Locale; slug: string }[] = [];
-  for (const locale of ["es", "en"] as Locale[]) {
+  for (const locale of locales) {
     for (const slug of getAllDivisionSlugs()) {
       params.push({ locale, slug });
     }

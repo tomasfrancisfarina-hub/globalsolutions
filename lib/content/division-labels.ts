@@ -20,6 +20,24 @@ export function getDivisionLabels(locale: Locale) {
     };
   }
 
+  if (locale === "de") {
+    return {
+      eyebrow: "Division",
+      eyebrowIndex: "Divisionen",
+      indexTitle: "Unsere Divisionen",
+      indexDescription:
+        "Sechs spezialisierte Kompetenzbereiche innerhalb einer einheitlichen Vision für Unternehmenswachstum.",
+      approachEyebrow: "Unser Ansatz",
+      capabilitiesTitle: "Leistungen",
+      relatedServicesTitle: "Verwandte Services",
+      learnMore: "Mehr erfahren",
+      viewDivision: "Division ansehen",
+      indexCtaHeadline: "Nicht das Richtige gefunden?",
+      indexCtaDescription: "Sprechen Sie mit uns über die konkrete Herausforderung Ihres Unternehmens.",
+      indexCtaButton: "Gespräch starten",
+    };
+  }
+
   return {
     eyebrow: "Division",
     eyebrowIndex: "Divisions",

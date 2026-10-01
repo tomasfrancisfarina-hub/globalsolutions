@@ -29,6 +29,12 @@ export const seoConfig = {
       defaultDescription:
         "We help ambitious companies grow through strategy, artificial intelligence, automation, and execution.",
     },
+    de: {
+      titleTemplate: "%s | Global Solutions",
+      defaultTitle: "Global Solutions — Strategische Beratung für internationales Wachstum",
+      defaultDescription:
+        "Wir unterstützen ambitionierte Unternehmen beim Wachstum durch Strategie, künstliche Intelligenz, Automatisierung und Umsetzung.",
+    },
   },
 
   /** Metadata template for SEO pages */

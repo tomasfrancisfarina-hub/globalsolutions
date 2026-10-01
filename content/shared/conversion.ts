@@ -17,6 +17,20 @@ export function getDefaultConversion(locale: Locale): ConversionBlock {
     };
   }
 
+  if (locale === "de") {
+    return {
+      headline: "Sprechen wir über das Wachstum Ihres Unternehmens",
+      description:
+        "Vereinbaren Sie ein strategisches Gespräch mit unserem Team. Unverbindlich, Antwort innerhalb von 24 Stunden.",
+      cta: { label: "Gespräch vereinbaren", href: "/contact" },
+      proofPoints: [
+        "Senior-Team in jedem Projekt",
+        "Unverbindliches Erstgespräch",
+        "Antwort innerhalb von 24 Stunden",
+      ],
+    };
+  }
+
   return {
     headline: "Let's discuss growing your business",
     description:

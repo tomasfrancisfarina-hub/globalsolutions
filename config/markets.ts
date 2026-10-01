@@ -11,7 +11,7 @@ export interface MarketConfig {
   id: Market;
   name: string;
   /** Primary locale for this market */
-  primaryLocale: "en" | "es";
+  primaryLocale: "en" | "es" | "de";
   /** Google Ads geo target ID */
   googleAdsGeoId?: string;
   /** hreflang value */
@@ -51,9 +51,9 @@ export const markets: Record<Market, MarketConfig> = {
 export const targetMarkets: Market[] = ["us", "eu", "ae"];
 
 /** Get markets where a locale is primary */
-export function getMarketsForLocale(locale: "en" | "es"): Market[] {
+export function getMarketsForLocale(locale: "en" | "es" | "de"): Market[] {
   return targetMarkets.filter((m) => markets[m].primaryLocale === locale);
 }
 
 /** x-default locale for hreflang — English for international reach */
-export const hreflangDefault: "en" | "es" = "en";
+export const hreflangDefault: "en" | "es" | "de" = "en";

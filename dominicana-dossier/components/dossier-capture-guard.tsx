@@ -2,6 +2,7 @@
 
 import { useEffect, useState, type ReactNode } from "react";
 import type { Locale } from "@/types/locale";
+import { toDossierLocale } from "@/dominicana-dossier/copy";
 
 const COPY = {
   es: {
@@ -27,7 +28,7 @@ function isDesktopPointer() {
 }
 
 export function DossierCaptureGuard({ locale, children }: DossierCaptureGuardProps) {
-  const copy = COPY[locale];
+  const copy = COPY[toDossierLocale(locale)];
   const [blocked, setBlocked] = useState(false);
 
   useEffect(() => {

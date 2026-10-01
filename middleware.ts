@@ -10,8 +10,9 @@ function negotiateLocale(request: NextRequest): Locale {
   const cookie = request.cookies.get("NEXT_LOCALE")?.value;
   if (cookie && isValidLocale(cookie)) return cookie;
 
-  const accept = request.headers.get("accept-language") ?? "";
-  if (accept.toLowerCase().includes("es")) return "es";
+  const accept = request.headers.get("accept-language")?.toLowerCase() ?? "";
+  if (accept.includes("de")) return "de";
+  if (accept.includes("es")) return "es";
 
   return defaultLocale;
 }

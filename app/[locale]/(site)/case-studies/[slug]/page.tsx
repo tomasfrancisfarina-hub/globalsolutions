@@ -36,8 +36,9 @@ export default async function CaseStudyPage({ params }: Props) {
 
   const labels = getPageLabels(loc);
   const base = siteConfig.url;
+  const homeLabel = loc === "es" ? "Inicio" : loc === "de" ? "Startseite" : "Home";
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: loc === "es" ? "Inicio" : "Home", url: `${base}${localizedPath("/", loc)}` },
+    { name: homeLabel, url: `${base}${localizedPath("/", loc)}` },
     { name: labels.caseStudies.eyebrow, url: `${base}${localizedPath("/case-studies", loc)}` },
     { name: caseStudy.client, url: `${base}${localizedPath(`/case-studies/${slug}`, loc)}` },
   ]);

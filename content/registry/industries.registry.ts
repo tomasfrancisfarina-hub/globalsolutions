@@ -101,7 +101,16 @@ const industriesEs: Industry[] = [
   },
 ];
 
-const byLocale: Record<Locale, Industry[]> = { es: industriesEs, en: industriesEn };
+const byLocale: Record<Locale, Industry[]> = {
+  es: industriesEs,
+  en: industriesEn,
+  /** DE uses EN industry targeting copy until dedicated DE industry pages are authored */
+  de: industriesEn.map((industry) => ({
+    ...industry,
+    locale: "de" as const,
+    conversion: getDefaultConversion("de"),
+  })),
+};
 
 export function getAllIndustries(locale: Locale): Industry[] {
   return byLocale[locale] ?? byLocale.en;

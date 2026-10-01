@@ -4,7 +4,7 @@ import { getDefaultConversion } from "@/content/shared/conversion";
 export const investmentVentures: Division = {
   id: "investment-ventures",
   slug: "investment-ventures",
-  name: "Investment & Ventures",
+  name: "Inversión y Ventures",
   tagline: "Captación de inversión y apoyo a startups en crecimiento",
   description:
     "Conectamos empresas en crecimiento con capital e inversores estratégicos. Desde la preparación de startups para rondas de inversión hasta la estructuración de operaciones de capital, facilitamos el acceso a financiación.",

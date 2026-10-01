@@ -4,7 +4,7 @@ import { getDefaultConversion } from "@/content/shared/conversion";
 export const growthMarketing: Division = {
   id: "growth-marketing",
   slug: "growth-marketing",
-  name: "Growth & Marketing",
+  name: "Crecimiento y Marketing",
   tagline: "Estrategias de crecimiento acelerado y presencia de mercado",
   description:
     "Diseñamos e implementamos estrategias de crecimiento que conectan la visión empresarial con resultados medibles. Desde la definición del posicionamiento hasta la ejecución multicanal, ayudamos a las empresas a expandir su presencia y captar nuevos mercados.",

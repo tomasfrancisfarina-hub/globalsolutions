@@ -3,9 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Container, Section, Heading, Text } from "@/components/ui";
-import { localizedPath } from "@/lib/i18n/config";
+import { localizedPath, isValidLocale } from "@/lib/i18n/config";
+import { getPageLabels } from "@/lib/content/page-labels";
 import { defaultLocale, type Locale } from "@/types/locale";
-import { isValidLocale } from "@/lib/i18n/config";
 
 function localeFromPath(pathname: string): Locale {
   const segment = pathname.split("/")[1];
@@ -16,7 +16,7 @@ function localeFromPath(pathname: string): Locale {
 export function NotFoundContent() {
   const pathname = usePathname();
   const locale = localeFromPath(pathname ?? "/");
-  const isEs = locale === "es";
+  const labels = getPageLabels(locale).notFound;
 
   return (
     <Section spacing="hero">
@@ -24,18 +24,16 @@ export function NotFoundContent() {
         <div className="mx-auto max-w-xl text-center">
           <p className="text-xs font-medium uppercase tracking-widest text-subtle">404</p>
           <Heading as="h1" size="hero" className="mt-6">
-            {isEs ? "Página no encontrada" : "Page not found"}
+            {labels.title}
           </Heading>
           <Text variant="lead" className="mx-auto mt-6">
-            {isEs
-              ? "La página que buscas no existe o ha sido movida."
-              : "The page you are looking for does not exist or has been moved."}
+            {labels.description}
           </Text>
           <Link
             href={localizedPath("/", locale)}
             className="mt-12 inline-block text-sm transition-opacity hover:opacity-60"
           >
-            {isEs ? "Volver al inicio →" : "Back to home →"}
+            {labels.back} →
           </Link>
         </div>
       </Container>

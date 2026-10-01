@@ -6,7 +6,7 @@ import { isIndexingAllowed } from "@/config/indexing";
 import { localizedPath } from "@/lib/i18n/config";
 import { getContentRobots } from "@/lib/seo/robots";
 import type { Locale, SeoMetadata, ContentStatus } from "@/types";
-import { locales } from "@/types/locale";
+import { localeConfigs, locales } from "@/types/locale";
 
 interface MetadataBaseOptions {
   /** Path without locale prefix, e.g. "/divisions/growth-marketing" */
@@ -66,7 +66,7 @@ export function createBrandingMetadata({
       description: desc,
       url: `${siteConfig.url}${localizedPath(path, locale)}`,
       siteName: siteConfig.name,
-      locale: locale === "es" ? "es_ES" : "en_US",
+      locale: localeConfigs[locale].ogLocale,
       type: "website",
     },
     twitter: { card: "summary_large_image", title: fullTitle, description: desc },
@@ -106,7 +106,7 @@ export function createSeoMetadata({
       description: ogDescription,
       url: `${siteConfig.url}${localizedPath(path, locale)}`,
       siteName: siteConfig.name,
-      locale: locale === "es" ? "es_ES" : "en_US",
+      locale: localeConfigs[locale].ogLocale,
       type,
       ...(seo.ogImage && { images: [{ url: seo.ogImage }] }),
     },

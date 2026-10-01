@@ -6,6 +6,8 @@ interface SectionHeaderProps {
   headline: string;
   description?: string;
   align?: "left" | "center";
+  /** Page heroes should pass "h1"; section intros keep default "h2". */
+  as?: "h1" | "h2";
   className?: string;
 }
 
@@ -14,6 +16,7 @@ export function SectionHeader({
   headline,
   description,
   align = "left",
+  as = "h2",
   className,
 }: SectionHeaderProps) {
   return (
@@ -26,8 +29,8 @@ export function SectionHeader({
     >
       {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
       <Heading
-        as="h2"
-        size="h2"
+        as={as}
+        size={as === "h1" ? "hero" : "h2"}
         className={cn("whitespace-pre-line text-balance", eyebrow && "mt-6 sm:mt-8 md:mt-10")}
       >
         {headline}

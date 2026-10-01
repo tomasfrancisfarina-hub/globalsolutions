@@ -33,6 +33,38 @@ export function getPageLabels(locale: Locale) {
     };
   }
 
+  if (locale === "de") {
+    return {
+      caseStudies: {
+        eyebrow: "Fallstudien",
+        title: "Ergebnisse, die sprechen",
+        description:
+          "Projekte, in denen Strategie, Umsetzung und angewandte Intelligenz messbare Wirkung erzielt haben.",
+        viewCase: "Fallstudie ansehen",
+        detailEyebrow: "Fallstudie",
+        challenge: "Die Herausforderung",
+        approach: "Unser Ansatz",
+        results: "Ergebnisse",
+      },
+      methodology: {
+        principlesTitle: "Prinzipien",
+      },
+      about: {
+        valuesTitle: "Werte",
+        testimonialsTitle: "Was unsere Kunden sagen",
+      },
+      service: {
+        eyebrow: "Service",
+        featuresTitle: "Was enthalten ist",
+      },
+      notFound: {
+        title: "Seite nicht gefunden",
+        description: "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+        back: "Zur Startseite",
+      },
+    };
+  }
+
   return {
     caseStudies: {
       eyebrow: "Case studies",

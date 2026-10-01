@@ -4,7 +4,7 @@ import { getDefaultConversion } from "@/content/shared/conversion";
 export const artificialIntelligence: Division = {
   id: "artificial-intelligence",
   slug: "artificial-intelligence",
-  name: "Artificial Intelligence",
+  name: "Inteligencia Artificial",
   tagline: "Inteligencia artificial aplicada a decisiones de negocio",
   description:
     "Integramos inteligencia artificial en los procesos empresariales para optimizar decisiones, automatizar operaciones y descubrir oportunidades de crecimiento. No vendemos tecnología — aplicamos IA donde genera valor real.",

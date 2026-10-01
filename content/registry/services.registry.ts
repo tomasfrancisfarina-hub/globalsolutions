@@ -3,6 +3,7 @@
  */
 
 import type { Service, ServiceSummary, Locale } from "@/types";
+import { locales } from "@/types/locale";
 import { getDefaultConversion } from "@/content/shared/conversion";
 
 const servicesEs: Service[] = [
@@ -300,7 +301,182 @@ const servicesEn: Service[] = [
   },
 ];
 
-const servicesByLocale: Record<Locale, Service[]> = { es: servicesEs, en: servicesEn };
+const servicesDe: Service[] = [
+  {
+    id: "marketing-digital",
+    slug: "digital-marketing",
+    name: "Digitales Marketing",
+    shortDescription:
+      "Integrierte Digital-Marketing-Strategien mit Fokus auf Unternehmenswachstum.",
+    fullDescription:
+      "Wir entwickeln Digital-Marketing-Strategien, die Geschäftsziele mit messbaren Ergebnissen verbinden — für Marktpräsenz und qualifizierte Gespräche mit Entscheidungsträgern.",
+    divisionId: "growth-marketing",
+    features: [
+      "Integrierte Digital-Marketing-Strategie",
+      "Multichannel-Planung",
+      "Markt- und Wettbewerbsanalyse",
+      "Datenbasierte Optimierung",
+      "KPI-Tracking und Reporting",
+    ],
+    faq: [
+      {
+        question: "Was umfasst eine Digital-Marketing-Strategie?",
+        answer:
+          "Marktanalyse, Zieldefinition, Kanalplanung, Kampagnenausführung und kontinuierliche datengestützte Optimierung.",
+      },
+    ],
+    order: 1,
+    seo: {
+      title: "Digital-Marketing-Beratung für Unternehmen",
+      description:
+        "Digital-Marketing-Beratung für wachstumsorientierte Unternehmen. Multichannel-Strategien, optimierte Kampagnen und messbare Ergebnisse.",
+      keywords: ["Digital Marketing Beratung", "Wachstumsmarketing", "Online-Marketing Strategie"],
+      markets: ["us", "eu", "ae"],
+    },
+    sem: {
+      conversionGoal: "consultation",
+      ctaText: "Digital-Marketing-Beratung anfragen",
+      markets: ["us", "eu"],
+    },
+    conversion: getDefaultConversion("de"),
+    locale: "de",
+  },
+  {
+    id: "google-ads",
+    slug: "google-ads",
+    name: "Google Ads",
+    shortDescription: "Google-Ads-Kampagnen optimiert auf Conversion und ROI.",
+    fullDescription:
+      "Wir steuern Google-Ads-Kampagnen mit Fokus auf Conversion und ROI — inklusive Landingpages, die Klicks in qualifizierte strategische Gespräche überführen.",
+    divisionId: "growth-marketing",
+    features: [
+      "Kontoaudit und Struktur",
+      "Keyword-Recherche",
+      "Conversion-optimierte Landingpages",
+      "Performance-Reporting",
+    ],
+    faq: [
+      {
+        question: "Welches Mindestbudget empfehlen Sie?",
+        answer:
+          "Wir empfehlen ein Mindestbudget von etwa 2.000 €/Monat, um aussagekräftige Daten zu gewinnen und Kampagnen wirksam zu optimieren.",
+      },
+    ],
+    order: 2,
+    seo: {
+      title: "Google Ads Management für Unternehmen",
+      description:
+        "Professionelles Google-Ads-Management. Conversion-optimierte Kampagnen mit messbarem ROI.",
+      keywords: ["Google Ads Management", "Google Ads Agentur", "PPC Beratung"],
+      markets: ["us", "eu", "ae"],
+    },
+    sem: {
+      conversionGoal: "consultation",
+      ctaText: "Google-Ads-Beratung anfragen",
+      markets: ["us", "eu"],
+    },
+    conversion: getDefaultConversion("de"),
+    locale: "de",
+  },
+  {
+    id: "seo",
+    slug: "seo",
+    name: "SEO",
+    shortDescription: "Organische Suchpositionierung für nachhaltiges Wachstum.",
+    fullDescription:
+      "Wir entwickeln SEO-Strategien, die Unternehmen in den Top-Suchergebnissen positionieren — für qualifizierten Traffic und kommerzielle Chancen.",
+    divisionId: "growth-marketing",
+    features: ["Technisches SEO-Audit", "Keyword-Recherche", "Content-Strategie", "Linkbuilding"],
+    order: 3,
+    seo: {
+      title: "SEO-Beratung für Unternehmen",
+      description:
+        "SEO-Beratung für Unternehmen. Organische Google-Positionierung und nachhaltiges Suchwachstum.",
+      keywords: ["SEO Beratung", "Unternehmens-SEO", "Suchmaschinenoptimierung"],
+      markets: ["us", "eu", "ae"],
+    },
+    sem: { conversionGoal: "consultation", ctaText: "SEO-Audit anfragen" },
+    conversion: getDefaultConversion("de"),
+    locale: "de",
+  },
+  {
+    id: "inteligencia-artificial",
+    slug: "artificial-intelligence",
+    name: "Künstliche Intelligenz",
+    shortDescription: "KI für Geschäftsprozesse und Entscheidungen.",
+    fullDescription:
+      "Wir integrieren KI in Geschäftsprozesse, um Abläufe zu optimieren und Chancen zu erkennen — praxisnah, ergebnisorientiert, nie experimentell um der Innovation willen.",
+    divisionId: "artificial-intelligence",
+    features: ["KI-Potenzialanalyse", "Lösungsimplementierung", "Prozessautomatisierung"],
+    order: 4,
+    seo: {
+      title: "KI-Beratung für Unternehmen",
+      description:
+        "KI-Beratung für Unternehmen. Implementierung, Automatisierung und strategische Optimierung.",
+      keywords: ["KI Beratung", "Künstliche Intelligenz Unternehmen", "Enterprise AI"],
+      markets: ["us", "eu", "ae"],
+    },
+    sem: {
+      conversionGoal: "consultation",
+      ctaText: "KI-Beratung anfragen",
+      markets: ["us", "ae"],
+    },
+    conversion: getDefaultConversion("de"),
+    locale: "de",
+  },
+  {
+    id: "consultoria-empresarial",
+    slug: "business-consulting",
+    name: "Unternehmensberatung",
+    shortDescription: "Strategische Beratung für Führungskräfte.",
+    fullDescription:
+      "Wir unterstützen Führungskräfte bei strategischen Entscheidungen und Wachstumsplänen. Beratung mit Fokus auf Ergebnisse, nicht auf Berichte.",
+    divisionId: "business-consulting",
+    features: ["Geschäftsdiagnose", "Strategische Planung", "Umsetzungsbegleitung"],
+    order: 5,
+    seo: {
+      title: "Unternehmensberatung — Strategische Advisory",
+      description:
+        "Unternehmensberatung für Führungskräfte. Strategie, Planung und Wachstumsberatung.",
+      keywords: ["Unternehmensberatung", "Management Consulting", "Strategische Beratung"],
+      markets: ["us", "eu", "ae"],
+    },
+    sem: { conversionGoal: "consultation", ctaText: "Unternehmensberatung vereinbaren" },
+    conversion: getDefaultConversion("de"),
+    locale: "de",
+  },
+  {
+    id: "expansion-internacional",
+    slug: "international-expansion",
+    name: "Internationale Expansion",
+    shortDescription: "Beratung für den Markteintritt im Ausland.",
+    fullDescription:
+      "Wir begleiten internationale Expansion mit bewährter Methodik — Analyse, Markteintrittsstrategie und operative Umsetzung.",
+    divisionId: "international-expansion",
+    features: ["Marktanalyse", "Markteintrittsstrategie", "Operative Umsetzung"],
+    order: 6,
+    seo: {
+      title: "Beratung für internationale Expansion",
+      description:
+        "Beratung für internationale Expansion in globale Märkte einschließlich USA, Europa und VAE.",
+      keywords: ["internationale Expansion Beratung", "globaler Markteintritt"],
+      markets: ["us", "eu", "ae"],
+    },
+    sem: {
+      conversionGoal: "consultation",
+      ctaText: "Internationale Expansion besprechen",
+      markets: ["us", "ae"],
+    },
+    conversion: getDefaultConversion("de"),
+    locale: "de",
+  },
+];
+
+const servicesByLocale: Record<Locale, Service[]> = {
+  es: servicesEs,
+  en: servicesEn,
+  de: servicesDe,
+};
 
 export function getAllServices(locale: Locale): Service[] {
   return [...(servicesByLocale[locale] ?? servicesByLocale.en)].sort((a, b) => a.order - b.order);
@@ -326,7 +502,7 @@ export function getAllServiceSlugs(locale: Locale): string[] {
 
 export function getAllServiceParams(): { locale: Locale; slug: string }[] {
   const params: { locale: Locale; slug: string }[] = [];
-  for (const locale of ["es", "en"] as Locale[]) {
+  for (const locale of locales) {
     for (const slug of getAllServiceSlugs(locale)) {
       params.push({ locale, slug });
     }

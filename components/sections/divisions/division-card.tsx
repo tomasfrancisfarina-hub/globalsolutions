@@ -5,6 +5,7 @@ import {
   type DivisionCardVariant,
 } from "@/config/visual-assets";
 import { localizedPath } from "@/lib/i18n/config";
+import { getUiCopy } from "@/lib/i18n/ui-copy";
 import type { DivisionSummary, Locale } from "@/types";
 import { cn } from "@/lib/utils";
 
@@ -29,7 +30,7 @@ export function DivisionCard({
   variant = "large",
   className,
 }: DivisionCardProps) {
-  const viewLabel = locale === "es" ? "Ver división" : "View division";
+  const viewLabel = getUiCopy(locale).viewDivision;
   const visual = getDivisionVisual(division.slug);
   const number = String(index + 1).padStart(2, "0");
   const isAiVideoCard = division.slug === "artificial-intelligence";

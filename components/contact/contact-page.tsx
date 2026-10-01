@@ -2,6 +2,7 @@ import { Container, Section, Eyebrow, Heading, Text } from "@/components/ui";
 import { ContactForm } from "@/components/contact/contact-form";
 import { SlideUp } from "@/components/motion";
 import { siteConfig } from "@/config/site";
+import { getUiCopy } from "@/lib/i18n/ui-copy";
 import type { ContactContent, Locale } from "@/types";
 
 interface ContactPageContentProps {
@@ -10,7 +11,7 @@ interface ContactPageContentProps {
 }
 
 export function ContactPageContent({ content, locale }: ContactPageContentProps) {
-  const isEs = locale === "es";
+  const ui = getUiCopy(locale);
 
   return (
     <Section spacing="hero">
@@ -26,7 +27,7 @@ export function ContactPageContent({ content, locale }: ContactPageContentProps)
             </Text>
             <div className="mt-8 space-y-3 break-words text-[15px] text-muted sm:mt-10">
               <p>
-                <span className="text-subtle">{isEs ? "Email" : "Email"}:</span>{" "}
+                <span className="text-subtle">{ui.emailLabel}:</span>{" "}
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
                   className="text-foreground transition-opacity hover:opacity-70"
@@ -35,7 +36,7 @@ export function ContactPageContent({ content, locale }: ContactPageContentProps)
                 </a>
               </p>
               <p>
-                <span className="text-subtle">LinkedIn:</span>{" "}
+                <span className="text-subtle">{ui.linkedInLabel}:</span>{" "}
                 <a
                   href={siteConfig.social.linkedin}
                   className="text-foreground transition-opacity hover:opacity-70"
@@ -46,8 +47,7 @@ export function ContactPageContent({ content, locale }: ContactPageContentProps)
                 </a>
               </p>
               <p>
-                <span className="text-subtle">{isEs ? "Alcance" : "Reach"}:</span>{" "}
-                {isEs ? "Estados Unidos · Europa · Dubái" : "United States · Europe · Dubai"}
+                <span className="text-subtle">{ui.reachLabel}:</span> {ui.reachValue}
               </p>
             </div>
           </SlideUp>

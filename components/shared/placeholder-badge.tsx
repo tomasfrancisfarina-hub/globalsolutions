@@ -1,17 +1,18 @@
 import { cn } from "@/lib/utils";
-import type { ContentStatus } from "@/types";
+import { getUiCopy } from "@/lib/i18n/ui-copy";
+import type { ContentStatus, Locale } from "@/types";
 
 interface PlaceholderBadgeProps {
   status?: ContentStatus;
   className?: string;
-  locale?: "es" | "en";
+  locale?: Locale;
 }
 
 /** Visible marker for temporary content — remove when status is 'published' */
 export function PlaceholderBadge({ status, className, locale = "en" }: PlaceholderBadgeProps) {
   if (status !== "placeholder") return null;
 
-  const label = locale === "es" ? "Contenido placeholder" : "Placeholder content";
+  const label = getUiCopy(locale).placeholderBadge;
 
   return (
     <span

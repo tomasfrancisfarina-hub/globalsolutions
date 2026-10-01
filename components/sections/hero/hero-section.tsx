@@ -14,6 +14,7 @@ interface HeroSectionProps {
 const marketLine = {
   es: "Estados Unidos · Europa · Dubái",
   en: "United States · Europe · Dubai",
+  de: "Vereinigte Staaten · Europa · Dubai",
 };
 
 export function HeroSection({ content, locale }: HeroSectionProps) {

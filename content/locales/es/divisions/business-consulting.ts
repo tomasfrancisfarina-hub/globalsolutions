@@ -4,7 +4,7 @@ import { getDefaultConversion } from "@/content/shared/conversion";
 export const businessConsulting: Division = {
   id: "business-consulting",
   slug: "business-consulting",
-  name: "Business Consulting",
+  name: "Consultoría de Negocio",
   tagline: "Consultoría estratégica para empresas en crecimiento",
   description:
     "Acompañamos a directivos y equipos directivos en la toma de decisiones estratégicas, la optimización de procesos y el desarrollo de nuevas líneas de negocio. Nuestro enfoque combina análisis riguroso con ejecución práctica.",

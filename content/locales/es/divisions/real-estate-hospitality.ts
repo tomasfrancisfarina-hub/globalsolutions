@@ -4,7 +4,7 @@ import { getDefaultConversion } from "@/content/shared/conversion";
 export const realEstateHospitality: Division = {
   id: "real-estate-hospitality",
   slug: "real-estate-hospitality",
-  name: "Real Estate & Hospitality",
+  name: "Inmobiliario y Hospitalidad",
   tagline: "Desarrollo y gestión de activos inmobiliarios y hospitalidad",
   description:
     "Asesoramos en el desarrollo, adquisición y gestión de activos inmobiliarios y proyectos de hospitalidad. Combinamos análisis de mercado, viabilidad financiera y estrategia operativa para maximizar el valor de cada activo.",

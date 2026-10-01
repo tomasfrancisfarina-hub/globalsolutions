@@ -11,12 +11,12 @@ export const navigation: Navigation = {
     {
       title: "Divisiones",
       links: [
-        { label: "Growth & Marketing", href: "/divisions/growth-marketing" },
-        { label: "Artificial Intelligence", href: "/divisions/artificial-intelligence" },
-        { label: "Business Consulting", href: "/divisions/business-consulting" },
-        { label: "International Expansion", href: "/divisions/international-expansion" },
-        { label: "Investment & Ventures", href: "/divisions/investment-ventures" },
-        { label: "Real Estate & Hospitality", href: "/divisions/real-estate-hospitality" },
+        { label: "Crecimiento y Marketing", href: "/divisions/growth-marketing" },
+        { label: "Inteligencia Artificial", href: "/divisions/artificial-intelligence" },
+        { label: "Consultoría de Negocio", href: "/divisions/business-consulting" },
+        { label: "Expansión Internacional", href: "/divisions/international-expansion" },
+        { label: "Inversión y Ventures", href: "/divisions/investment-ventures" },
+        { label: "Inmobiliario y Hospitalidad", href: "/divisions/real-estate-hospitality" },
       ],
     },
     {
@@ -31,8 +31,8 @@ export const navigation: Navigation = {
     {
       title: "Legal",
       links: [
-        { label: "Impressum", href: "/impressum" },
-        { label: "Datenschutz", href: "/datenschutz" },
+        { label: "Aviso legal (Impressum)", href: "/impressum" },
+        { label: "Protección de datos (Datenschutz)", href: "/datenschutz" },
         { label: "Política de privacidad", href: "/privacy" },
         { label: "Términos de uso", href: "/terms" },
       ],

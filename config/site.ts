@@ -14,7 +14,7 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://globalsolutions.com",
   locale: "es",
   defaultLocale: "en" as const,
-  locales: ["es", "en"] as const,
+  locales: ["es", "en", "de"] as const,
   contact: {
     email: "info@globalsolutionsworldwide.com",
     phone: "",

@@ -26,6 +26,7 @@ export function AboutPageContent({
               eyebrow={content.hero.eyebrow}
               headline={content.hero.headline}
               description={content.hero.description}
+              as="h1"
             />
           </SlideUp>
         </Container>
