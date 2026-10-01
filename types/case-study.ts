@@ -20,6 +20,11 @@ export interface CaseStudy {
   results: Metric[];
   /** Optional index-card highlight when different from results[0] */
   teaser?: Metric;
+  /** Informational external reference. Not a client endorsement. */
+  referenceLink?: {
+    href: string;
+    label: string;
+  };
   featured: boolean;
   locale: Locale;
   status: ContentStatus;

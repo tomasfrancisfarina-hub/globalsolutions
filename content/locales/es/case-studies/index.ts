@@ -91,3 +91,48 @@ export const moralesEstates: CaseStudy = {
       "Una presencia digital premium diseñada para captar propiedades de alto valor y generar nuevas oportunidades inmobiliarias.",
   },
 };
+
+export const mTwoClubMallorca: CaseStudy = {
+  id: "m-two-club-mallorca",
+  slug: "m-two-club-mallorca",
+  client: "M TWO Club Mallorca",
+  industry: "Hospitalidad / Nightlife",
+  divisionId: "growth-marketing",
+  challenge:
+    "M TWO Club Mallorca, la discoteca de mayor exclusividad de la isla, necesitaba que su universo —lounge, cócteles, clubbing, DJs, eventos y acceso VIP en Port d’Andratx— llegara con precisión durante la temporada y acompañara su expansión internacional. El reto era conectar promoción, colaboraciones y programación para llenar la sala con la audiencia correcta.",
+  approach:
+    "Durante la temporada desarrollamos campañas de publicidad de forma continua. Como ejemplo, una campaña de reconocimiento presentó la noche de M TWO —el cartel, las colaboraciones y los formatos de evento— ante una audiencia amplia y afinada, con 98.311 personas alcanzadas y 184.260 impresiones a partir de 150 € de inversión. La estrategia mantuvo unidas la promoción, las marcas colaboradoras y la programación, con el mismo nivel de exigencia que la experiencia en sala. En una campaña independiente, el enlace generó 989 clics a 0,12 € por clic. A lo largo de esa etapa, el club sumó numerosas noches a sala llena, nuevas marcas colaboradoras, DJs y formatos de evento.",
+  results: [
+    {
+      value: "98.311",
+      label: "Personas alcanzadas en una campaña de reconocimiento",
+    },
+    {
+      value: "184.260",
+      label: "Impresiones con una inversión de 150 €",
+    },
+    {
+      value: "Sala llena",
+      label: "Noches completas, nuevas marcas colaboradoras, DJs y formatos de evento",
+    },
+  ],
+  teaser: {
+    value: "98.311",
+    label: "Personas alcanzadas en una campaña de reconocimiento con 150 €",
+  },
+  referenceLink: {
+    href: "https://m-two.club/",
+    label: "Ver sitio oficial de M TWO",
+  },
+  featured: true,
+  locale: "es",
+  status: "published",
+  seo: {
+    title: "Caso de éxito — M TWO Club Mallorca",
+    description:
+      "Campaña de reconocimiento para M TWO Club Mallorca: 98.311 personas alcanzadas y 184.260 impresiones con 150 € de inversión.",
+    ogTitle: "M TWO Club Mallorca — Reconocimiento y sala llena",
+    ogDescription:
+      "Cómo la publicidad de temporada conectó promoción, colaboraciones y programación en la discoteca más exclusiva de Mallorca.",
+  },
+};

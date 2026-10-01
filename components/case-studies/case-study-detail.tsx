@@ -1,4 +1,4 @@
-import { Container, Section, Eyebrow, Heading, Text } from "@/components/ui";
+import { Container, Section, Eyebrow, Heading, Text, CustomLink } from "@/components/ui";
 import { PlaceholderBadge } from "@/components/shared/placeholder-badge";
 import { ConversionCta } from "@/components/shared/conversion-cta";
 import { SlideUp, StaggerContainer, StaggerItem } from "@/components/motion";
@@ -33,6 +33,15 @@ export function CaseStudyDetail({ caseStudy, locale, labels }: CaseStudyDetailPr
               <Text variant="lead" className="mt-4">
                 {caseStudy.industry}
               </Text>
+              {caseStudy.referenceLink && (
+                <CustomLink
+                  href={caseStudy.referenceLink.href}
+                  external
+                  className="mt-6 inline-block text-sm text-subtle"
+                >
+                  {caseStudy.referenceLink.label}
+                </CustomLink>
+              )}
             </div>
           </SlideUp>
         </Container>

@@ -91,3 +91,48 @@ export const moralesEstates: CaseStudy = {
       "Eine digitale Premium-Präsenz, entwickelt zur Gewinnung hochwertiger Immobilien und zur Generierung neuer Immobilienchancen.",
   },
 };
+
+export const mTwoClubMallorca: CaseStudy = {
+  id: "m-two-club-mallorca",
+  slug: "m-two-club-mallorca",
+  client: "M TWO Club Mallorca",
+  industry: "Hospitality / Nightlife",
+  divisionId: "growth-marketing",
+  challenge:
+    "M TWO Club Mallorca, der exklusivste Club der Insel, musste sein Universum — Lounge, Cocktails, Clubbing, DJs, Events und VIP-Zugang in Port d’Andratx — während der Saison präzise erreichen und seine internationale Expansion begleiten. Die Aufgabe war, Promotion, Kooperationen und Programm so zu verbinden, dass der Raum mit dem richtigen Publikum gefüllt wurde.",
+  approach:
+    "Während der Saison haben wir fortlaufend Werbekampagnen umgesetzt. Als Beispiel stellte eine Awareness-Kampagne die Nacht von M TWO — Line-up, Kooperationen und Eventformate — einem breiten und präzisen Publikum vor: 98.311 erreichte Personen und 184.260 Impressionen bei einer Investition von 150 €. Die Strategie hielt Promotion, Partnermarken und Programm auf dem Niveau des Raums selbst. Eine eigenständige Kampagne erzielte 989 Link-Klicks bei 0,12 € pro Klick. In dieser Phase verzeichnete der Club zahlreiche ausverkaufte Nächte, neue Partnermarken, DJs und Eventformate.",
+  results: [
+    {
+      value: "98.311",
+      label: "Erreichte Personen in einer Awareness-Kampagne",
+    },
+    {
+      value: "184.260",
+      label: "Impressionen bei einer Investition von 150 €",
+    },
+    {
+      value: "Ausverkauft",
+      label: "Volle Nächte, neue Partnermarken, DJs und Eventformate",
+    },
+  ],
+  teaser: {
+    value: "98.311",
+    label: "Erreichte Personen in einer Awareness-Kampagne mit 150 €",
+  },
+  referenceLink: {
+    href: "https://m-two.club/",
+    label: "Offizielle Website von M TWO",
+  },
+  featured: true,
+  locale: "de",
+  status: "published",
+  seo: {
+    title: "Fallstudie — M TWO Club Mallorca",
+    description:
+      "Awareness-Kampagne für M TWO Club Mallorca: 98.311 erreichte Personen und 184.260 Impressionen bei einer Investition von 150 €.",
+    ogTitle: "M TWO Club Mallorca — Reichweite und voller Raum",
+    ogDescription:
+      "Wie saisonale Werbung Promotion, Kooperationen und Programm im exklusivsten Club Mallorcas verbunden hat.",
+  },
+};
