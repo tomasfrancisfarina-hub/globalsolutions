@@ -164,7 +164,6 @@ export const tecnologiaDrones: CaseStudy = {
     },
     { value: "24.723", label: "Impresiones de la campaña" },
     { value: "20.949", label: "Reproducciones de vídeo" },
-    { value: "3 s", label: "Tiempo medio de reproducción" },
     { value: "26 %", label: "Captura inicial del vídeo" },
     { value: "46,7 %", label: "Retención de vídeo reportada" },
   ],

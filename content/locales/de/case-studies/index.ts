@@ -164,7 +164,6 @@ export const tecnologiaDrones: CaseStudy = {
     },
     { value: "24.723", label: "Impressionen der Kampagne" },
     { value: "20.949", label: "Videoaufrufe" },
-    { value: "3 Sek.", label: "Durchschnittliche Wiedergabezeit" },
     { value: "26 %", label: "Initiale Video-Capture-Rate" },
     { value: "46,7 %", label: "Berichtete Videoretention" },
   ],

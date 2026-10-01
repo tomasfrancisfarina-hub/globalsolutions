@@ -164,7 +164,6 @@ export const tecnologiaDrones: CaseStudy = {
     },
     { value: "24,723", label: "Campaign impressions" },
     { value: "20,949", label: "Video plays" },
-    { value: "3 sec", label: "Average play time" },
     { value: "26%", label: "Initial video capture rate" },
     { value: "46.7%", label: "Reported video retention" },
   ],
