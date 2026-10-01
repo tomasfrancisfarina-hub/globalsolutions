@@ -6,12 +6,22 @@
   "redirects": [
     {
       "source": "/:locale(es|en)/case-studies/francisco-sanchez",
-      "destination": "/:locale/case-studies/david",
+      "destination": "/:locale/case-studies/morales-estates",
       "permanent": true
     },
     {
       "source": "/case-studies/francisco-sanchez",
-      "destination": "/es/case-studies/david",
+      "destination": "/es/case-studies/morales-estates",
+      "permanent": true
+    },
+    {
+      "source": "/:locale(es|en)/case-studies/david",
+      "destination": "/:locale/case-studies/morales-estates",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/david",
+      "destination": "/es/case-studies/morales-estates",
       "permanent": true
     }
   ]

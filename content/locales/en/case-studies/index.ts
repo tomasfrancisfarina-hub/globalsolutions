@@ -50,10 +50,10 @@ export const dominicM: CaseStudy = {
   },
 };
 
-export const david: CaseStudy = {
-  id: "david",
-  slug: "david",
-  client: "David",
+export const moralesEstates: CaseStudy = {
+  id: "morales-estates",
+  slug: "morales-estates",
+  client: "Morales Estates",
   industry: "Real Estate / Positioning",
   divisionId: "real-estate-hospitality",
   challenge:
@@ -83,10 +83,10 @@ export const david: CaseStudy = {
   locale: "en",
   status: "published",
   seo: {
-    title: "Case Study — David · Real Estate and Positioning",
+    title: "Case Study — Morales Estates · Real Estate and Positioning",
     description:
       "Web development and positioning strategy focused on capturing and presenting real estate properties worth several million euros.",
-    ogTitle: "David — Real Estate and Positioning",
+    ogTitle: "Morales Estates — Real Estate and Positioning",
     ogDescription:
       "A premium digital presence designed to capture high-value properties and generate new real estate opportunities.",
   },
