@@ -1,5 +1,10 @@
 import { siteConfig } from "@/config/site";
 import { getAllCaseStudySlugs, getCaseStudyBySlug } from "@/content/registry/case-studies.registry";
+import { getAllCaseStudySectorSlugs } from "@/content/registry/case-study-sectors.registry";
+import {
+  getAllPortfolioProjectSlugs,
+  getPortfolioProjectBySlug,
+} from "@/content/registry/portfolio-projects.registry";
 import { isIndexableContent } from "@/lib/seo/robots";
 import { getAllDivisionSlugs } from "@/content/registry/divisions.registry";
 import { getAllServiceSlugs } from "@/content/registry/services.registry";
@@ -64,10 +69,30 @@ export function generateSitemapEntries(locale: Locale): SitemapEntry[] {
     });
   }
 
-  // Case study pages — exclude placeholders until published
+  // Case study sector hubs
+  for (const slug of getAllCaseStudySectorSlugs()) {
+    entries.push({
+      url: `${base}${localizedPath(`/case-studies/${slug}`, locale)}`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    });
+  }
+
+  // Visual portfolio projects (listed only)
+  for (const slug of getAllPortfolioProjectSlugs()) {
+    const project = getPortfolioProjectBySlug(slug, locale);
+    if (!project || !project.listed) continue;
+    entries.push({
+      url: `${base}${localizedPath(`/case-studies/${slug}`, locale)}`,
+      changeFrequency: "monthly",
+      priority: 0.78,
+    });
+  }
+
+  // Individual case study pages — only when listed inside a sector
   for (const slug of getAllCaseStudySlugs()) {
     const cs = getCaseStudyBySlug(slug, locale);
-    if (!cs || !isIndexableContent(cs.status)) continue;
+    if (!cs || !isIndexableContent(cs.status) || cs.listed !== true) continue;
     entries.push({
       url: `${base}${localizedPath(`/case-studies/${slug}`, locale)}`,
       changeFrequency: "monthly",

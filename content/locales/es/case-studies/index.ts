@@ -1,61 +1,13 @@
 import type { CaseStudy } from "@/types";
 
-export const edgarL: CaseStudy = {
-  id: "edgar-l",
-  slug: "edgar-l",
-  client: "Edgar L.",
-  industry: "Hospitalidad / Desarrollo de marca",
-  divisionId: "real-estate-hospitality",
-  challenge:
-    "Un proyecto de hospitalidad necesitaba reforzar su identidad de marca y definir una dirección de crecimiento más clara en un mercado competitivo.",
-  approach:
-    "Posicionamiento estratégico y transformación digital para crear una identidad de marca más sólida y una dirección de crecimiento más clara.",
-  results: [
-    { value: "Crecimiento de marca", label: "Emprendedor en hospitalidad" },
-    { value: "Identidad", label: "Marca más sólida y diferenciada" },
-    { value: "Dirección", label: "Estrategia de crecimiento definida" },
-  ],
-  featured: true,
-  locale: "es",
-  status: "published",
-  seo: {
-    title: "Caso de éxito — Edgar L. · Hospitalidad",
-    description:
-      "Posicionamiento estratégico y transformación digital para un proyecto de hospitalidad.",
-  },
-};
-
-export const dominicM: CaseStudy = {
-  id: "dominic-m",
-  slug: "dominic-m",
-  client: "Dominic M.",
-  industry: "Hospitalidad / Lifestyle",
-  divisionId: "real-estate-hospitality",
-  challenge:
-    "Un concepto de hospitalidad y lifestyle requería elevar su propuesta, fortalecer su presencia en el mercado y construir valor sostenible.",
-  approach:
-    "Consultoría estratégica y desarrollo de marca enfocados en elevar el concepto, fortalecer su presencia en el mercado y construir valor a largo plazo.",
-  results: [
-    { value: "Posicionamiento premium", label: "Emprendedor en hospitalidad y lifestyle" },
-    { value: "Concepto", label: "Propuesta elevada con mayor claridad" },
-    { value: "Valor", label: "Presencia de mercado fortalecida" },
-  ],
-  featured: true,
-  locale: "es",
-  status: "published",
-  seo: {
-    title: "Caso de éxito — Dominic M. · Hospitalidad & Lifestyle",
-    description:
-      "Consultoría estratégica y desarrollo de marca para posicionamiento premium en hospitalidad.",
-  },
-};
-
 export const moralesEstates: CaseStudy = {
   id: "morales-estates",
   slug: "morales-estates",
   client: "Morales Estates",
   industry: "Real Estate / Posicionamiento",
   divisionId: "real-estate-hospitality",
+  sectorId: "real-estate-investment",
+  listed: false,
   challenge:
     "Una nueva propuesta inmobiliaria necesitaba construir una presencia digital sólida y profesional, capaz de posicionarse en el segmento premium y generar confianza tanto entre propietarios como entre compradores internacionales.",
   approach:
@@ -98,6 +50,8 @@ export const mTwoClubMallorca: CaseStudy = {
   client: "M TWO Club Mallorca",
   industry: "Hospitalidad / Nightlife",
   divisionId: "growth-marketing",
+  sectorId: "nightlife-clubs",
+  listed: false,
   challenge:
     "M TWO Club Mallorca, la discoteca de mayor exclusividad de la isla, necesitaba que su universo —lounge, cócteles, clubbing, DJs, eventos y acceso VIP en Port d’Andratx— llegara con precisión durante la temporada y acompañara su expansión internacional. El reto era conectar promoción, colaboraciones y programación para llenar la sala con la audiencia correcta.",
   approach:
@@ -143,6 +97,8 @@ export const tecnologiaDrones: CaseStudy = {
   client: "Tecnología y drones internacional",
   industry: "Tecnología industrial / Soluciones aéreas",
   divisionId: "growth-marketing",
+  sectorId: "drones-aerial-production",
+  listed: false,
   headings: {
     challenge: "Contexto",
     approach: "Trabajo realizado",

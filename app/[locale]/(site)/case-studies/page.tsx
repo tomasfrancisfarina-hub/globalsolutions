@@ -1,5 +1,5 @@
 import { CaseStudiesIndex } from "@/components/case-studies";
-import { getCaseStudySummaries } from "@/content/registry/case-studies.registry";
+import { getAllCaseStudySectors } from "@/content/registry/case-study-sectors.registry";
 import { getPageLabels } from "@/lib/content/page-labels";
 import { createSeoMetadata } from "@/lib/seo";
 import { locales, type Locale } from "@/types/locale";
@@ -16,13 +16,30 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const loc = locale as Locale;
+  const title =
+    loc === "es"
+      ? "Casos de Éxito — Por sector"
+      : loc === "de"
+        ? "Fallstudien — Nach Sektor"
+        : "Case Studies — By sector";
+  const description =
+    loc === "es"
+      ? "Casos de éxito de Global Solutions organizados por sector: gastronomía, nightlife, cultura, belleza, turismo, inmobiliario, drones y música."
+      : loc === "de"
+        ? "Fallstudien von Global Solutions nach Sektor: Gastronomie, Nachtleben, Kultur, Beauty, Tourismus, Immobilien, Drohnen und Musik."
+        : "Global Solutions case studies by sector: food & beverage, nightlife, culture, beauty, travel, real estate, drones, and music.";
+  const keywords =
+    loc === "es"
+      ? ["casos de éxito consultoría", "gastronomía", "inmobiliario", "turismo"]
+      : loc === "de"
+        ? ["fallstudien consulting", "gastronomie", "immobilien", "tourismus"]
+        : ["consulting case studies", "food and beverage", "real estate", "travel"];
+
   return createSeoMetadata({
     seo: {
-      title: loc === "es" ? "Casos de Éxito — Resultados de Crecimiento" : "Case Studies — Growth Results",
-      description: loc === "es"
-        ? "Casos de éxito en consultoría de crecimiento empresarial."
-        : "Case studies in business growth consulting.",
-      keywords: loc === "es" ? ["casos de éxito consultoría"] : ["consulting case studies"],
+      title,
+      description,
+      keywords,
       markets: ["us", "eu", "ae"],
     },
     path: "/case-studies",
@@ -41,8 +58,9 @@ export default async function CaseStudiesPage({ params }: Props) {
       eyebrow={labels.caseStudies.eyebrow}
       title={labels.caseStudies.title}
       description={labels.caseStudies.description}
-      caseStudies={getCaseStudySummaries(loc)}
-      viewLabel={labels.caseStudies.viewCase}
+      sectors={getAllCaseStudySectors(loc)}
+      sectorEyebrow={labels.caseStudies.sectorEyebrow}
+      viewLabel={labels.caseStudies.viewSector}
     />
   );
 }

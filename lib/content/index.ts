@@ -31,10 +31,26 @@ export {
   getAllCaseStudies,
   getFeaturedCaseStudies,
   getCaseStudyBySlug,
+  getCaseStudiesBySector,
   getCaseStudySummaries,
   getAllCaseStudySlugs,
   getAllCaseStudyParams,
 } from "@/content/registry/case-studies.registry";
+
+export {
+  getAllCaseStudySectors,
+  getCaseStudySectorBySlug,
+  getAllCaseStudySectorSlugs,
+  getAllCaseStudySectorParams,
+} from "@/content/registry/case-study-sectors.registry";
+
+export {
+  getAllPortfolioProjects,
+  getPortfolioProjectBySlug,
+  getListedPortfolioProjectsBySector,
+  getAllPortfolioProjectSlugs,
+  getAllPortfolioProjectParams,
+} from "@/content/registry/portfolio-projects.registry";
 
 export {
   getHomeContent,

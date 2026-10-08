@@ -6,33 +6,27 @@ import type { CaseStudy, CaseStudySummary, Locale } from "@/types";
 import { locales } from "@/types/locale";
 
 import {
-  edgarL as edgarLEs,
-  dominicM as dominicMEs,
   moralesEstates as moralesEstatesEs,
   mTwoClubMallorca as mTwoClubMallorcaEs,
   tecnologiaDrones as tecnologiaDronesEs,
 } from "@/content/locales/es/case-studies/index";
 
 import {
-  edgarL as edgarLEn,
-  dominicM as dominicMEn,
   moralesEstates as moralesEstatesEn,
   mTwoClubMallorca as mTwoClubMallorcaEn,
   tecnologiaDrones as tecnologiaDronesEn,
 } from "@/content/locales/en/case-studies/index";
 
 import {
-  edgarL as edgarLDe,
-  dominicM as dominicMDe,
   moralesEstates as moralesEstatesDe,
   mTwoClubMallorca as mTwoClubMallorcaDe,
   tecnologiaDrones as tecnologiaDronesDe,
 } from "@/content/locales/de/case-studies/index";
 
 const byLocale: Record<Locale, CaseStudy[]> = {
-  es: [edgarLEs, dominicMEs, moralesEstatesEs, mTwoClubMallorcaEs, tecnologiaDronesEs],
-  en: [edgarLEn, dominicMEn, moralesEstatesEn, mTwoClubMallorcaEn, tecnologiaDronesEn],
-  de: [edgarLDe, dominicMDe, moralesEstatesDe, mTwoClubMallorcaDe, tecnologiaDronesDe],
+  es: [moralesEstatesEs, mTwoClubMallorcaEs, tecnologiaDronesEs],
+  en: [moralesEstatesEn, mTwoClubMallorcaEn, tecnologiaDronesEn],
+  de: [moralesEstatesDe, mTwoClubMallorcaDe, tecnologiaDronesDe],
 };
 
 export function getAllCaseStudies(locale: Locale): CaseStudy[] {
@@ -47,14 +41,39 @@ export function getCaseStudyBySlug(slug: string, locale: Locale): CaseStudy | un
   return getAllCaseStudies(locale).find((c) => c.slug === slug);
 }
 
+export function getCaseStudiesBySector(
+  sectorId: string,
+  locale: Locale,
+  options?: { listedOnly?: boolean },
+): CaseStudy[] {
+  const listedOnly = options?.listedOnly ?? true;
+  return getAllCaseStudies(locale).filter(
+    (c) => c.sectorId === sectorId && (!listedOnly || c.listed === true),
+  );
+}
+
 export function getCaseStudySummaries(locale: Locale): CaseStudySummary[] {
   return getAllCaseStudies(locale).map(
-    ({ id, slug, client, industry, divisionId, featured, results, teaser, status }) => ({
+    ({
       id,
       slug,
       client,
       industry,
       divisionId,
+      sectorId,
+      listed,
+      featured,
+      results,
+      teaser,
+      status,
+    }) => ({
+      id,
+      slug,
+      client,
+      industry,
+      divisionId,
+      sectorId,
+      listed,
       featured,
       results,
       teaser,

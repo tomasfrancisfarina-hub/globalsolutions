@@ -11,6 +11,104 @@ export interface Metric {
   emphasis?: boolean;
 }
 
+/** Sector hub that groups case studies without exposing them until ready */
+export interface CaseStudySector {
+  id: string;
+  slug: string;
+  name: string;
+  description: string;
+  /** Short line for the sector card highlight */
+  highlight: string;
+  locale: Locale;
+  order: number;
+  seo: {
+    title: string;
+    description: string;
+    ogTitle?: string;
+    ogDescription?: string;
+  };
+}
+
+/**
+ * Visual portfolio project for Refokus-style sector galleries.
+ * Media paths are replaceable; omit src until the final asset is approved.
+ */
+export interface PortfolioProjectMedia {
+  type: "image" | "video";
+  /** Public path under /public — leave undefined until the final asset is ready */
+  src?: string;
+  /** Optional poster for video */
+  poster?: string;
+  alt: string;
+  /** Dev-only placeholder label when src is missing */
+  pendingLabel?: string;
+  aspect?: "16/9" | "4/3" | "1/1" | "3/4" | "auto";
+  fit?: "cover" | "contain";
+}
+
+export interface PortfolioProjectMetric {
+  value: number;
+  label: string;
+  /** Exact display string if formatting differs from locale number */
+  display?: string;
+}
+
+export interface PortfolioProjectMoment {
+  id: string;
+  title: string;
+  body: string;
+  pending?: boolean;
+}
+
+export interface PortfolioCaseImage {
+  id: string;
+  /** Suggested filename under public/case-studies/{slug}/ */
+  filename: string;
+  alt: string;
+  src?: string;
+  aspect?: "16/9" | "4/3" | "1/1" | "3/4" | "auto";
+}
+
+export interface PortfolioProject {
+  id: string;
+  slug: string;
+  sectorId: string;
+  name: string;
+  location: string;
+  locale: Locale;
+  listed: boolean;
+  /** Short description for the work listing (1–2 lines) */
+  summary?: string;
+  summaryPending?: boolean;
+  /** Service tags — omit or mark pending when not confirmed */
+  services?: string[];
+  servicesPending?: boolean;
+  /** Primary 16:9 stage */
+  primary: PortfolioProjectMedia;
+  /** Supporting media shown beside the primary on unfold (1–2) */
+  supports: PortfolioProjectMedia[];
+  /** Unfold media grid: equal columns, or wider primary (Refokus Santa Ruta layout) */
+  mediaLayout?: "equal" | "wide-primary";
+  /** Public client links shown on listing + detail */
+  links?: {
+    website?: string;
+    instagram?: string;
+  };
+  /** Detail-page narrative moments */
+  moments?: PortfolioProjectMoment[];
+  /** Measured results shown only on the detail page */
+  metrics?: PortfolioProjectMetric[];
+  metricsPeriod?: string;
+  /** Named image slots for the detail narrative */
+  caseImages?: PortfolioCaseImage[];
+  seo: {
+    title: string;
+    description: string;
+    ogTitle?: string;
+    ogDescription?: string;
+  };
+}
+
 /** Case study — social proof for branding and SEO */
 export interface CaseStudy {
   id: string;
@@ -18,6 +116,13 @@ export interface CaseStudy {
   client: string;
   industry: string;
   divisionId: string;
+  /** Sector hub this case belongs to (food-beverage, nightlife-clubs, …) */
+  sectorId: string;
+  /**
+   * When false, the case stays in data/routes but is not listed inside its sector.
+   * Defaults to false until each case is mounted individually.
+   */
+  listed?: boolean;
   challenge: string;
   approach: string;
   results: Metric[];
@@ -60,6 +165,8 @@ export interface CaseStudySummary {
   client: string;
   industry: string;
   divisionId: string;
+  sectorId: string;
+  listed?: boolean;
   featured: boolean;
   results: Metric[];
   teaser?: Metric;

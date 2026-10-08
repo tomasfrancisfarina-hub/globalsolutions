@@ -18,6 +18,11 @@ export const siteConfig = {
   contact: {
     email: "info@globalsolutionsworldwide.com",
     phone: "",
+    /**
+     * Cal.com booking URL. Set NEXT_PUBLIC_CAL_URL in env when available.
+     * Falls back to the on-site contact page.
+     */
+    calUrl: process.env.NEXT_PUBLIC_CAL_URL || "/contact",
   },
   social: {
     linkedin: "https://www.linkedin.com/company/109008349",

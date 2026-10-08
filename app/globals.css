@@ -77,6 +77,44 @@ body {
   }
 }
 
+/* Work rows: invert + unfold only on desktop with a real pointer (not iOS tap). */
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
+  .work-project-row:hover,
+  .work-project-row:focus-within {
+    background-color: #ffffff;
+    color: var(--color-foreground);
+  }
+
+  .work-project-media {
+    max-height: 0;
+    margin-top: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  .work-project-row:hover .work-project-media,
+  .work-project-row:focus-within .work-project-media {
+    max-height: 80rem;
+    margin-top: 2.5rem;
+    opacity: 1;
+  }
+
+  .work-project-row:hover .work-project-copy,
+  .work-project-row:focus-within .work-project-copy {
+    color: rgb(17 17 17 / 0.75);
+  }
+
+  .work-project-row:hover .work-project-meta,
+  .work-project-row:focus-within .work-project-meta {
+    color: rgb(17 17 17 / 0.55);
+  }
+
+  .work-project-row:hover .work-project-ext,
+  .work-project-row:focus-within .work-project-ext {
+    color: rgb(17 17 17 / 0.7);
+  }
+}
+
 /* Selection */
 ::selection {
   background-color: var(--color-foreground);
@@ -106,3 +144,4 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-border-hover);
 }
+
