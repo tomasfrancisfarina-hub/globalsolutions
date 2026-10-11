@@ -17,11 +17,18 @@ function negotiateLocale(request: NextRequest): Locale {
   return defaultLocale;
 }
 
+function shouldBypassLocale(pathname: string): boolean {
+  return (
+    pathname.startsWith("/api") ||
+    pathname.startsWith("/_next") ||
+    pathname.includes(".")
+  );
+}
+
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Skip static assets and API
-  if (pathname.startsWith("/api") || pathname.includes(".")) {
+  if (shouldBypassLocale(pathname)) {
     return NextResponse.next();
   }
 
@@ -45,5 +52,7 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico|.*\\..*).*)"],
+  matcher: [
+    "/((?!api|_next(?:/|$)|favicon.ico|icon.png|apple-icon.png|apple-touch-icon.png|robots.txt|sitemap.xml|manifest.webmanifest|.*\\..*).*)",
+  ],
 };

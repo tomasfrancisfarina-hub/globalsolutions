@@ -1,10 +1,12 @@
-import { notFound } from "next/navigation";
-import { locales, type Locale } from "@/types/locale";
+import { requireLocale } from "@/lib/i18n/require-locale";
+import { locales } from "@/types/locale";
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }
+
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -12,6 +14,6 @@ export async function generateStaticParams() {
 
 export default async function LocaleLayout({ children, params }: LocaleLayoutProps) {
   const { locale } = await params;
-  if (!locales.includes(locale as Locale)) notFound();
+  requireLocale(locale);
   return children;
 }

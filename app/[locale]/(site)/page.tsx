@@ -9,7 +9,8 @@ import {
 } from "@/components/sections";
 import { createBrandingMetadata, createOrganizationSchema, createWebSiteSchema } from "@/lib/seo";
 import { getDictionary } from "@/lib/content/get-dictionary";
-import { locales, type Locale } from "@/types/locale";
+import { requireLocale } from "@/lib/i18n/require-locale";
+import { locales } from "@/types/locale";
 import type { Metadata } from "next";
 
 interface HomePageProps {
@@ -22,7 +23,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {
   const { locale } = await params;
-  const loc = locale as Locale;
+  const loc = requireLocale(locale);
   const { home } = getDictionary(loc);
   return createBrandingMetadata({
     description: home.hero.subheadline,
@@ -33,7 +34,7 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
 
 export default async function HomePage({ params }: HomePageProps) {
   const { locale } = await params;
-  const loc = locale as Locale;
+  const loc = requireLocale(locale);
   const { home } = getDictionary(loc);
 
   const organizationSchema = createOrganizationSchema();

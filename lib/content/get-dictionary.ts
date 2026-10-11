@@ -1,3 +1,4 @@
+import { requireLocale } from "@/lib/i18n/require-locale";
 import type { Locale } from "@/types";
 import { homeContent as homeEs } from "@/content/locales/es/home";
 import { homeContent as homeEn } from "@/content/locales/en/home";
@@ -31,7 +32,12 @@ const contactByLocale: Record<Locale, ContactContent> = {
 };
 
 export function getHomeContent(locale: Locale): HomeContent {
-  return homeByLocale[locale] ?? homeByLocale.en;
+  const validLocale = requireLocale(locale);
+  const home = homeByLocale[validLocale];
+  if (!home) {
+    throw new Error(`Missing home dictionary for locale "${validLocale}"`);
+  }
+  return home;
 }
 
 export function getNavigation(locale: Locale): Navigation {
@@ -51,12 +57,21 @@ export function getContactContent(locale: Locale): ContactContent {
 }
 
 export function getDictionary(locale: Locale) {
+  const validLocale = requireLocale(locale);
+  const home = getHomeContent(validLocale);
+  const navigation = navigationByLocale[validLocale];
+  const methodology = methodologyByLocale[validLocale];
+  const about = aboutByLocale[validLocale];
+  const contact = contactByLocale[validLocale];
+  if (!navigation || !methodology || !about || !contact) {
+    throw new Error(`Incomplete dictionary for locale "${validLocale}"`);
+  }
   return {
-    home: getHomeContent(locale),
-    navigation: getNavigation(locale),
-    methodology: getMethodologyContent(locale),
-    about: getAboutContent(locale),
-    contact: getContactContent(locale),
+    home,
+    navigation,
+    methodology,
+    about,
+    contact,
   };
 }
 

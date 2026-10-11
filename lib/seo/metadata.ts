@@ -4,9 +4,16 @@ import { seoConfig } from "@/config/seo";
 import { hreflangDefault } from "@/config/markets";
 import { isIndexingAllowed } from "@/config/indexing";
 import { localizedPath } from "@/lib/i18n/config";
+import { requireLocale } from "@/lib/i18n/require-locale";
 import { getContentRobots } from "@/lib/seo/robots";
 import type { Locale, SeoMetadata, ContentStatus } from "@/types";
 import { localeConfigs, locales } from "@/types/locale";
+
+const brandingTitleFallback: Record<Locale, string> = {
+  es: "Global Solutions — Consultoría Estratégica para el Crecimiento Internacional",
+  en: "Global Solutions — Strategic Consulting for International Growth",
+  de: "Global Solutions — Strategische Beratung für internationales Wachstum",
+};
 
 interface MetadataBaseOptions {
   /** Path without locale prefix, e.g. "/divisions/growth-marketing" */
@@ -49,10 +56,14 @@ export function createBrandingMetadata({
   path,
   locale,
 }: BrandingMetadataOptions): Metadata {
-  const branding = seoConfig.defaultBranding[locale];
+  const validLocale = requireLocale(locale);
+  const branding = seoConfig.defaultBranding[validLocale];
+  if (!branding) {
+    throw new Error(`Missing defaultBranding for locale "${validLocale}"`);
+  }
   const fullTitle = title
     ? branding.titleTemplate.replace("%s", title)
-    : branding.defaultTitle;
+    : branding.defaultTitle || brandingTitleFallback[validLocale];
 
   const desc = description ?? branding.defaultDescription;
 
@@ -89,6 +100,7 @@ export function createSeoMetadata({
   type = "website",
   contentStatus,
 }: SeoPageMetadataOptions): Metadata {
+  requireLocale(locale);
   const fullTitle = seoConfig.seoTitleTemplate.replace("%s", seo.title);
   const robots = globalRobots(getContentRobots(contentStatus, seo.noIndex));
 
