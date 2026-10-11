@@ -25,7 +25,7 @@ Copy `.env.example` to `.env.local` and set values before production deploy:
 
 | Variable | Required | Notes |
 |----------|----------|-------|
-| `NEXT_PUBLIC_SITE_URL` | Yes (prod) | Canonical URL, e.g. `https://globalsolutions.com` |
+| `NEXT_PUBLIC_SITE_URL` | Yes (prod) | Canonical URL, e.g. `https://www.globalsolutionsworldwide.com` |
 | `NEXT_PUBLIC_ALLOW_INDEXING` | Yes | `true` for production; `false` on preview/staging |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | No | GA4 Measurement ID — do not invent |
 | `NEXT_PUBLIC_ENABLE_ANALYTICS` | No | Must be `true` **and** GA ID set to load scripts |

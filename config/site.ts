@@ -5,13 +5,16 @@
  * Extend with regional configs when multi-country is enabled.
  */
 
+/** Canonical public origin used by metadata, sitemap, robots and JSON-LD. */
+export const SITE_URL = "https://www.globalsolutionsworldwide.com";
+
 export const siteConfig = {
   name: "Global Solutions",
   legalName: "Global Solutions Worldwide",
   tagline: "Consultoría de crecimiento empresarial",
   description:
     "Firma internacional de consultoría especializada en crecimiento empresarial. Estrategia, inteligencia artificial, automatización y ejecución.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://globalsolutions.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? SITE_URL,
   locale: "es",
   defaultLocale: "en" as const,
   locales: ["es", "en", "de"] as const,
