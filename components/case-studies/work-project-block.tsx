@@ -19,7 +19,7 @@ interface WorkProjectBlockProps {
 /**
  * Refokus-style work row:
  * desktop: collapsed → hover unfolds media
- * smaller screens: same 3-column composition, media visible (no hover)
+ * all breakpoints: same 3-column row as desktop; media visible on touch (no hover)
  */
 export function WorkProjectBlock({
   project,
@@ -52,38 +52,38 @@ export function WorkProjectBlock({
         "motion-reduce:transition-none",
       )}
     >
-      <div className="mx-auto max-w-[90rem] px-3 py-6 sm:px-8 sm:py-12 md:px-12 md:py-14">
-        <div className="grid grid-cols-2 items-start gap-x-3 gap-y-3 sm:gap-x-6 md:grid-cols-[0.95fr_1.45fr_0.75fr] md:gap-12">
-          <div className="col-start-1 row-start-1 min-w-0 md:col-start-1 md:row-start-1">
+      <div className="mx-auto max-w-[90rem] px-3 py-5 sm:px-8 sm:py-12 md:px-12 md:py-14">
+        <div className="grid grid-cols-[0.95fr_1.45fr_0.75fr] items-start gap-2 sm:gap-8 lg:gap-12">
+          <div className="min-w-0">
             <Link
               href={href}
               className="inline-block outline-none"
               aria-label={`${project.name} — ${viewLabel}`}
             >
-              <h2 className="break-words text-[clamp(1.35rem,5vw,2.75rem)] font-medium leading-[1.12] tracking-tight">
+              <h2 className="break-words text-[clamp(0.95rem,4.2vw,2.75rem)] font-medium leading-[1.12] tracking-tight">
                 {project.name}
               </h2>
-              <span className="mt-2 inline-flex min-h-11 items-center gap-2 text-sm text-current sm:mt-3">
+              <span className="mt-1.5 inline-flex min-h-11 items-center gap-1.5 text-[11px] text-current sm:mt-3 sm:text-sm">
                 {viewLabel}
                 <span aria-hidden>→</span>
               </span>
             </Link>
           </div>
 
-          <div className="col-span-2 row-start-2 min-w-0 md:col-span-1 md:col-start-2 md:row-start-1">
+          <div className="min-w-0">
             {summary ? (
-              <p className="work-project-copy max-w-xl text-[14px] leading-relaxed text-white/85 md:text-base">
+              <p className="work-project-copy max-w-xl text-[11px] leading-relaxed text-white/85 sm:text-[14px] md:text-base">
                 {summary}
               </p>
             ) : null}
             {hasLinks ? (
-              <div className="mt-3 flex flex-wrap items-center gap-x-1 gap-y-1 sm:mt-5">
+              <div className="mt-2 flex flex-wrap items-center gap-x-1 gap-y-1 sm:mt-5">
                 {project.links?.website ? (
                   <a
                     href={project.links.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="work-project-ext inline-flex min-h-11 items-center px-1 text-[11px] uppercase tracking-[0.14em] text-white/70 underline-offset-4 hover:underline"
+                    className="work-project-ext inline-flex min-h-11 items-center px-1 text-[9px] uppercase tracking-[0.12em] text-white/70 underline-offset-4 hover:underline sm:text-[11px] sm:tracking-[0.14em]"
                   >
                     {websiteLabel}
                   </a>
@@ -93,7 +93,7 @@ export function WorkProjectBlock({
                     href={project.links.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="work-project-ext inline-flex min-h-11 items-center px-1 text-[11px] uppercase tracking-[0.14em] text-white/70 underline-offset-4 hover:underline"
+                    className="work-project-ext inline-flex min-h-11 items-center px-1 text-[9px] uppercase tracking-[0.12em] text-white/70 underline-offset-4 hover:underline sm:text-[11px] sm:tracking-[0.14em]"
                   >
                     {instagramLabel}
                   </a>
@@ -102,9 +102,9 @@ export function WorkProjectBlock({
             ) : null}
           </div>
 
-          <div className="col-start-2 row-start-1 min-w-0 text-right md:col-start-3 md:row-start-1">
+          <div className="min-w-0 text-right">
             {services.length > 0 && (
-              <ul className="work-project-meta block space-y-1 break-words text-[10px] uppercase leading-snug tracking-[0.1em] text-white/65 sm:space-y-1.5 sm:text-[11px] sm:tracking-[0.14em] [&>li]:block">
+              <ul className="work-project-meta block space-y-0.5 break-words text-[8px] uppercase leading-snug tracking-[0.1em] text-white/65 sm:space-y-1.5 sm:text-[11px] sm:tracking-[0.14em] [&>li]:block">
                 {services.map((service) => (
                   <li key={service}>{service}</li>
                 ))}
@@ -112,8 +112,8 @@ export function WorkProjectBlock({
             )}
             <p
               className={cn(
-                "work-project-meta break-words text-[10px] uppercase leading-snug tracking-[0.1em] text-white/65 sm:text-[11px] sm:tracking-[0.14em]",
-                services.length > 0 && "mt-2 sm:mt-5",
+                "work-project-meta break-words text-[8px] uppercase leading-snug tracking-[0.1em] text-white/65 sm:text-[11px] sm:tracking-[0.14em]",
+                services.length > 0 && "mt-1.5 sm:mt-5",
               )}
             >
               {project.location}
