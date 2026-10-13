@@ -77,6 +77,11 @@ body {
   }
 }
 
+/* Work rows hug media height on every breakpoint (no leftover carousel frame). */
+.work-project-media {
+  height: fit-content;
+}
+
 /* Work rows: invert + unfold only on desktop with a real pointer (not iOS tap). */
 @media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
   .work-project-row:hover,

@@ -68,7 +68,7 @@ export function SectorPortfolio({
             <p className="mt-3 text-xs uppercase tracking-[0.16em] text-white/40">
               {sector.name}
             </p>
-            <h1 className="mt-6 text-[clamp(2.25rem,5.5vw,5rem)] font-medium leading-[1.02] tracking-tight text-white">
+            <h1 className="mt-6 break-words text-[clamp(1.85rem,5.5vw,5rem)] font-medium leading-[1.02] tracking-tight text-white">
               {titleLines.map((line) => (
                 <span key={line} className="block">
                   {line}

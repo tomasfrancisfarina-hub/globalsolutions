@@ -19,7 +19,7 @@ interface WorkProjectBlockProps {
 /**
  * Refokus-style work row:
  * desktop: collapsed → hover unfolds media
- * mobile: compact snap carousel, no sticky hover invert
+ * smaller screens: same 3-column composition, media visible (no hover)
  */
 export function WorkProjectBlock({
   project,
@@ -47,37 +47,37 @@ export function WorkProjectBlock({
         ease: animation.easing,
       }}
       className={cn(
-        "work-project-row group relative border-t border-white/15",
+        "work-project-row group relative overflow-x-hidden border-t border-white/15",
         "bg-[#0b0b0b] text-white transition-colors duration-500",
         "motion-reduce:transition-none",
       )}
     >
-      <div className="mx-auto max-w-[90rem] px-4 py-8 sm:px-8 sm:py-12 md:px-12 md:py-14">
-        <div className="grid grid-cols-1 gap-4 sm:gap-8 lg:grid-cols-[0.95fr_1.45fr_0.75fr] lg:gap-12">
-          <div className="min-w-0">
+      <div className="mx-auto max-w-[90rem] px-3 py-6 sm:px-8 sm:py-12 md:px-12 md:py-14">
+        <div className="grid grid-cols-2 items-start gap-x-3 gap-y-3 sm:gap-x-6 md:grid-cols-[0.95fr_1.45fr_0.75fr] md:gap-12">
+          <div className="col-start-1 row-start-1 min-w-0 md:col-start-1 md:row-start-1">
             <Link
               href={href}
               className="inline-block outline-none"
               aria-label={`${project.name} — ${viewLabel}`}
             >
-              <h2 className="text-[clamp(1.45rem,6vw,2.75rem)] font-medium leading-[1.12] tracking-tight">
+              <h2 className="break-words text-[clamp(1.35rem,5vw,2.75rem)] font-medium leading-[1.12] tracking-tight">
                 {project.name}
               </h2>
-              <span className="mt-3 inline-flex items-center gap-2 text-sm text-current">
+              <span className="mt-2 inline-flex min-h-11 items-center gap-2 text-sm text-current sm:mt-3">
                 {viewLabel}
                 <span aria-hidden>→</span>
               </span>
             </Link>
           </div>
 
-          <div className="min-w-0">
+          <div className="col-span-2 row-start-2 min-w-0 md:col-span-1 md:col-start-2 md:row-start-1">
             {summary ? (
-              <p className="work-project-copy max-w-xl text-[14px] leading-relaxed text-white/85 sm:text-base">
+              <p className="work-project-copy max-w-xl text-[14px] leading-relaxed text-white/85 md:text-base">
                 {summary}
               </p>
             ) : null}
             {hasLinks ? (
-              <div className="mt-4 flex flex-wrap items-center gap-x-1 gap-y-1 sm:mt-5">
+              <div className="mt-3 flex flex-wrap items-center gap-x-1 gap-y-1 sm:mt-5">
                 {project.links?.website ? (
                   <a
                     href={project.links.website}
@@ -102,9 +102,9 @@ export function WorkProjectBlock({
             ) : null}
           </div>
 
-          <div className="min-w-0 lg:text-right">
+          <div className="col-start-2 row-start-1 min-w-0 text-right md:col-start-3 md:row-start-1">
             {services.length > 0 && (
-              <ul className="work-project-meta flex flex-wrap gap-x-3 gap-y-1 text-[11px] uppercase tracking-[0.14em] text-white/65 lg:block lg:space-y-1.5 lg:[&>li]:block">
+              <ul className="work-project-meta block space-y-1 break-words text-[10px] uppercase leading-snug tracking-[0.1em] text-white/65 sm:space-y-1.5 sm:text-[11px] sm:tracking-[0.14em] [&>li]:block">
                 {services.map((service) => (
                   <li key={service}>{service}</li>
                 ))}
@@ -112,8 +112,8 @@ export function WorkProjectBlock({
             )}
             <p
               className={cn(
-                "work-project-meta text-[11px] uppercase tracking-[0.14em] text-white/65",
-                services.length > 0 && "mt-3 lg:mt-5",
+                "work-project-meta break-words text-[10px] uppercase leading-snug tracking-[0.1em] text-white/65 sm:text-[11px] sm:tracking-[0.14em]",
+                services.length > 0 && "mt-2 sm:mt-5",
               )}
             >
               {project.location}
@@ -122,7 +122,7 @@ export function WorkProjectBlock({
         </div>
 
         {project.primary.src ? (
-        <div className="work-project-media mt-6 opacity-100 sm:mt-8">
+        <div className="work-project-media mt-5 h-fit sm:mt-8">
           <Link
             href={href}
             className="block outline-none"
@@ -131,15 +131,13 @@ export function WorkProjectBlock({
           >
             <div
               className={cn(
-                "flex snap-x snap-mandatory gap-3 overflow-x-auto overscroll-x-contain pb-1",
-                "[-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
-                "md:grid md:items-start md:overflow-visible md:pb-0 md:gap-4",
-                mediaCount === 1 && "md:grid-cols-1",
-                mediaCount === 2 && "md:grid-cols-2",
+                "grid items-start gap-2 overflow-visible sm:gap-4",
+                mediaCount === 1 && "grid-cols-1",
+                mediaCount === 2 && "grid-cols-2",
                 mediaCount >= 3 &&
                   (project.mediaLayout === "wide-primary"
-                    ? "md:grid-cols-[1.45fr_1fr_0.95fr]"
-                    : "md:grid-cols-3"),
+                    ? "grid-cols-[1.45fr_1fr_0.95fr]"
+                    : "grid-cols-3"),
               )}
             >
               <CaseImage
@@ -147,7 +145,7 @@ export function WorkProjectBlock({
                 alt={project.primary.alt}
                 src={project.primary.src}
                 type={project.primary.type}
-                className="w-[min(84vw,22rem)] shrink-0 snap-center rounded-md md:w-auto"
+                className="min-w-0 w-full rounded-md"
                 pendingLabel={project.primary.pendingLabel}
               />
               {project.supports.map((support, index) => (
@@ -159,7 +157,7 @@ export function WorkProjectBlock({
                   alt={support.alt}
                   src={support.src}
                   type={support.type}
-                  className="w-[min(84vw,22rem)] shrink-0 snap-center rounded-md md:w-auto"
+                  className="min-w-0 w-full rounded-md"
                   pendingLabel={support.pendingLabel}
                 />
               ))}
