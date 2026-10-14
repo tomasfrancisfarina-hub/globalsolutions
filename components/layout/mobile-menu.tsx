@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { LocaleSwitcher } from "@/components/layout/locale-switcher";
@@ -16,6 +17,11 @@ interface MobileMenuProps {
 
 export function MobileMenu({ locale, navigation, ctaLabel }: MobileMenuProps) {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -47,39 +53,42 @@ export function MobileMenu({ locale, navigation, ctaLabel }: MobileMenuProps) {
         {open ? <X size={20} /> : <Menu size={20} />}
       </button>
 
-      {open ? (
-        <div
-          id="mobile-navigation"
-          className="fixed inset-0 top-20 z-40 overflow-y-auto overscroll-contain bg-background"
-          role="dialog"
-          aria-modal="true"
-        >
-          <nav
-            className="flex min-h-[calc(100dvh-5rem)] flex-col px-5 py-8 pb-[max(2rem,env(safe-area-inset-bottom))] sm:px-8"
-            aria-label="Mobile navigation"
-          >
-            {navigation.map((item) => (
-              <Link
-                key={item.href}
-                href={localizedPath(item.href, locale)}
-                onClick={() => setOpen(false)}
-                className="border-b border-border py-4 text-lg font-medium"
+      {mounted && open
+        ? createPortal(
+            <div
+              id="mobile-navigation"
+              className="fixed inset-x-0 bottom-0 top-20 z-[60] overflow-y-auto overscroll-contain bg-background"
+              role="dialog"
+              aria-modal="true"
+            >
+              <nav
+                className="flex min-h-[calc(100dvh-5rem)] flex-col px-5 py-8 pb-[max(2rem,env(safe-area-inset-bottom))] sm:px-8"
+                aria-label="Mobile navigation"
               >
-                {item.label}
-              </Link>
-            ))}
-            <div className="mt-8 flex flex-wrap items-center justify-between gap-4">
-              <LocaleSwitcher currentLocale={locale} />
-              <Link
-                href={localizedPath("/contact", locale)}
-                onClick={() => setOpen(false)}
-              >
-                <Button>{ctaLabel}</Button>
-              </Link>
-            </div>
-          </nav>
-        </div>
-      ) : null}
+                {navigation.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={localizedPath(item.href, locale)}
+                    onClick={() => setOpen(false)}
+                    className="border-b border-border py-4 text-lg font-medium"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <div className="mt-8 flex flex-wrap items-center justify-between gap-4">
+                  <LocaleSwitcher currentLocale={locale} />
+                  <Link
+                    href={localizedPath("/contact", locale)}
+                    onClick={() => setOpen(false)}
+                  >
+                    <Button>{ctaLabel}</Button>
+                  </Link>
+                </div>
+              </nav>
+            </div>,
+            document.body,
+          )
+        : null}
     </div>
   );
 }
