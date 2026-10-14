@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ImpressumPage() {
   const { tradeName, owner, address } = siteConfig.legal;
   const email = siteConfig.contact.email;
+  const { phoneDisplay, whatsappUrl } = siteConfig.contact;
 
   return (
     <Section spacing="hero">
@@ -67,6 +68,17 @@ export default async function ImpressumPage() {
                 className="text-foreground transition-opacity hover:opacity-70"
               >
                 {email}
+              </a>
+            </p>
+            <p className="mt-2">
+              WhatsApp:{" "}
+              <a
+                href={whatsappUrl}
+                className="text-foreground transition-opacity hover:opacity-70"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {phoneDisplay}
               </a>
             </p>
           </section>

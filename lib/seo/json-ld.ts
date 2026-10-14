@@ -15,6 +15,7 @@ export function createOrganizationSchema() {
     contactPoint: {
       "@type": "ContactPoint",
       email: siteConfig.contact.email,
+      telephone: siteConfig.contact.phone,
       contactType: "customer service",
     },
     sameAs: [siteConfig.social.linkedin].filter(Boolean),

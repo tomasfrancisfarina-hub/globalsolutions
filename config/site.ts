@@ -20,7 +20,9 @@ export const siteConfig = {
   locales: ["es", "en", "de"] as const,
   contact: {
     email: "info@globalsolutionsworldwide.com",
-    phone: "",
+    phone: "+4917641265629",
+    phoneDisplay: "+49 176 41265629",
+    whatsappUrl: "https://wa.me/4917641265629",
     /**
      * Cal.com booking URL. Set NEXT_PUBLIC_CAL_URL in env when available.
      * Falls back to the on-site contact page.

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/shared/logo";
+import { siteConfig } from "@/config/site";
 import { localizedPath } from "@/lib/i18n/config";
 import { getUiCopy } from "@/lib/i18n/ui-copy";
 import type { Locale, FooterColumn } from "@/types";
@@ -20,6 +21,14 @@ export function Footer({ locale, footer }: FooterProps) {
           <div className="sm:col-span-2 md:col-span-1">
             <Logo locale={locale} />
             <p className="mt-4 text-sm text-muted">{ui.tagline}</p>
+            <a
+              href={siteConfig.contact.whatsappUrl}
+              className="mt-3 inline-block text-sm text-muted transition-opacity duration-150 hover:text-foreground"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {ui.whatsappLabel}: {siteConfig.contact.phoneDisplay}
+            </a>
           </div>
 
           {footer.map((column) => (

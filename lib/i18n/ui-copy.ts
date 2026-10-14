@@ -14,6 +14,7 @@ export function getUiCopy(locale: Locale) {
         marketLine: "Estados Unidos · Europa · Dubái",
         placeholderBadge: "Contenido placeholder",
         emailLabel: "Email",
+        whatsappLabel: "WhatsApp",
         linkedInLabel: "LinkedIn",
       };
     case "de":
@@ -27,6 +28,7 @@ export function getUiCopy(locale: Locale) {
         marketLine: "Vereinigte Staaten · Europa · Dubai",
         placeholderBadge: "Platzhalterinhalt",
         emailLabel: "E-Mail",
+        whatsappLabel: "WhatsApp",
         linkedInLabel: "LinkedIn",
       };
     default:
@@ -40,6 +42,7 @@ export function getUiCopy(locale: Locale) {
         marketLine: "United States · Europe · Dubai",
         placeholderBadge: "Placeholder content",
         emailLabel: "Email",
+        whatsappLabel: "WhatsApp",
         linkedInLabel: "LinkedIn",
       };
   }

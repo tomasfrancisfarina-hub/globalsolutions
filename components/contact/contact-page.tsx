@@ -36,6 +36,17 @@ export function ContactPageContent({ content, locale }: ContactPageContentProps)
                 </a>
               </p>
               <p>
+                <span className="text-subtle">{ui.whatsappLabel}:</span>{" "}
+                <a
+                  href={siteConfig.contact.whatsappUrl}
+                  className="text-foreground transition-opacity hover:opacity-70"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {siteConfig.contact.phoneDisplay}
+                </a>
+              </p>
+              <p>
                 <span className="text-subtle">{ui.linkedInLabel}:</span>{" "}
                 <a
                   href={siteConfig.social.linkedin}
