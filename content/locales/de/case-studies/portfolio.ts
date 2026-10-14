@@ -347,4 +347,151 @@ export const portfolioProjectsDe: PortfolioProject[] = [
       ogDescription: "Echte Geschichten. Wirkung, die man spürt.",
     },
   },
+  {
+    id: "m-two-club-mallorca",
+    slug: "m-two-club-mallorca",
+    sectorId: "nightlife-clubs",
+    name: "M‑Two Mallorca",
+    location: "Mallorca · Nightclub",
+    locale: "de",
+    listed: true,
+    summary:
+      "2024 verbanden wir digitale Kampagnen mit Events und Kooperationen mit Eventmarken, um die Identität des Clubs zu stärken und lokales sowie internationales Publikum zu erreichen.",
+    services: [
+      "Meta-Kampagnen",
+      "Eventstrategie",
+      "Lokale Kooperationen",
+    ],
+    links: {
+      website: "https://m-two.club/",
+    },
+    primary: {
+      type: "image",
+      src: "/case-studies/m-two-club-mallorca/meta-ad.png",
+      alt: "Facebook-Anzeige von M TWO Club Mallorca mit Reservierungsaufruf",
+    },
+    supports: [
+      {
+        type: "image",
+        src: "/case-studies/m-two-club-mallorca/instagram-growth.png",
+        alt: "Instagram-Entwicklung von M TWO Club Mallorca",
+      },
+    ],
+    moments: [
+      {
+        id: "context",
+        title: "Kontext und Herausforderung",
+        body: "2024 verbanden wir digitale Kampagnen mit Events und Kooperationen mit Eventmarken. Party Animals, Dirty Party und Palma Events waren Teil einer Strategie, die Identität des Clubs zu stärken und das Publikum auf der Insel sowie international zu erreichen.",
+      },
+      {
+        id: "work",
+        title: "Arbeit von GSW",
+        body: "Wir testeten verschiedene Ansätze, bis wir einen der Schlüssel identifizierten: Partnerschaften mit Eventmarken, verstärkt durch Werbekampagnen, Creatives und ein ganzheitliches Management der Strategie.",
+      },
+      {
+        id: "results",
+        title: "Gemessene Ergebnisse",
+        body: "Die Ergebnisse stammen aus getrennten Maßnahmen der Zusammenarbeit: einer Traffic-Kampagne, einer Video-Kampagne und der auf Instagram verzeichneten Entwicklung.",
+      },
+    ],
+    metricsPeriod: "Ergebnisse nach separater Maßnahme",
+    metrics: [
+      { value: 989, label: "Linkklicks", display: "989" },
+      { value: 119.59, label: "Werbeausgaben", display: "119,59 €" },
+      { value: 0.12, label: "Kosten pro Klick", display: "0,12 €" },
+      { value: 55450, label: "Videoaufrufe", display: "55.450" },
+      { value: 31, label: "Initiale Capture-Rate", display: "31 %" },
+      { value: 1100, label: "Linkklicks · Instagram", display: "1,1 Tsd." },
+      { value: 100, label: "Von Meta angezeigte Veränderung", display: "↑ 100 %" },
+    ],
+    caseImages: [
+      {
+        id: "hero",
+        filename: "meta-ad.png",
+        alt: "Facebook-Anzeige von M TWO Club Mallorca",
+        src: "/case-studies/m-two-club-mallorca/meta-ad.png",
+        aspect: "auto",
+      },
+      {
+        id: "instagram",
+        filename: "instagram-growth.png",
+        alt: "Instagram-Entwicklung von M TWO Club Mallorca",
+        src: "/case-studies/m-two-club-mallorca/instagram-growth.png",
+        aspect: "auto",
+      },
+    ],
+    seo: {
+      title: "M‑Two Mallorca — Fallstudie",
+      description:
+        "Fallstudie von Global Solutions mit M‑Two Mallorca: Meta-Kampagnen, Eventstrategie, Kooperationen und digitale Ergebnisse.",
+      ogTitle: "M‑Two Mallorca",
+      ogDescription: "Echte Geschichten. Wirkung, die man spürt.",
+    },
+  },
+  {
+    id: "oceans-mallorca",
+    slug: "oceans-mallorca",
+    sectorId: "nightlife-clubs",
+    name: "Oceans Mallorca",
+    location: "Magaluf · Mallorca · 2019",
+    locale: "de",
+    listed: true,
+    summary:
+      "Bewerbung mehrerer Termine mit Künstlern wie Javi Bora und Chus & Ceballos für Oceans Night Club Mallorca.",
+    services: [
+      "Eventpromotion",
+      "Künstlerkampagnen",
+      "Javi Bora · Chus & Ceballos",
+    ],
+    links: {
+      website: "https://oceanscalviabeach.com/en/",
+    },
+    primary: {
+      type: "image",
+      src: "/case-studies/oceans-mallorca/campaign-2019.png",
+      alt: "Originalbeitrag von Oceans Night Club Mallorca für Chus & Ceballos am 23. August 2019",
+    },
+    supports: [
+      {
+        type: "image",
+        src: "/case-studies/oceans-mallorca/interior.png",
+        alt: "Innenraum des Oceans Beach Club Mallorca mit violetter Beleuchtung und Oceans-Logo",
+      },
+    ],
+    moments: [
+      {
+        id: "context",
+        title: "Kontext und Herausforderung",
+        body: "Bewerbung mehrerer Termine mit Künstlern wie Javi Bora und Chus & Ceballos für Oceans Night Club Mallorca.",
+      },
+      {
+        id: "work",
+        title: "Arbeit von GSW",
+        body: "Die Kampagne für Chus & Ceballos erzielte die stärkste Resonanz der Zusammenarbeit, zu der auch unsere Teilnahme am Event gehörte.",
+      },
+    ],
+    caseImages: [
+      {
+        id: "hero",
+        filename: "campaign-2019.png",
+        alt: "Oceans-Kampagnenarchiv für Chus & Ceballos 2019",
+        src: "/case-studies/oceans-mallorca/campaign-2019.png",
+        aspect: "auto",
+      },
+      {
+        id: "interior",
+        filename: "interior.png",
+        alt: "Innenraum des Oceans Beach Club Mallorca",
+        src: "/case-studies/oceans-mallorca/interior.png",
+        aspect: "auto",
+      },
+    ],
+    seo: {
+      title: "Oceans Mallorca — Fallstudie",
+      description:
+        "Fallstudie von Global Solutions mit Oceans Mallorca: Eventpromotion und Künstlerkampagnen im Jahr 2019.",
+      ogTitle: "Oceans Mallorca",
+      ogDescription: "Echte Geschichten. Wirkung, die man spürt.",
+    },
+  },
 ];
