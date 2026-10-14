@@ -1,9 +1,8 @@
 import { Container, Section, Eyebrow, Heading, Text, CustomLink } from "@/components/ui";
 import { PlaceholderBadge } from "@/components/shared/placeholder-badge";
-import { ConversionCta } from "@/components/shared/conversion-cta";
 import { SlideUp, StaggerContainer, StaggerItem } from "@/components/motion";
-import { getDefaultConversion } from "@/content/shared/conversion";
 import type { CaseStudy, Locale, Metric } from "@/types";
+import { CaseStudyBookingCta } from "./case-study-booking-cta";
 
 interface CaseStudyDetailProps {
   caseStudy: CaseStudy;
@@ -67,6 +66,11 @@ export function CaseStudyDetail({ caseStudy, locale, labels }: CaseStudyDetailPr
               )}
             </div>
           </SlideUp>
+          <CaseStudyBookingCta
+            locale={locale}
+            compact
+            className="mt-12 sm:mt-16"
+          />
         </Container>
       </Section>
 
@@ -142,10 +146,7 @@ export function CaseStudyDetail({ caseStudy, locale, labels }: CaseStudyDetailPr
       <Section spacing="compact">
         <Container>
           <SlideUp>
-            <ConversionCta
-              block={caseStudy.conversion ?? getDefaultConversion(locale)}
-              locale={locale}
-            />
+            <CaseStudyBookingCta locale={locale} />
           </SlideUp>
         </Container>
       </Section>

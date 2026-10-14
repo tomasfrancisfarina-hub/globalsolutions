@@ -4,6 +4,7 @@ import { SlideUp } from "@/components/motion";
 import { localizedPath } from "@/lib/i18n/config";
 import type { CaseStudy, CaseStudySector, Locale } from "@/types";
 import { CaseStudyCard } from "./case-study-card";
+import { CaseStudyBookingCta } from "./case-study-booking-cta";
 
 interface CaseStudySectorDetailProps {
   sector: CaseStudySector;
@@ -47,6 +48,12 @@ export function CaseStudySectorDetail({
           </div>
         </SlideUp>
 
+        <CaseStudyBookingCta
+          locale={locale}
+          compact
+          className="mt-12 sm:mt-16"
+        />
+
         {listedCases.length > 0 && (
           <div className="mt-16 grid gap-6 md:mt-24 md:grid-cols-2 lg:grid-cols-3">
             {listedCases.map((caseStudy) => (
@@ -59,6 +66,8 @@ export function CaseStudySectorDetail({
             ))}
           </div>
         )}
+
+        <CaseStudyBookingCta locale={locale} className="mt-16 md:mt-24" />
       </Container>
     </Section>
   );

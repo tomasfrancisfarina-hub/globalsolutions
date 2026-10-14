@@ -3,6 +3,7 @@ import { Container, Section, Eyebrow, Heading, Text } from "@/components/ui";
 import { SlideUp, StaggerContainer, StaggerItem } from "@/components/motion";
 import { localizedPath } from "@/lib/i18n/config";
 import type { CaseStudySector, Locale } from "@/types";
+import { CaseStudyBookingCta } from "./case-study-booking-cta";
 
 interface SectorCardProps {
   sector: CaseStudySector;
@@ -66,6 +67,12 @@ export function CaseStudiesIndex({
           </div>
         </SlideUp>
 
+        <CaseStudyBookingCta
+          locale={locale}
+          compact
+          className="mt-12 sm:mt-16"
+        />
+
         <StaggerContainer className="mt-16 grid gap-6 md:mt-24 md:grid-cols-2 lg:grid-cols-3">
           {sectors.map((sector) => (
             <StaggerItem key={sector.id}>
@@ -78,6 +85,8 @@ export function CaseStudiesIndex({
             </StaggerItem>
           ))}
         </StaggerContainer>
+
+        <CaseStudyBookingCta locale={locale} className="mt-16 md:mt-24" />
       </Container>
     </Section>
   );

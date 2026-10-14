@@ -7,6 +7,7 @@ import { animation } from "@/config/theme";
 import type { Locale, PortfolioProject } from "@/types";
 import { CaseImage } from "./case-image";
 import { MetricCounter } from "./metric-counter";
+import { CaseStudyBookingCta } from "./case-study-booking-cta";
 
 interface PortfolioProjectCanvasProps {
   project: PortfolioProject;
@@ -79,6 +80,12 @@ export function PortfolioProjectCanvas({
             </div>
           ) : null}
         </motion.div>
+
+        <CaseStudyBookingCta
+          locale={locale}
+          compact
+          className="mt-10 sm:mt-14"
+        />
       </div>
 
       {project.primary.src ? (
@@ -178,6 +185,10 @@ export function PortfolioProjectCanvas({
           </section>
         )}
 
+      </div>
+
+      <div className="mx-auto max-w-[90rem] px-4 pb-16 sm:px-8 sm:pb-28 md:px-12">
+        <CaseStudyBookingCta locale={locale} />
       </div>
     </div>
   );

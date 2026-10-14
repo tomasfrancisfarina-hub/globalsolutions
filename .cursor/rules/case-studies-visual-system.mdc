@@ -1,0 +1,17 @@
+---
+description: Preserve the approved GSW visual system for every case-study sector and individual case
+alwaysApply: true
+---
+
+# Case-study visual system
+
+- Treat `/es/case-studies/food-beverage` as the canonical visual reference.
+- Build every sector with the existing `SectorPortfolio` and `WorkProjectBlock` system.
+- Build every portfolio case with the existing `PortfolioProjectCanvas` system.
+- Preserve the desktop composition first: large media, generous spacing, restrained copy, three-column rows, typography, colors, motion, and hover-to-unfold behavior.
+- Adapt the same hierarchy to tablet and mobile without changing the desktop design or introducing horizontal scroll.
+- Reuse existing components, tokens, navigation, locale routing, metadata, and CTA patterns.
+- Keep ES, EN, and DE content structurally aligned with natural translations.
+- Use only approved text, images, links, and metrics. Never invent results.
+- Validate at 1440, 1280, 768, 430, and 390 px before publishing.
+- Publish through the existing Git/Vercel project and verify the production URLs.

@@ -117,8 +117,6 @@ export default async function CaseStudyOrSectorPage({ params }: Props) {
               eyebrow: portfolioCopy.eyebrow,
               title: portfolioCopy.title,
               viewCase: portfolioCopy.viewCase,
-              closeHeadline: portfolioCopy.closeHeadline,
-              closeCta: portfolioCopy.closeCta,
               back: labels.caseStudies.backToSectors,
               websiteLink: portfolioCopy.websiteLink,
               instagramLink: portfolioCopy.instagramLink,

@@ -4,10 +4,10 @@ import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { localizedPath } from "@/lib/i18n/config";
 import { animation } from "@/config/theme";
-import { siteConfig } from "@/config/site";
 import type { CaseStudySector, Locale, PortfolioProject } from "@/types";
 import { WorkProjectBlock } from "./work-project-block";
 import { PortfolioFilters } from "./portfolio-filters";
+import { CaseStudyBookingCta } from "./case-study-booking-cta";
 
 interface SectorPortfolioProps {
   sector: CaseStudySector;
@@ -17,8 +17,6 @@ interface SectorPortfolioProps {
     eyebrow: string;
     title: string;
     viewCase: string;
-    closeHeadline: string;
-    closeCta: string;
     back: string;
     websiteLink: string;
     instagramLink: string;
@@ -37,9 +35,6 @@ export function SectorPortfolio({
   labels,
 }: SectorPortfolioProps) {
   const reduceMotion = useReducedMotion();
-  const calHref = siteConfig.contact.calUrl.startsWith("http")
-    ? siteConfig.contact.calUrl
-    : localizedPath(siteConfig.contact.calUrl, locale);
   const titleLines = labels.title.split("\n");
 
   return (
@@ -76,6 +71,13 @@ export function SectorPortfolio({
               ))}
             </h1>
           </motion.div>
+
+          <CaseStudyBookingCta
+            locale={locale}
+            variant="dark"
+            compact
+            className="mt-12 sm:mt-16"
+          />
         </div>
       </section>
 
@@ -95,20 +97,8 @@ export function SectorPortfolio({
       </section>
 
       <section className="px-4 py-16 sm:px-8 sm:py-28 md:px-12">
-        <div className="mx-auto flex max-w-[90rem] flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
-          <h2 className="max-w-xl text-[clamp(1.75rem,3.5vw,3rem)] font-medium tracking-tight text-white">
-            {labels.closeHeadline}
-          </h2>
-          <Link
-            href={calHref}
-            {...(calHref.startsWith("http")
-              ? { target: "_blank", rel: "noopener noreferrer" }
-              : {})}
-            className="inline-flex items-center gap-2 text-sm text-white/80 underline-offset-4 transition-colors hover:text-white hover:underline"
-          >
-            {labels.closeCta}
-            <span aria-hidden>→</span>
-          </Link>
+        <div className="mx-auto max-w-[90rem]">
+          <CaseStudyBookingCta locale={locale} variant="dark" />
         </div>
       </section>
     </div>

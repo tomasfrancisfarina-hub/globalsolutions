@@ -23,11 +23,8 @@ export const siteConfig = {
     phone: "+4917641265629",
     phoneDisplay: "+49 176 41265629",
     whatsappUrl: "https://wa.me/4917641265629",
-    /**
-     * Cal.com booking URL. Set NEXT_PUBLIC_CAL_URL in env when available.
-     * Falls back to the on-site contact page.
-     */
-    calUrl: process.env.NEXT_PUBLIC_CAL_URL || "/contact",
+    /** Canonical 30-minute booking URL used by every case-study CTA. */
+    calUrl: "https://cal.com/tomas-farina-vmou0z/30min",
   },
   social: {
     linkedin: "https://www.linkedin.com/company/109008349",
