@@ -4,6 +4,7 @@ import {
   CaseStudySectorDetail,
   PortfolioProjectCanvas,
   SectorPortfolio,
+  SectorShowcase,
 } from "@/components/case-studies";
 import {
   getAllCaseStudyParams,
@@ -19,6 +20,7 @@ import {
   getListedPortfolioProjectsBySector,
   getPortfolioProjectBySlug,
 } from "@/content/registry/portfolio-projects.registry";
+import { getSectorShowcase } from "@/content/registry/sector-showcases.registry";
 import { portfolioPageEs } from "@/content/locales/es/case-studies/portfolio-page";
 import { portfolioPageEn } from "@/content/locales/en/case-studies/portfolio-page";
 import { portfolioPageDe } from "@/content/locales/de/case-studies/portfolio-page";
@@ -101,6 +103,19 @@ export default async function CaseStudyOrSectorPage({ params }: Props) {
         url: `${base}${localizedPath(`/case-studies/${slug}`, loc)}`,
       },
     ]);
+
+    const showcase = getSectorShowcase(sector.id, loc);
+    if (showcase) {
+      return (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+          />
+          <SectorShowcase showcase={showcase} locale={loc} />
+        </>
+      );
+    }
 
     if (portfolioProjects.length > 0) {
       return (

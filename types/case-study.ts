@@ -109,6 +109,63 @@ export interface PortfolioProject {
   };
 }
 
+export interface SectorShowcaseImage {
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+  caption: string;
+}
+
+export interface SectorShowcaseCase {
+  id: string;
+  name: string;
+  location: string;
+  description: string;
+  services: string[];
+  story?: {
+    label: string;
+    body: string;
+  };
+  /**
+   * "triptych": wide lead image plus two staggered supports.
+   * "diptych": wide lead image plus one taller support, captions visible.
+   */
+  layout: "triptych" | "diptych";
+  images: SectorShowcaseImage[];
+  metrics?: PortfolioProjectMetric[];
+  metricsPeriod?: string;
+}
+
+/**
+ * Editorial sector page built from an approved HTML reference:
+ * oversized hero, independent case rows, and a personal booking close.
+ * Cases have no individual pages.
+ */
+export interface SectorShowcase {
+  sectorId: string;
+  locale: Locale;
+  eyebrow: string;
+  heroLines: [string, string];
+  intro: string;
+  projectsLabel: string;
+  cases: SectorShowcaseCase[];
+  closing: {
+    ctaLabel: string;
+    title: string;
+    intro: string;
+    portrait: { src: string; alt: string };
+    name: string;
+    role: string;
+    calendarTitle: string;
+    calendarFallback: string;
+  };
+  labels: {
+    enlarge: string;
+    close: string;
+  };
+}
+
 /** Case study — social proof for branding and SEO */
 export interface CaseStudy {
   id: string;
