@@ -14,12 +14,12 @@ export function MetricCounter({ value, display, label }: MetricCounterProps) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.25 });
   const reduceMotion = useReducedMotion();
-  const [done, setDone] = useState(Boolean(reduceMotion));
-  const [shown, setShown] = useState(reduceMotion ? value : 0);
+  const [done, setDone] = useState(Boolean(reduceMotion) || Boolean(display));
+  const [shown, setShown] = useState(reduceMotion || display ? value : 0);
 
   useEffect(() => {
     if (!inView) return;
-    if (reduceMotion) {
+    if (reduceMotion || display) {
       setShown(value);
       setDone(true);
       return;
@@ -43,7 +43,7 @@ export function MetricCounter({ value, display, label }: MetricCounterProps) {
 
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
-  }, [inView, reduceMotion, value]);
+  }, [display, inView, reduceMotion, value]);
 
   const text =
     display && done

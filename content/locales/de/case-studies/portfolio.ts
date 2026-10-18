@@ -588,4 +588,168 @@ export const portfolioProjectsDe: PortfolioProject[] = [
         "Fallstudie von Global Solutions in der Kosmetik: Kampagnen und Interaktion.",
     },
   },
+  {
+    id: "thomas-inmo",
+    slug: "thomas-inmo",
+    sectorId: "real-estate-investment",
+    name: "Thomas Inmo",
+    location: "Mallorca · Deutscher Markt",
+    locale: "de",
+    listed: true,
+    listingOnly: true,
+    summary:
+      "Eine ganzheitliche Strategie, um Cala Serena internationalen Käufern näherzubringen: segmentierte Kampagnen, Creatives, Landingpage mit Formular und Kontaktaufnahme in Deutschland. Ergänzend kamen Portalrecherche und Off-Market-Verbreitung hinzu, um Besichtigungen potenzieller Kunden zu unterstützen.",
+    services: [
+      "Meta Ads",
+      "Segmentierung und Creatives",
+      "Landingpage und Formular",
+      "Ansprache in Deutschland",
+      "Off-Market-Verbreitung",
+    ],
+    links: {
+      website: "https://cala-serena.vercel.app/es",
+      websiteLabel: "Website ansehen",
+    },
+    story: {
+      label: "Von Sichtbarkeit zu Besichtigungen",
+      body: "Nach den Kampagnen wurden Besichtigungen der Immobilie vereinbart; die Besichtigungstätigkeit läuft laut der vom Kunden geteilten Nachverfolgung weiter.",
+    },
+    mediaLayout: "wide-primary",
+    primary: {
+      type: "video",
+      src: "/case-studies/real-estate-investment/thomas-inmo-landing.mp4",
+      poster: "/case-studies/real-estate-investment/thomas-inmo-01.jpg",
+      alt: "Echte Präsentation der Landingpage von Cala Serena",
+      caption: "Landingpage Cala Serena",
+      fit: "contain",
+    },
+    supports: [
+      {
+        type: "image",
+        src: "/case-studies/real-estate-investment/thomas-inmo-02.png",
+        alt: "Echter Meta-Screenshot: früherer Schnitt mit 264 Besuchen, 15.661 Impressionen und 83,55 € Investition",
+        caption: "Meta Ads · früherer Schnitt",
+        fit: "contain",
+      },
+      {
+        type: "slider",
+        alt: "Cala-Serena-Creatives für Deutschland",
+        caption: "Kampagnen · Deutschland",
+        sliderLabel: "Kampagnen / Deutschland",
+        previousLabel: "Vorheriges Creative",
+        nextLabel: "Nächstes Creative",
+        slides: [
+          {
+            kind: "collage",
+            sources: [
+              {
+                src: "/case-studies/real-estate-investment/thomas-inmo-creative-01.png",
+                alt: "Cala-Serena-Creative 1",
+              },
+              {
+                src: "/case-studies/real-estate-investment/thomas-inmo-creative-02.png",
+                alt: "Cala-Serena-Creative 2",
+              },
+              {
+                src: "/case-studies/real-estate-investment/thomas-inmo-creative-03.png",
+                alt: "Cala-Serena-Creative 3",
+              },
+            ],
+          },
+          {
+            kind: "panel",
+            kicker: "IN ENTWICKLUNG",
+            title: "Polen.\nCosta Blanca.",
+            body: "Landingpage für polnische Käufer.",
+          },
+          {
+            kind: "image",
+            src: "/case-studies/real-estate-investment/thomas-inmo-creative-01.png",
+            alt: "Cala-Serena-Creative 1",
+          },
+          {
+            kind: "image",
+            src: "/case-studies/real-estate-investment/thomas-inmo-creative-02.png",
+            alt: "Cala-Serena-Creative 2",
+          },
+          {
+            kind: "image",
+            src: "/case-studies/real-estate-investment/thomas-inmo-creative-03.png",
+            alt: "Cala-Serena-Creative 3",
+          },
+        ],
+      },
+    ],
+    metrics: [
+      { value: 416, label: "Besuche der Landingpage" },
+      { value: 19795, display: "19.795", label: "Impressionen" },
+      { value: 13088, display: "13.088", label: "Erreichte Personen" },
+      { value: 0.25, display: "0,25 €", label: "Kosten pro Landingpage-Besuch" },
+      { value: 105.38, display: "105,38 €", label: "Werbeinvestition" },
+    ],
+    metricsPeriod:
+      "Zeitraum: Aktives 30-Tage-Fenster · Kampagnenbericht Thomas Inmo",
+    metricsNote:
+      "Besuche der Landingpage sind weder Kontakte noch Vor-Ort-Besichtigungen. Abschlussbericht: aktives 30-Tage-Fenster. Der Meta-Screenshot zeigt einen früheren Schnitt: 264 Besuche und 83,55 € Investition. Polen / Costa Blanca: derzeit entwickeln wir eine Landingpage für polnische Käufer von Immobilien an der Costa Blanca.",
+    seo: {
+      title: "Thomas Inmo — Fallstudie",
+      description:
+        "Fallstudie von Global Solutions mit Thomas Inmo: Kampagnen, Landingpage und Ansprache für Cala Serena.",
+    },
+  },
+  {
+    id: "morales-estates",
+    slug: "morales-estates",
+    sectorId: "real-estate-investment",
+    name: "Morales Estates",
+    location: "Immobilien und Investment",
+    locale: "de",
+    listed: true,
+    listingOnly: true,
+    summary:
+      "Von einer unfertigen WordPress-Website zu einer premium Immobilienpräsenz. Wir haben das Projekt übernommen und fertiggestellt, einen Chatbot integriert, den Blog aufgebaut und am SEO gearbeitet. Außerdem haben wir drei Immobilien akquiriert, um das Portfolio des Kunden zu erweitern.",
+    services: [
+      "WordPress-Entwicklung",
+      "Chatbot",
+      "Blog und SEO",
+      "3 akquirierte Immobilien",
+    ],
+    links: {
+      website: "https://moralesestates.com/",
+      websiteLabel: "Website ansehen",
+    },
+    story: {
+      label: "Nächste Phase",
+      body: "Die nächste Phase sieht ein System aus Kooperationen und Eigentümergewinnung vor, um das Portfolio zu erweitern und neue Geschäftschancen zu schaffen.",
+    },
+    mediaLayout: "wide-primary",
+    primary: {
+      type: "image",
+      src: "/case-studies/real-estate-investment/morales-estates-01.png",
+      alt: "Website und Chatbot von Morales Estates",
+      caption: "Website und Chatbot von Morales Estates",
+      fit: "contain",
+    },
+    supports: [
+      {
+        type: "image",
+        src: "/case-studies/real-estate-investment/morales-estates-02.png",
+        alt: "Immobilienkatalog von Morales Estates",
+        caption: "Immobilienkatalog von Morales Estates",
+        fit: "contain",
+      },
+      {
+        type: "image",
+        src: "/case-studies/real-estate-investment/morales-estates-03.png",
+        alt: "Blog von Morales Estates",
+        caption: "Blog von Morales Estates",
+        fit: "contain",
+      },
+    ],
+    seo: {
+      title: "Morales Estates — Fallstudie",
+      description:
+        "Fallstudie von Global Solutions mit Morales Estates: WordPress, Chatbot, Blog, SEO und Immobilienakquise.",
+    },
+  },
 ];

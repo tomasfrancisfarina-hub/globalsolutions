@@ -7,6 +7,7 @@ import { localizedPath } from "@/lib/i18n/config";
 import { animation } from "@/config/theme";
 import { cn } from "@/lib/utils";
 import type { Locale, PortfolioProject, PortfolioProjectMedia } from "@/types";
+import { CampaignSlider } from "./campaign-slider";
 import { CaseImage } from "./case-image";
 import { MetricCounter } from "./metric-counter";
 
@@ -119,7 +120,7 @@ export function WorkProjectBlock({
                     rel="noopener noreferrer"
                     className="work-project-ext inline-flex min-h-11 items-center px-1 text-[9px] uppercase tracking-[0.12em] text-white/70 underline-offset-4 hover:underline sm:text-[11px] sm:tracking-[0.14em]"
                   >
-                    {websiteLabel}
+                    {project.links.websiteLabel ?? websiteLabel}
                   </a>
                 ) : null}
                 {project.links?.instagram ? (
@@ -169,15 +170,47 @@ export function WorkProjectBlock({
             )}
           >
             {mediaItems.map((media, index) => {
+              if (media.type === "slider" && media.slides?.length) {
+                return (
+                  <div key={`${project.id}-media-${index}`} className="min-w-0">
+                    <CampaignSlider
+                      slides={media.slides}
+                      caption={media.caption}
+                      label={media.sliderLabel ?? media.caption ?? media.alt}
+                      previousLabel={media.previousLabel ?? "Previous"}
+                      nextLabel={media.nextLabel ?? "Next"}
+                      onImageClick={(src, alt) =>
+                        openImage({ type: "image", src, alt })
+                      }
+                    />
+                  </div>
+                );
+              }
+
               const image = (
                 <CaseImage
                   filename={media.src?.split("/").pop() ?? `media-${index}`}
                   alt={media.alt}
                   src={media.src}
                   type={media.type}
+                  poster={media.poster}
                   className="min-w-0 w-full rounded-md"
                   pendingLabel={media.pendingLabel}
                   caption={media.caption}
+                  playLabel={
+                    locale === "de"
+                      ? "Abspielen"
+                      : locale === "en"
+                        ? "Play"
+                        : "Reproducir"
+                  }
+                  pauseLabel={
+                    locale === "de"
+                      ? "Pausieren"
+                      : locale === "en"
+                        ? "Pause"
+                        : "Pausar"
+                  }
                 />
               );
 
@@ -234,6 +267,11 @@ export function WorkProjectBlock({
                   />
                 ))}
               </div>
+              {project.metricsNote ? (
+                <p className="work-project-meta mt-5 max-w-3xl text-[12px] leading-relaxed text-white/55">
+                  {project.metricsNote}
+                </p>
+              ) : null}
             </div>
           ) : null}
         </div>

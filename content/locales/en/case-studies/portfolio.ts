@@ -587,4 +587,167 @@ export const portfolioProjectsEn: PortfolioProject[] = [
         "Global Solutions case study in aesthetics: campaigns and engagement.",
     },
   },
+  {
+    id: "thomas-inmo",
+    slug: "thomas-inmo",
+    sectorId: "real-estate-investment",
+    name: "Thomas Inmo",
+    location: "Mallorca · German market",
+    locale: "en",
+    listed: true,
+    listingOnly: true,
+    summary:
+      "An integrated strategy to bring Cala Serena to international buyers: segmented campaigns, creatives, a landing page with form, and prospecting in Germany. We also added portal research and off-market outreach to support visits from potential clients.",
+    services: [
+      "Meta Ads",
+      "Targeting and creatives",
+      "Landing page and form",
+      "Prospecting in Germany",
+      "Off-market outreach",
+    ],
+    links: {
+      website: "https://cala-serena.vercel.app/es",
+      websiteLabel: "View website",
+    },
+    story: {
+      label: "From visibility to visits",
+      body: "After the campaigns, property viewings were arranged and viewing activity continues, according to the follow-up shared by the client.",
+    },
+    mediaLayout: "wide-primary",
+    primary: {
+      type: "video",
+      src: "/case-studies/real-estate-investment/thomas-inmo-landing.mp4",
+      poster: "/case-studies/real-estate-investment/thomas-inmo-01.jpg",
+      alt: "Real walkthrough of the Cala Serena landing page",
+      caption: "Cala Serena landing page",
+      fit: "contain",
+    },
+    supports: [
+      {
+        type: "image",
+        src: "/case-studies/real-estate-investment/thomas-inmo-02.png",
+        alt: "Real Meta screenshot: earlier cut of 264 visits, 15,661 impressions and €83.55 spend",
+        caption: "Meta Ads · earlier cut",
+        fit: "contain",
+      },
+      {
+        type: "slider",
+        alt: "Cala Serena creatives for Germany",
+        caption: "Campaigns · Germany",
+        sliderLabel: "Campaigns / Germany",
+        previousLabel: "Previous creative",
+        nextLabel: "Next creative",
+        slides: [
+          {
+            kind: "collage",
+            sources: [
+              {
+                src: "/case-studies/real-estate-investment/thomas-inmo-creative-01.png",
+                alt: "Cala Serena creative 1",
+              },
+              {
+                src: "/case-studies/real-estate-investment/thomas-inmo-creative-02.png",
+                alt: "Cala Serena creative 2",
+              },
+              {
+                src: "/case-studies/real-estate-investment/thomas-inmo-creative-03.png",
+                alt: "Cala Serena creative 3",
+              },
+            ],
+          },
+          {
+            kind: "panel",
+            kicker: "IN DEVELOPMENT",
+            title: "Poland.\nCosta Blanca.",
+            body: "Landing page for Polish buyers.",
+          },
+          {
+            kind: "image",
+            src: "/case-studies/real-estate-investment/thomas-inmo-creative-01.png",
+            alt: "Cala Serena creative 1",
+          },
+          {
+            kind: "image",
+            src: "/case-studies/real-estate-investment/thomas-inmo-creative-02.png",
+            alt: "Cala Serena creative 2",
+          },
+          {
+            kind: "image",
+            src: "/case-studies/real-estate-investment/thomas-inmo-creative-03.png",
+            alt: "Cala Serena creative 3",
+          },
+        ],
+      },
+    ],
+    metrics: [
+      { value: 416, label: "Landing page visits" },
+      { value: 19795, display: "19,795", label: "Impressions" },
+      { value: 13088, display: "13,088", label: "People reached" },
+      { value: 0.25, display: "€0.25", label: "Cost per landing page visit" },
+      { value: 105.38, display: "€105.38", label: "Ad spend" },
+    ],
+    metricsPeriod: "Period: 30-day active window · Thomas Inmo campaign report",
+    metricsNote:
+      "Landing page visits are not leads or in-person viewings. Final report: 30-day active window. The Meta screenshot shows an earlier cut: 264 visits and €83.55 spend. Poland / Costa Blanca: we are currently developing a landing page for Polish buyers of properties on the Costa Blanca.",
+    seo: {
+      title: "Thomas Inmo — Case study",
+      description:
+        "Global Solutions case study with Thomas Inmo: campaigns, landing page and acquisition for Cala Serena.",
+    },
+  },
+  {
+    id: "morales-estates",
+    slug: "morales-estates",
+    sectorId: "real-estate-investment",
+    name: "Morales Estates",
+    location: "Real estate and investment",
+    locale: "en",
+    listed: true,
+    listingOnly: true,
+    summary:
+      "From an unfinished WordPress site to a premium real-estate presence. We recovered and completed the project, added a chatbot, built the blog and worked on SEO. We also sourced three properties to expand the client’s portfolio.",
+    services: [
+      "WordPress development",
+      "Chatbot",
+      "Blog and SEO",
+      "3 properties sourced",
+    ],
+    links: {
+      website: "https://moralesestates.com/",
+      websiteLabel: "View website",
+    },
+    story: {
+      label: "Next phase",
+      body: "The next phase outlines a system of collaborations and owner acquisition to expand the portfolio and generate new commercial opportunities.",
+    },
+    mediaLayout: "wide-primary",
+    primary: {
+      type: "image",
+      src: "/case-studies/real-estate-investment/morales-estates-01.png",
+      alt: "Morales Estates website and chatbot",
+      caption: "Morales Estates website and chatbot",
+      fit: "contain",
+    },
+    supports: [
+      {
+        type: "image",
+        src: "/case-studies/real-estate-investment/morales-estates-02.png",
+        alt: "Morales Estates property catalogue",
+        caption: "Morales Estates property catalogue",
+        fit: "contain",
+      },
+      {
+        type: "image",
+        src: "/case-studies/real-estate-investment/morales-estates-03.png",
+        alt: "Morales Estates blog",
+        caption: "Morales Estates blog",
+        fit: "contain",
+      },
+    ],
+    seo: {
+      title: "Morales Estates — Case study",
+      description:
+        "Global Solutions case study with Morales Estates: WordPress, chatbot, blog, SEO and property sourcing.",
+    },
+  },
 ];

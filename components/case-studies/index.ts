@@ -7,5 +7,6 @@ export { SectorPortfolio } from "./sector-portfolio";
 export { PortfolioProjectCanvas } from "./portfolio-project-canvas";
 export { WorkProjectBlock } from "./work-project-block";
 export { CaseImage } from "./case-image";
+export { CampaignSlider } from "./campaign-slider";
 export { MetricCounter } from "./metric-counter";
 export { PortfolioFilters } from "./portfolio-filters";

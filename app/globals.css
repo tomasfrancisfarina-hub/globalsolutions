@@ -88,6 +88,18 @@ body {
   }
 }
 
+.campaign-track {
+  scrollbar-width: none;
+}
+
+.campaign-track::-webkit-scrollbar {
+  display: none;
+}
+
+.campaign-panels > *:nth-child(2) {
+  transform: translateY(8px);
+}
+
 /* Work rows: invert + unfold only on desktop with a real pointer (not iOS tap). */
 @media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
   .work-project-row:hover,
@@ -105,7 +117,7 @@ body {
 
   .work-project-row:hover .work-project-media,
   .work-project-row:focus-within .work-project-media {
-    max-height: 80rem;
+    max-height: 140rem;
     margin-top: 2.5rem;
     opacity: 1;
   }

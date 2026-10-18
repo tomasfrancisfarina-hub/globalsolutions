@@ -33,8 +33,18 @@ export interface CaseStudySector {
  * Visual portfolio project for Refokus-style sector galleries.
  * Media paths are replaceable; omit src until the final asset is approved.
  */
+export interface PortfolioSliderSlide {
+  kind?: "image" | "collage" | "panel";
+  src?: string;
+  alt?: string;
+  sources?: { src: string; alt: string }[];
+  kicker?: string;
+  title?: string;
+  body?: string;
+}
+
 export interface PortfolioProjectMedia {
-  type: "image" | "video";
+  type: "image" | "video" | "slider";
   /** Public path under /public — leave undefined until the final asset is ready */
   src?: string;
   /** Optional poster for video */
@@ -45,6 +55,10 @@ export interface PortfolioProjectMedia {
   pendingLabel?: string;
   aspect?: "16/9" | "4/3" | "1/1" | "3/4" | "auto";
   fit?: "cover" | "contain";
+  slides?: PortfolioSliderSlide[];
+  sliderLabel?: string;
+  previousLabel?: string;
+  nextLabel?: string;
 }
 
 export interface PortfolioProjectMetric {
@@ -96,6 +110,7 @@ export interface PortfolioProject {
   links?: {
     website?: string;
     instagram?: string;
+    websiteLabel?: string;
   };
   story?: {
     label: string;
@@ -106,6 +121,7 @@ export interface PortfolioProject {
   /** Measured results shown only on the detail page */
   metrics?: PortfolioProjectMetric[];
   metricsPeriod?: string;
+  metricsNote?: string;
   /** Named image slots for the detail narrative */
   caseImages?: PortfolioCaseImage[];
   seo: {
