@@ -42,7 +42,7 @@ export function CampaignSlider({
         {slides.map((slide, index) => (
           <div
             key={`${slide.kind ?? "image"}-${index}`}
-            className="campaign-slide flex w-full min-w-full shrink-0 snap-start items-center justify-center p-2"
+            className="campaign-slide flex w-full min-w-full shrink-0 snap-start items-center justify-center p-0 sm:p-2"
           >
             {slide.kind === "collage" && slide.sources ? (
               <div className="campaign-panels grid w-full grid-cols-3 gap-1">
@@ -107,19 +107,19 @@ export function CampaignSlider({
           </div>
         ))}
       </div>
-      <div className="mt-2 flex items-center justify-between gap-2 border-t border-current/20 pt-2 text-[10px] uppercase tracking-[0.12em]">
+      <div className="mt-2 flex items-center justify-between gap-1 border-t border-current/20 pt-2 text-[8px] uppercase leading-tight tracking-[0.08em] sm:text-[10px] sm:tracking-[0.12em]">
         <button
           type="button"
-          className="inline-flex min-h-11 min-w-11 items-center justify-center"
+          className="inline-flex h-11 w-8 shrink-0 items-center justify-center sm:w-11"
           aria-label={previousLabel}
           onClick={() => scrollBySlide(-1)}
         >
           ←
         </button>
-        <span>{label}</span>
+        <span className="min-w-0 flex-1 text-center break-words">{label}</span>
         <button
           type="button"
-          className="inline-flex min-h-11 min-w-11 items-center justify-center"
+          className="inline-flex h-11 w-8 shrink-0 items-center justify-center sm:w-11"
           aria-label={nextLabel}
           onClick={() => scrollBySlide(1)}
         >

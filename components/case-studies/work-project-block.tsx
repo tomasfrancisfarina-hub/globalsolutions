@@ -78,7 +78,6 @@ export function WorkProjectBlock({
         "work-project-row group relative overflow-x-hidden border-t border-white/15",
         "bg-[#0b0b0b] text-white transition-colors duration-500",
         "motion-reduce:transition-none",
-        listingOnly && "work-project-stack",
       )}
     >
       <div className="mx-auto max-w-[90rem] px-3 py-5 sm:px-8 sm:py-12 md:px-12 md:py-14">
@@ -160,7 +159,7 @@ export function WorkProjectBlock({
         <div className="work-project-media mt-5 h-fit sm:mt-8">
           <div
             className={cn(
-              "grid items-start gap-2 overflow-visible sm:gap-4",
+              "grid min-w-0 items-start gap-2 overflow-visible sm:gap-4",
               mediaCount === 1 && "grid-cols-1",
               mediaCount === 2 && "grid-cols-2",
               mediaCount >= 3 &&
