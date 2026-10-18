@@ -13,6 +13,7 @@ interface CaseImageProps {
   priority?: boolean;
   compact?: boolean;
   pendingLabel?: string;
+  caption?: string;
 }
 
 /** Renders the attached file at full intrinsic size — no crop, no leftover frame. */
@@ -24,6 +25,7 @@ export function CaseImage({
   className,
   priority = false,
   pendingLabel,
+  caption,
 }: CaseImageProps) {
   const mediaType =
     type ?? (src?.match(/\.(mp4|webm|mov)(\?|$)/i) ? "video" : "image");
@@ -72,6 +74,9 @@ export function CaseImage({
           </p>
         </div>
       )}
+      {caption ? (
+        <p className="mt-2 text-[11px] leading-snug text-white/70">{caption}</p>
+      ) : null}
     </div>
   );
 }

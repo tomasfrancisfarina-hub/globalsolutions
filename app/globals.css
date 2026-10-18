@@ -82,6 +82,12 @@ body {
   height: fit-content;
 }
 
+@media (max-width: 1023px) {
+  .work-project-stack .work-project-media > div {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Work rows: invert + unfold only on desktop with a real pointer (not iOS tap). */
 @media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
   .work-project-row:hover,
@@ -117,6 +123,11 @@ body {
   .work-project-row:hover .work-project-ext,
   .work-project-row:focus-within .work-project-ext {
     color: rgb(17 17 17 / 0.7);
+  }
+
+  .work-project-row:hover .work-project-media p,
+  .work-project-row:focus-within .work-project-media p {
+    color: rgb(17 17 17 / 0.55);
   }
 }
 

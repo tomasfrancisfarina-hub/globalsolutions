@@ -494,4 +494,98 @@ export const portfolioProjectsDe: PortfolioProject[] = [
       ogDescription: "Echte Geschichten. Wirkung, die man spürt.",
     },
   },
+  {
+    id: "womens-hair-salon",
+    slug: "womens-hair-salon",
+    sectorId: "beauty-personal-care",
+    name: "Damenfriseur",
+    location: "Friseursalon · Langjährige Zusammenarbeit",
+    locale: "de",
+    listed: true,
+    listingOnly: true,
+    summary:
+      "Von null auf 22.000 Follower. Ganzheitliche Marketingleitung gemeinsam mit der Inhaberin – von den Anfängen des Salons an und über mehrere Jahre –, um die Marke aufzubauen und ihre Position in der Stadt zu festigen.",
+    services: [
+      "Marketingleitung",
+      "Logo & Markenidentität",
+      "3D-Design des Salons",
+      "Kampagnen & Social Media",
+      "Personalwesen",
+    ],
+    story: {
+      label: "Die Zusammenarbeit · Von Anfang an",
+      body: "In einer beruflichen Phase vor der heutigen GSW übernahm Tomás Fariña gemeinsam mit der Inhaberin die Marketingleitung des Salons. Die Arbeit umfasste die Gesamtstrategie, das Design von Logo und Markenidentität, das 3D-Design des Salons sowie Unterstützung im Personalbereich. Über mehrere Jahre wurden Kampagnen und die digitale Community betreut, die auf Facebook von null auf 22.000 Follower wuchs und dazu beitrug, den Salon als Referenz in seiner Stadt zu positionieren.",
+    },
+    mediaLayout: "wide-primary",
+    primary: {
+      type: "image",
+      src: "/case-studies/beauty-personal-care/salon-space.webp",
+      alt: "Waschbereich von Amen: für die Präsentation retuschiertes Foto mit hinzugefügtem Bild",
+      caption: "Der Raum · retuschiertes Foto",
+      fit: "contain",
+    },
+    supports: [
+      {
+        type: "image",
+        src: "/case-studies/beauty-personal-care/salon-community-22k.webp",
+        alt: "Profil von Amen Peluquería mit 22.000 Followern; für die Präsentation bereinigter Screenshot",
+        caption: "Community · 22.000 Follower",
+        fit: "contain",
+      },
+      {
+        type: "image",
+        src: "/case-studies/beauty-personal-care/salon-campaign-2018.webp",
+        alt: "Historische Balayage-Kampagne vom 26. Februar 2018: 109 Reaktionen, 384 Kommentare und 12-mal geteilt; bereinigter Screenshot",
+        caption: "Kampagne · Februar 2018",
+        fit: "contain",
+      },
+    ],
+    seo: {
+      title: "Damenfriseur — Fallstudie",
+      description:
+        "Fallstudie von Global Solutions im Friseurhandwerk: Marke, Community und Kampagnen.",
+    },
+  },
+  {
+    id: "womens-aesthetics",
+    slug: "womens-aesthetics",
+    sectorId: "beauty-personal-care",
+    name: "Damenkosmetik",
+    location: "Argentinien · Kosmetikstudio",
+    locale: "de",
+    listed: true,
+    listingOnly: true,
+    summary:
+      "Marketingkampagnen, um ihre Behandlungen sichtbar zu machen und bei potenziellen Kundinnen Interesse und Interaktion zu wecken.",
+    services: ["Werbekampagnen", "Digitales Marketing"],
+    mediaLayout: "wide-primary",
+    primary: {
+      type: "image",
+      src: "/case-studies/beauty-personal-care/aesthetics-campaign.webp",
+      alt: "Historisches Kampagnenbeispiel von Amen Estética mit 244 Reaktionen, 92 Kommentaren und 15-mal geteilt",
+      caption: "Kampagne · historischer Screenshot",
+      fit: "contain",
+    },
+    supports: [
+      {
+        type: "image",
+        src: "/case-studies/beauty-personal-care/aesthetics-projection-simulated.webp",
+        alt: "Projektion +50 % mit simulierten Daten: 60.996 Impressionen, 926 Besuche, 45,69 Euro Budget und 600 Events; keine realen Ergebnisse",
+        caption: "Projektion +50 % · SIMULIERTE DATEN",
+        fit: "contain",
+      },
+    ],
+    metrics: [
+      { value: 244, label: "Reaktionen" },
+      { value: 92, label: "Kommentare" },
+      { value: 15, label: "Geteilt" },
+    ],
+    metricsPeriod:
+      "Zeitraum: Historischer Beitrag vom 19. Juli · Jahr nicht angegeben",
+    seo: {
+      title: "Damenkosmetik — Fallstudie",
+      description:
+        "Fallstudie von Global Solutions in der Kosmetik: Kampagnen und Interaktion.",
+    },
+  },
 ];

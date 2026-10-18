@@ -40,6 +40,7 @@ export interface PortfolioProjectMedia {
   /** Optional poster for video */
   poster?: string;
   alt: string;
+  caption?: string;
   /** Dev-only placeholder label when src is missing */
   pendingLabel?: string;
   aspect?: "16/9" | "4/3" | "1/1" | "3/4" | "auto";
@@ -77,6 +78,8 @@ export interface PortfolioProject {
   location: string;
   locale: Locale;
   listed: boolean;
+  /** Shown only in the sector list; no individual case URL. */
+  listingOnly?: boolean;
   /** Short description for the work listing (1–2 lines) */
   summary?: string;
   summaryPending?: boolean;
@@ -94,6 +97,10 @@ export interface PortfolioProject {
     website?: string;
     instagram?: string;
   };
+  story?: {
+    label: string;
+    body: string;
+  };
   /** Detail-page narrative moments */
   moments?: PortfolioProjectMoment[];
   /** Measured results shown only on the detail page */
@@ -106,63 +113,6 @@ export interface PortfolioProject {
     description: string;
     ogTitle?: string;
     ogDescription?: string;
-  };
-}
-
-export interface SectorShowcaseImage {
-  src: string;
-  width: number;
-  height: number;
-  alt: string;
-  caption: string;
-}
-
-export interface SectorShowcaseCase {
-  id: string;
-  name: string;
-  location: string;
-  description: string;
-  services: string[];
-  story?: {
-    label: string;
-    body: string;
-  };
-  /**
-   * "triptych": wide lead image plus two staggered supports.
-   * "diptych": wide lead image plus one taller support, captions visible.
-   */
-  layout: "triptych" | "diptych";
-  images: SectorShowcaseImage[];
-  metrics?: PortfolioProjectMetric[];
-  metricsPeriod?: string;
-}
-
-/**
- * Editorial sector page built from an approved HTML reference:
- * oversized hero, independent case rows, and a personal booking close.
- * Cases have no individual pages.
- */
-export interface SectorShowcase {
-  sectorId: string;
-  locale: Locale;
-  eyebrow: string;
-  heroLines: [string, string];
-  intro: string;
-  projectsLabel: string;
-  cases: SectorShowcaseCase[];
-  closing: {
-    ctaLabel: string;
-    title: string;
-    intro: string;
-    portrait: { src: string; alt: string };
-    name: string;
-    role: string;
-    calendarTitle: string;
-    calendarFallback: string;
-  };
-  labels: {
-    enlarge: string;
-    close: string;
   };
 }
 

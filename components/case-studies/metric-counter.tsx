@@ -52,10 +52,10 @@ export function MetricCounter({ value, display, label }: MetricCounterProps) {
 
   return (
     <div ref={ref} className="min-w-0">
-      <p className="text-[1.55rem] font-medium leading-none tracking-normal text-foreground sm:text-4xl lg:text-5xl">
+      <p className="text-[1.55rem] font-medium leading-none tracking-normal text-current sm:text-4xl lg:text-5xl">
         {text}
       </p>
-      <p className="mt-2 text-[12px] leading-snug text-muted sm:mt-3 sm:text-sm">
+      <p className="mt-2 text-[12px] leading-snug text-current/60 sm:mt-3 sm:text-sm">
         {label}
       </p>
     </div>

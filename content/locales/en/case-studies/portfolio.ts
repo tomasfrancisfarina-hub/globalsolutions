@@ -494,4 +494,97 @@ export const portfolioProjectsEn: PortfolioProject[] = [
       ogDescription: "Real stories. Impact you can feel.",
     },
   },
+  {
+    id: "womens-hair-salon",
+    slug: "womens-hair-salon",
+    sectorId: "beauty-personal-care",
+    name: "Women’s hair salon",
+    location: "Hair salon · Long-term collaboration",
+    locale: "en",
+    listed: true,
+    listingOnly: true,
+    summary:
+      "From zero to 22,000 followers. End-to-end marketing leadership alongside the owner, from the salon’s early days and over several years, to build the brand and consolidate its position in the city.",
+    services: [
+      "Marketing leadership",
+      "Logo & brand identity",
+      "3D salon design",
+      "Campaigns & social media",
+      "Human resources",
+    ],
+    story: {
+      label: "The collaboration · From the start",
+      body: "In a professional chapter before today’s GSW, Tomás Fariña took on the salon’s marketing leadership alongside its owner. The work covered overall strategy, logo and brand identity design, the 3D design of the salon, and support with human resources. Over several years, campaigns and the digital community were managed, growing from zero to 22,000 followers on Facebook and helping position the salon as a reference in its city.",
+    },
+    mediaLayout: "wide-primary",
+    primary: {
+      type: "image",
+      src: "/case-studies/beauty-personal-care/salon-space.webp",
+      alt: "Amen’s washing area: photo retouched for presentation, with an added painting",
+      caption: "The space · retouched photo",
+      fit: "contain",
+    },
+    supports: [
+      {
+        type: "image",
+        src: "/case-studies/beauty-personal-care/salon-community-22k.webp",
+        alt: "Amen Peluquería profile with 22,000 followers; screenshot cleaned up for presentation",
+        caption: "Community · 22,000 followers",
+        fit: "contain",
+      },
+      {
+        type: "image",
+        src: "/case-studies/beauty-personal-care/salon-campaign-2018.webp",
+        alt: "Historical balayage campaign from 26 February 2018: 109 reactions, 384 comments, and 12 shares; cleaned-up screenshot",
+        caption: "Campaign · February 2018",
+        fit: "contain",
+      },
+    ],
+    seo: {
+      title: "Women’s hair salon — Case study",
+      description:
+        "Global Solutions case study in hair: brand, community and campaigns.",
+    },
+  },
+  {
+    id: "womens-aesthetics",
+    slug: "womens-aesthetics",
+    sectorId: "beauty-personal-care",
+    name: "Women’s aesthetics",
+    location: "Argentina · Beauty aesthetics",
+    locale: "en",
+    listed: true,
+    listingOnly: true,
+    summary:
+      "Marketing campaigns to give its treatments visibility and spark interest and interaction among potential clients.",
+    services: ["Advertising campaigns", "Digital marketing"],
+    mediaLayout: "wide-primary",
+    primary: {
+      type: "image",
+      src: "/case-studies/beauty-personal-care/aesthetics-campaign.webp",
+      alt: "Historical Amen Estética campaign example with 244 reactions, 92 comments, and 15 shares",
+      caption: "Campaign · historical screenshot",
+      fit: "contain",
+    },
+    supports: [
+      {
+        type: "image",
+        src: "/case-studies/beauty-personal-care/aesthetics-projection-simulated.webp",
+        alt: "+50% projection with simulated data: 60,996 impressions, 926 visits, €45.69 spend, and 600 events; not real results",
+        caption: "+50% projection · SIMULATED DATA",
+        fit: "contain",
+      },
+    ],
+    metrics: [
+      { value: 244, label: "Reactions" },
+      { value: 92, label: "Comments" },
+      { value: 15, label: "Shares" },
+    ],
+    metricsPeriod: "Period: Historical post from 19 July · year not stated",
+    seo: {
+      title: "Women’s aesthetics — Case study",
+      description:
+        "Global Solutions case study in aesthetics: campaigns and engagement.",
+    },
+  },
 ];

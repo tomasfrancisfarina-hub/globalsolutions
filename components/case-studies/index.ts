@@ -4,7 +4,6 @@ export { CaseStudySectorDetail } from "./case-study-sector-detail";
 export { CaseStudyDetail } from "./case-study-detail";
 export { CaseStudyBookingCta } from "./case-study-booking-cta";
 export { SectorPortfolio } from "./sector-portfolio";
-export { SectorShowcase } from "./sector-showcase";
 export { PortfolioProjectCanvas } from "./portfolio-project-canvas";
 export { WorkProjectBlock } from "./work-project-block";
 export { CaseImage } from "./case-image";

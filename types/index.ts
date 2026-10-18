@@ -10,9 +10,6 @@ export type {
   Metric,
   PortfolioProject,
   PortfolioProjectMedia,
-  SectorShowcase,
-  SectorShowcaseCase,
-  SectorShowcaseImage,
   Testimonial,
 } from "./case-study";
 export type { Insight, InsightSummary } from "./insight";

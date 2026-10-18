@@ -22,7 +22,9 @@ export function getPortfolioProjectBySlug(
   slug: string,
   locale: Locale,
 ): PortfolioProject | undefined {
-  return getAllPortfolioProjects(locale).find((project) => project.slug === slug);
+  return getAllPortfolioProjects(locale).find(
+    (project) => project.slug === slug && !project.listingOnly,
+  );
 }
 
 export function getListedPortfolioProjectsBySector(
@@ -35,7 +37,9 @@ export function getListedPortfolioProjectsBySector(
 }
 
 export function getAllPortfolioProjectSlugs(): string[] {
-  return byLocale.en.map((project) => project.slug);
+  return byLocale.en
+    .filter((project) => !project.listingOnly)
+    .map((project) => project.slug);
 }
 
 export function getAllPortfolioProjectParams(): { locale: Locale; slug: string }[] {

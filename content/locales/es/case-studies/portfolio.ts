@@ -494,4 +494,97 @@ export const portfolioProjectsEs: PortfolioProject[] = [
       ogDescription: "Historias reales. Impacto que se siente.",
     },
   },
+  {
+    id: "womens-hair-salon",
+    slug: "womens-hair-salon",
+    sectorId: "beauty-personal-care",
+    name: "Peluquería femenina",
+    location: "Peluquería · Colaboración histórica",
+    locale: "es",
+    listed: true,
+    listingOnly: true,
+    summary:
+      "De cero a 22.000 seguidores. Dirección integral de marketing junto a su propietaria, desde los inicios del salón y durante varios años, para construir su marca y consolidar su posicionamiento en la ciudad.",
+    services: [
+      "Dirección de marketing",
+      "Logo e identidad de marca",
+      "Diseño 3D del local",
+      "Campañas y redes sociales",
+      "Recursos humanos",
+    ],
+    story: {
+      label: "La colaboración · Desde los inicios",
+      body: "En una etapa profesional anterior a la actual GSW, Tomás Fariña asumió la dirección de marketing del salón junto a su propietaria. El trabajo abarcó la estrategia integral, el diseño del logo y la identidad de marca, el diseño 3D del local y el apoyo en recursos humanos. Durante varios años se gestionaron campañas y la comunidad digital, que pasó de cero a 22.000 seguidores en Facebook, contribuyendo a posicionar el salón como un referente en su ciudad.",
+    },
+    mediaLayout: "wide-primary",
+    primary: {
+      type: "image",
+      src: "/case-studies/beauty-personal-care/salon-space.webp",
+      alt: "Zona de lavado de Amen: fotografía retocada para presentación, con cuadro añadido",
+      caption: "El espacio · fotografía retocada",
+      fit: "contain",
+    },
+    supports: [
+      {
+        type: "image",
+        src: "/case-studies/beauty-personal-care/salon-community-22k.webp",
+        alt: "Perfil de Amen Peluquería con 22 mil seguidores; captura limpiada para presentación",
+        caption: "Comunidad · 22.000 seguidores",
+        fit: "contain",
+      },
+      {
+        type: "image",
+        src: "/case-studies/beauty-personal-care/salon-campaign-2018.webp",
+        alt: "Campaña histórica de balayage del 26 de febrero de 2018: 109 reacciones, 384 comentarios y 12 compartidos; captura limpiada",
+        caption: "Campaña · febrero de 2018",
+        fit: "contain",
+      },
+    ],
+    seo: {
+      title: "Peluquería femenina — Caso de éxito",
+      description:
+        "Caso de éxito de Global Solutions en peluquería: marca, comunidad y campañas.",
+    },
+  },
+  {
+    id: "womens-aesthetics",
+    slug: "womens-aesthetics",
+    sectorId: "beauty-personal-care",
+    name: "Estética femenina",
+    location: "Argentina · Estética de belleza",
+    locale: "es",
+    listed: true,
+    listingOnly: true,
+    summary:
+      "Campañas de marketing para dar visibilidad a sus tratamientos y generar interés e interacción con potenciales clientas.",
+    services: ["Campañas publicitarias", "Marketing digital"],
+    mediaLayout: "wide-primary",
+    primary: {
+      type: "image",
+      src: "/case-studies/beauty-personal-care/aesthetics-campaign.webp",
+      alt: "Ejemplo histórico de campaña de Amen Estética con 244 reacciones, 92 comentarios y 15 compartidos",
+      caption: "Campaña · captura histórica",
+      fit: "contain",
+    },
+    supports: [
+      {
+        type: "image",
+        src: "/case-studies/beauty-personal-care/aesthetics-projection-simulated.webp",
+        alt: "Proyección +50% con datos simulados: 60.996 impresiones, 926 visitas, 45,69 euros de inversión y 600 eventos; no son resultados reales",
+        caption: "Proyección +50% · DATOS SIMULADOS",
+        fit: "contain",
+      },
+    ],
+    metrics: [
+      { value: 244, label: "Reacciones" },
+      { value: 92, label: "Comentarios" },
+      { value: 15, label: "Compartidos" },
+    ],
+    metricsPeriod: "Periodo: Publicación histórica del 19 de julio · año no indicado",
+    seo: {
+      title: "Estética femenina — Caso de éxito",
+      description:
+        "Caso de éxito de Global Solutions en estética: campañas e interacción.",
+    },
+  },
 ];
