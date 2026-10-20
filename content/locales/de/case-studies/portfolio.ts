@@ -690,7 +690,7 @@ export const portfolioProjectsDe: PortfolioProject[] = [
     metricsPeriod:
       "Zeitraum: Aktives 30-Tage-Fenster · Kampagnenbericht Thomas Inmo",
     metricsNote:
-      "Besuche der Landingpage sind weder Kontakte noch Vor-Ort-Besichtigungen. Abschlussbericht: aktives 30-Tage-Fenster. Der Meta-Screenshot zeigt einen früheren Schnitt: 264 Besuche und 83,55 € Investition. Polen / Costa Blanca: derzeit entwickeln wir eine Landingpage für polnische Käufer von Immobilien an der Costa Blanca.",
+      "Die Besuche der Landing sind keine Kontakte und keine Vor-Ort-Besichtigungen.\nAbschlussbericht: aktives 30-Tage-Fenster. Die Meta-Ads-Anzeige zeigt einen früheren Stand: 264 Besuche und 83,55 € Investition.",
     seo: {
       title: "Thomas Inmo — Fallstudie",
       description:

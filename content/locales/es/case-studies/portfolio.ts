@@ -688,7 +688,7 @@ export const portfolioProjectsEs: PortfolioProject[] = [
     ],
     metricsPeriod: "Periodo: Ventana activa de 30 días · Informe de campaña de Thomas Inmo",
     metricsNote:
-      "Las visitas a la landing no son contactos ni visitas presenciales. Informe final: ventana activa de 30 días. La captura de Meta muestra un corte anterior: 264 visitas y 83,55 € de inversión. Polonia / Costa Blanca: actualmente desarrollamos una landing dirigida a compradores polacos de propiedades en Costa Blanca.",
+      "Las visitas a la landing no son contactos ni visitas presenciales.\nInforme final: ventana activa de 30 días. La captura de Meta muestra un corte anterior: 264 visitas y 83,55 € de inversión.",
     seo: {
       title: "Thomas Inmo — Caso de éxito",
       description:

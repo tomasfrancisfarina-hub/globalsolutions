@@ -688,7 +688,7 @@ export const portfolioProjectsEn: PortfolioProject[] = [
     ],
     metricsPeriod: "Period: 30-day active window · Thomas Inmo campaign report",
     metricsNote:
-      "Landing page visits are not leads or in-person viewings. Final report: 30-day active window. The Meta screenshot shows an earlier cut: 264 visits and €83.55 spend. Poland / Costa Blanca: we are currently developing a landing page for Polish buyers of properties on the Costa Blanca.",
+      "Landing visits are not contacts or in-person viewings.\nFinal report: 30-day active window. The Meta Ads capture shows an earlier cut: 264 visits and €83.55 spend.",
     seo: {
       title: "Thomas Inmo — Case study",
       description:

@@ -267,7 +267,7 @@ export function WorkProjectBlock({
                 ))}
               </div>
               {project.metricsNote ? (
-                <p className="work-project-meta mt-5 max-w-3xl text-[12px] leading-relaxed text-white/55">
+                <p className="work-project-meta mt-5 max-w-3xl whitespace-pre-line text-[12px] leading-relaxed text-white/55">
                   {project.metricsNote}
                 </p>
               ) : null}
