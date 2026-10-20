@@ -687,8 +687,6 @@ export const portfolioProjectsEs: PortfolioProject[] = [
       { value: 105.38, display: "105,38 €", label: "Inversión publicitaria" },
     ],
     metricsPeriod: "Periodo: Ventana activa de 30 días · Informe de campaña de Thomas Inmo",
-    metricsNote:
-      "Las visitas a la landing no son contactos ni visitas presenciales.\nInforme final: ventana activa de 30 días. La captura de Meta muestra un corte anterior: 264 visitas y 83,55 € de inversión.",
     seo: {
       title: "Thomas Inmo — Caso de éxito",
       description:

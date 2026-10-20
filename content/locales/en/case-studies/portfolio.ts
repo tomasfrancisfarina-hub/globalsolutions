@@ -687,8 +687,6 @@ export const portfolioProjectsEn: PortfolioProject[] = [
       { value: 105.38, display: "€105.38", label: "Ad spend" },
     ],
     metricsPeriod: "Period: 30-day active window · Thomas Inmo campaign report",
-    metricsNote:
-      "Landing visits are not contacts or in-person viewings.\nFinal report: 30-day active window. The Meta Ads capture shows an earlier cut: 264 visits and €83.55 spend.",
     seo: {
       title: "Thomas Inmo — Case study",
       description:

@@ -689,8 +689,6 @@ export const portfolioProjectsDe: PortfolioProject[] = [
     ],
     metricsPeriod:
       "Zeitraum: Aktives 30-Tage-Fenster · Kampagnenbericht Thomas Inmo",
-    metricsNote:
-      "Die Besuche der Landing sind keine Kontakte und keine Vor-Ort-Besichtigungen.\nAbschlussbericht: aktives 30-Tage-Fenster. Die Meta-Ads-Anzeige zeigt einen früheren Stand: 264 Besuche und 83,55 € Investition.",
     seo: {
       title: "Thomas Inmo — Fallstudie",
       description:
