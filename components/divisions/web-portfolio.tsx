@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CaseImage } from "@/components/case-studies/case-image";
+import { CaseImage, type CaseVideoCrop } from "@/components/case-studies/case-image";
 import { CaseStudyBookingCta } from "@/components/case-studies/case-study-booking-cta";
 import { getAllPortfolioProjects } from "@/content/registry/portfolio-projects.registry";
 import { localizedPath } from "@/lib/i18n/config";
@@ -9,6 +9,7 @@ type WebMedia = {
   type: "image" | "video";
   src?: string;
   poster?: string;
+  crop?: CaseVideoCrop;
 };
 
 type WebDevelopment = {
@@ -107,7 +108,11 @@ const WEB_DEVELOPMENTS: WebDevelopment[] = [
   {
     projectId: "polaris",
     caseHref: "/case-studies/polaris",
-    media: { type: "video" },
+    media: {
+      type: "video",
+      src: "/case-studies/polaris/polaris-web-laptop.mp4",
+      crop: { aspect: "1216 / 768", scale: 1.3, origin: "57.8% 15%" },
+    },
     copy: {
       es: {
         summary:
@@ -292,6 +297,7 @@ export function WebPortfolio({ locale }: WebPortfolioProps) {
                       src={media.src}
                       type={media.type}
                       poster={media.poster}
+                      crop={media.crop}
                       className="rounded-md"
                       playLabel={labels.play}
                       pauseLabel={labels.pause}

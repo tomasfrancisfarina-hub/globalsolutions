@@ -19,6 +19,14 @@ interface CaseImageProps {
   caption?: string;
   playLabel?: string;
   pauseLabel?: string;
+  crop?: CaseVideoCrop;
+}
+
+/** Fixed-aspect frame that zooms into a video to trim empty background around the mockup. */
+export interface CaseVideoCrop {
+  aspect: string;
+  scale: number;
+  origin: string;
 }
 
 /** Renders the attached file at full intrinsic size — no crop, no leftover frame. */
@@ -34,6 +42,7 @@ export function CaseImage({
   caption,
   playLabel = "Play",
   pauseLabel = "Pause",
+  crop,
 }: CaseImageProps) {
   const mediaType =
     type === "slider"
@@ -69,6 +78,7 @@ export function CaseImage({
           alt={alt}
           playLabel={playLabel}
           pauseLabel={pauseLabel}
+          crop={crop}
         />
       )}
 
@@ -92,12 +102,14 @@ function CaseVideo({
   alt,
   playLabel,
   pauseLabel,
+  crop,
 }: {
   src: string;
   poster?: string;
   alt: string;
   playLabel: string;
   pauseLabel: string;
+  crop?: CaseVideoCrop;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const reduceMotion = useReducedMotion();
@@ -149,21 +161,43 @@ function CaseVideo({
     }
   };
 
+  const video = (
+    <video
+      ref={videoRef}
+      className={cn(
+        crop
+          ? "absolute inset-0 h-full w-full object-cover"
+          : "block h-auto w-full max-w-full object-contain [-webkit-transform:translateZ(0)]",
+      )}
+      style={
+        crop
+          ? { transform: `scale(${crop.scale})`, transformOrigin: crop.origin }
+          : undefined
+      }
+      src={src}
+      poster={poster}
+      muted
+      loop
+      playsInline
+      preload="metadata"
+      controls={false}
+      disablePictureInPicture
+      aria-label={alt}
+    />
+  );
+
   return (
     <div className="relative">
-      <video
-        ref={videoRef}
-        className="block h-auto w-full max-w-full object-contain [-webkit-transform:translateZ(0)]"
-        src={src}
-        poster={poster}
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        controls={false}
-        disablePictureInPicture
-        aria-label={alt}
-      />
+      {crop ? (
+        <div
+          className="relative w-full overflow-hidden bg-black"
+          style={{ aspectRatio: crop.aspect }}
+        >
+          {video}
+        </div>
+      ) : (
+        video
+      )}
       <button
         type="button"
         className="absolute bottom-3 right-3 grid h-9 w-9 place-items-center rounded-full border border-white/40 bg-black/70 text-[11px] text-white opacity-90 hover:opacity-100"
