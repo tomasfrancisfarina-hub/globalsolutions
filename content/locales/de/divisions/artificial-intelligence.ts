@@ -13,7 +13,7 @@ export const artificialIntelligence: Division = {
   capabilities: [
     { id: "inteligencia-artificial", name: "Künstliche Intelligenz", description: "KI-Implementierung zur Prozessoptimierung und Entscheidungsunterstützung." },
     { id: "automatizaciones", name: "Automatisierung", description: "Automatisierung von Geschäftsprozessen für operative Effizienz." },
-    { id: "diseno-web", name: "Webdesign", description: "Digitale Premium-Erlebnisse mit Fokus auf Conversion." },
+    { id: "diseno-web", name: "Webdesign", description: "Digitale Premium-Erlebnisse mit Fokus auf Conversion.", href: "/divisions/artificial-intelligence/web-design" },
   ],
   order: 2,
   featured: true,

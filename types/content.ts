@@ -6,6 +6,7 @@ export interface Capability {
   id: string;
   name: string;
   description: string;
+  href?: string;
 }
 
 /** Conversion-focused block — every SEO page must convert, not just rank */
