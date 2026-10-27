@@ -504,7 +504,7 @@ export const portfolioProjectsEn: PortfolioProject[] = [
     listed: true,
     listingOnly: true,
     summary:
-      "From zero to 22,000 followers. End-to-end marketing leadership alongside the owner, from the salon’s early days and over several years, to build the brand and consolidate its position in the city.",
+      "From zero to 22,000 followers. End-to-end marketing leadership alongside the owner, from the salon’s early days and over several years, to build the brand and consolidate its position in the city. The salon grew in team and revenue thanks to Meta Ads campaigns and the leadership strategy.",
     services: [
       "Marketing leadership",
       "Logo & brand identity",
@@ -514,7 +514,7 @@ export const portfolioProjectsEn: PortfolioProject[] = [
     ],
     story: {
       label: "The collaboration · From the start",
-      body: "In a professional chapter before today’s GSW, Tomás Fariña took on the salon’s marketing leadership alongside its owner. The work covered overall strategy, logo and brand identity design, the 3D design of the salon, and support with human resources. Over several years, campaigns and the digital community were managed, growing from zero to 22,000 followers on Facebook and helping position the salon as a reference in its city.",
+      body: "In a professional chapter before today’s GSW, Tomás Fariña took on the salon’s marketing leadership alongside its owner. The work covered overall strategy, logo and brand identity design, the 3D design of the salon, and support with human resources. Over several years, campaigns and the digital community were managed, growing from zero to 22,000 followers on Facebook and helping position the salon as a reference in its city. The salon grew in team and revenue thanks to Meta Ads campaigns and the leadership strategy.",
     },
     mediaLayout: "wide-primary",
     primary: {
@@ -535,8 +535,8 @@ export const portfolioProjectsEn: PortfolioProject[] = [
       {
         type: "image",
         src: "/case-studies/beauty-personal-care/salon-campaign-2018.webp",
-        alt: "Historical balayage campaign from 26 February 2018: 109 reactions, 384 comments, and 12 shares; cleaned-up screenshot",
-        caption: "Campaign · February 2018",
+        alt: "Historical balayage campaign: 109 reactions, 384 comments, and 12 shares; cleaned-up screenshot",
+        caption: "Campaign",
         fit: "contain",
       },
     ],
@@ -551,7 +551,7 @@ export const portfolioProjectsEn: PortfolioProject[] = [
     slug: "womens-aesthetics",
     sectorId: "beauty-personal-care",
     name: "Women’s aesthetics",
-    location: "Argentina · Beauty aesthetics",
+    location: "America · Beauty aesthetics",
     locale: "en",
     listed: true,
     listingOnly: true,
@@ -570,8 +570,8 @@ export const portfolioProjectsEn: PortfolioProject[] = [
       {
         type: "image",
         src: "/case-studies/beauty-personal-care/aesthetics-projection-simulated.webp",
-        alt: "+50% projection with simulated data: 60,996 impressions, 926 visits, €45.69 spend, and 600 events; not real results",
-        caption: "+50% projection · SIMULATED DATA",
+        alt: "Partial campaign result with currency converted proportionally: 60,996 impressions, 926 visits, €45.69 spend, and 600 events",
+        caption: "Partial result · currency converted proportionally",
         fit: "contain",
       },
     ],

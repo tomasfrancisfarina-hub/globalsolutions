@@ -504,7 +504,7 @@ export const portfolioProjectsDe: PortfolioProject[] = [
     listed: true,
     listingOnly: true,
     summary:
-      "Von null auf 22.000 Follower. Ganzheitliche Marketingleitung gemeinsam mit der Inhaberin – von den Anfängen des Salons an und über mehrere Jahre –, um die Marke aufzubauen und ihre Position in der Stadt zu festigen.",
+      "Von null auf 22.000 Follower. Ganzheitliche Marketingleitung gemeinsam mit der Inhaberin – von den Anfängen des Salons an und über mehrere Jahre –, um die Marke aufzubauen und ihre Position in der Stadt zu festigen. Der Salon wuchs in Team und Umsatz dank der Meta-Ads-Kampagnen und der Führungsstrategie.",
     services: [
       "Marketingleitung",
       "Logo & Markenidentität",
@@ -514,7 +514,7 @@ export const portfolioProjectsDe: PortfolioProject[] = [
     ],
     story: {
       label: "Die Zusammenarbeit · Von Anfang an",
-      body: "In einer beruflichen Phase vor der heutigen GSW übernahm Tomás Fariña gemeinsam mit der Inhaberin die Marketingleitung des Salons. Die Arbeit umfasste die Gesamtstrategie, das Design von Logo und Markenidentität, das 3D-Design des Salons sowie Unterstützung im Personalbereich. Über mehrere Jahre wurden Kampagnen und die digitale Community betreut, die auf Facebook von null auf 22.000 Follower wuchs und dazu beitrug, den Salon als Referenz in seiner Stadt zu positionieren.",
+      body: "In einer beruflichen Phase vor der heutigen GSW übernahm Tomás Fariña gemeinsam mit der Inhaberin die Marketingleitung des Salons. Die Arbeit umfasste die Gesamtstrategie, das Design von Logo und Markenidentität, das 3D-Design des Salons sowie Unterstützung im Personalbereich. Über mehrere Jahre wurden Kampagnen und die digitale Community betreut, die auf Facebook von null auf 22.000 Follower wuchs und dazu beitrug, den Salon als Referenz in seiner Stadt zu positionieren. Der Salon wuchs in Team und Umsatz dank der Meta-Ads-Kampagnen und der Führungsstrategie.",
     },
     mediaLayout: "wide-primary",
     primary: {
@@ -535,8 +535,8 @@ export const portfolioProjectsDe: PortfolioProject[] = [
       {
         type: "image",
         src: "/case-studies/beauty-personal-care/salon-campaign-2018.webp",
-        alt: "Historische Balayage-Kampagne vom 26. Februar 2018: 109 Reaktionen, 384 Kommentare und 12-mal geteilt; bereinigter Screenshot",
-        caption: "Kampagne · Februar 2018",
+        alt: "Historische Balayage-Kampagne: 109 Reaktionen, 384 Kommentare und 12-mal geteilt; bereinigter Screenshot",
+        caption: "Kampagne",
         fit: "contain",
       },
     ],
@@ -551,7 +551,7 @@ export const portfolioProjectsDe: PortfolioProject[] = [
     slug: "womens-aesthetics",
     sectorId: "beauty-personal-care",
     name: "Damenkosmetik",
-    location: "Argentinien · Kosmetikstudio",
+    location: "Amerika · Kosmetikstudio",
     locale: "de",
     listed: true,
     listingOnly: true,
@@ -570,8 +570,8 @@ export const portfolioProjectsDe: PortfolioProject[] = [
       {
         type: "image",
         src: "/case-studies/beauty-personal-care/aesthetics-projection-simulated.webp",
-        alt: "Projektion +50 % mit simulierten Daten: 60.996 Impressionen, 926 Besuche, 45,69 Euro Budget und 600 Events; keine realen Ergebnisse",
-        caption: "Projektion +50 % · SIMULIERTE DATEN",
+        alt: "Teilergebnis der Kampagne mit anteilig umgerechneter Währung: 60.996 Impressionen, 926 Besuche, 45,69 Euro Budget und 600 Events",
+        caption: "Teilergebnis · Währung anteilig umgerechnet",
         fit: "contain",
       },
     ],

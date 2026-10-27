@@ -504,7 +504,7 @@ export const portfolioProjectsEs: PortfolioProject[] = [
     listed: true,
     listingOnly: true,
     summary:
-      "De cero a 22.000 seguidores. Dirección integral de marketing junto a su propietaria, desde los inicios del salón y durante varios años, para construir su marca y consolidar su posicionamiento en la ciudad.",
+      "De cero a 22.000 seguidores. Dirección integral de marketing junto a su propietaria, desde los inicios del salón y durante varios años, para construir su marca y consolidar su posicionamiento en la ciudad. El salón creció en equipo y facturación gracias a las campañas de Meta Ads y a la estrategia de liderazgo.",
     services: [
       "Dirección de marketing",
       "Logo e identidad de marca",
@@ -514,7 +514,7 @@ export const portfolioProjectsEs: PortfolioProject[] = [
     ],
     story: {
       label: "La colaboración · Desde los inicios",
-      body: "En una etapa profesional anterior a la actual GSW, Tomás Fariña asumió la dirección de marketing del salón junto a su propietaria. El trabajo abarcó la estrategia integral, el diseño del logo y la identidad de marca, el diseño 3D del local y el apoyo en recursos humanos. Durante varios años se gestionaron campañas y la comunidad digital, que pasó de cero a 22.000 seguidores en Facebook, contribuyendo a posicionar el salón como un referente en su ciudad.",
+      body: "En una etapa profesional anterior a la actual GSW, Tomás Fariña asumió la dirección de marketing del salón junto a su propietaria. El trabajo abarcó la estrategia integral, el diseño del logo y la identidad de marca, el diseño 3D del local y el apoyo en recursos humanos. Durante varios años se gestionaron campañas y la comunidad digital, que pasó de cero a 22.000 seguidores en Facebook, contribuyendo a posicionar el salón como un referente en su ciudad. El salón creció en equipo y facturación gracias a las campañas de Meta Ads y a la estrategia de liderazgo.",
     },
     mediaLayout: "wide-primary",
     primary: {
@@ -535,8 +535,8 @@ export const portfolioProjectsEs: PortfolioProject[] = [
       {
         type: "image",
         src: "/case-studies/beauty-personal-care/salon-campaign-2018.webp",
-        alt: "Campaña histórica de balayage del 26 de febrero de 2018: 109 reacciones, 384 comentarios y 12 compartidos; captura limpiada",
-        caption: "Campaña · febrero de 2018",
+        alt: "Campaña histórica de balayage: 109 reacciones, 384 comentarios y 12 compartidos; captura limpiada",
+        caption: "Campaña",
         fit: "contain",
       },
     ],
@@ -551,7 +551,7 @@ export const portfolioProjectsEs: PortfolioProject[] = [
     slug: "womens-aesthetics",
     sectorId: "beauty-personal-care",
     name: "Estética femenina",
-    location: "Argentina · Estética de belleza",
+    location: "América · Estética de belleza",
     locale: "es",
     listed: true,
     listingOnly: true,
@@ -570,8 +570,8 @@ export const portfolioProjectsEs: PortfolioProject[] = [
       {
         type: "image",
         src: "/case-studies/beauty-personal-care/aesthetics-projection-simulated.webp",
-        alt: "Proyección +50% con datos simulados: 60.996 impresiones, 926 visitas, 45,69 euros de inversión y 600 eventos; no son resultados reales",
-        caption: "Proyección +50% · DATOS SIMULADOS",
+        alt: "Resultado parcial de campaña con moneda convertida proporcionalmente: 60.996 impresiones, 926 visitas, 45,69 euros de inversión y 600 eventos",
+        caption: "Resultado parcial · moneda convertida proporcionalmente",
         fit: "contain",
       },
     ],
