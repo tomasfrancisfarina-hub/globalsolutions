@@ -26,6 +26,7 @@ const REQUIRED_FILES = [
   "app/[locale]/(dominicana-share)/inversiones/samana/route.ts",
   "app/[locale]/(dominicana-share)/investments/samana/route.ts",
   "app/api/dominicana-share/assets/[...path]/route.ts",
+  "app/api/dominicana-share/unlock/route.ts",
   "dominicana-share/content/es.html",
   "dominicana-share/content/en.html",
 ];

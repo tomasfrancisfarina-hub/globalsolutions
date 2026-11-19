@@ -51,14 +51,14 @@ const nextConfig: NextConfig = {
       {
         source: "/:locale/inversiones/samana",
         headers: [
-          { key: "Cache-Control", value: "public, max-age=300, stale-while-revalidate=86400" },
+          { key: "Cache-Control", value: "private, no-store, no-cache, must-revalidate" },
           { key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" },
         ],
       },
       {
         source: "/:locale/investments/samana",
         headers: [
-          { key: "Cache-Control", value: "public, max-age=300, stale-while-revalidate=86400" },
+          { key: "Cache-Control", value: "private, no-store, no-cache, must-revalidate" },
           { key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" },
         ],
       },

@@ -1,9 +1,15 @@
+import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import {
   assetContentType,
+  PRIVATE_NO_STORE_HEADERS,
   readPrivateAsset,
   resolvePrivateAsset,
 } from "@/dominicana-dossier/private-files";
+import {
+  hasValidSamanaSessionFromCookie,
+  SAMANA_COOKIE_NAME,
+} from "@/dominicana-share/session";
 import { createReadStream } from "node:fs";
 import { Readable } from "node:stream";
 
@@ -31,8 +37,7 @@ const ALLOWED = new Set([
 ]);
 
 const HEADERS = {
-  "X-Robots-Tag": "noindex, nofollow, noarchive",
-  "Cache-Control": "public, max-age=86400, stale-while-revalidate=604800",
+  ...PRIVATE_NO_STORE_HEADERS,
   "X-Content-Type-Options": "nosniff",
 };
 
@@ -53,6 +58,11 @@ function parseRange(header: string | null, size: number): { start: number; end: 
 }
 
 export async function GET(request: Request, context: RouteContext) {
+  const store = await cookies();
+  if (!hasValidSamanaSessionFromCookie(store.get(SAMANA_COOKIE_NAME)?.value)) {
+    return new NextResponse("Unauthorized", { status: 401, headers: HEADERS });
+  }
+
   const { path: segments } = await context.params;
   const key = (segments ?? []).join("/");
   if (!ALLOWED.has(key)) {
