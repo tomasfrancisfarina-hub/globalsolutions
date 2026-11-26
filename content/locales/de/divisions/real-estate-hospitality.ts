@@ -4,27 +4,37 @@ import { getDefaultConversion } from "@/content/shared/conversion";
 export const realEstateHospitality: Division = {
   id: "real-estate-hospitality",
   slug: "real-estate-hospitality",
-  name: "Immobilien & Hospitality",
-  tagline: "Immobilienassets und Hospitality-Entwicklung",
+  name: "Immobilien und Hospitality",
+  tagline: "Marketing und spezifische Beratung für den Immobiliensektor und Hospitality",
   description:
-    "Wir beraten bei Entwicklung, Erwerb und Management von Immobilienassets und Hospitality-Projekten. Wir verbinden Marktanalyse, finanzielle Tragfähigkeit und operative Strategie, um den Wert jedes Assets zu maximieren.",
+    "Wir entwickeln Kampagnen und Inhalte für Unternehmen aus Immobilien und Hospitality, auch auf Investorengruppen ausgerichtet.",
   vision:
-    "Immobilien- und Hospitality-Assets brauchen langfristige Vision und präzise Umsetzung. Wir liefern die Strategie und Begleitung, damit jedes Projekt sein volles Potenzial entfaltet.",
+    "Wir helfen Unternehmen der Branche mit Marketing und spezifischer Beratung, ihre Positionierung zu definieren und ihr Angebot an die Zielgruppen zu kommunizieren, die sie erreichen wollen.",
   capabilities: [
-    { id: "real-estate", name: "Immobilien", description: "Strategische Immobilienberatung und Asset-Entwicklung." },
-    { id: "hospitality", name: "Hospitality", description: "Strategie und Management für Hospitality-Projekte." },
+    {
+      id: "real-estate",
+      name: "Immobilien",
+      description:
+        "Marketing, Kommunikation und spezifische Beratung für Unternehmen der Immobilienbranche.",
+    },
+    {
+      id: "hospitality",
+      name: "Hospitality",
+      description:
+        "Marketing, Kommunikation und spezifische Beratung für Unternehmen im Hospitality-Sektor.",
+    },
   ],
   order: 6,
   featured: true,
   seo: {
-    title: "Beratung Immobilien & Hospitality",
+    title: "Immobilien und Hospitality — Marketing und Beratung",
     description:
-      "Beratung für Immobilien und Hospitality. Asset-Entwicklung, finanzielle Tragfähigkeit, operative Strategie und Projektmanagement für internationale Märkte.",
+      "Marketing, Kommunikation und spezifische Beratung für den Immobiliensektor und Hospitality, auch auf Investorengruppen ausgerichtet.",
     keywords: [
-      "Immobilienberatung",
-      "Hospitality-Beratung",
-      "Beratung Immobilienentwicklung",
-      "Immobilienstrategie",
+      "Immobilienmarketing",
+      "Hospitality-Marketing",
+      "Immobilienkampagnen",
+      "Hospitality-Kommunikation",
     ],
     markets: ["us", "eu", "ae"],
   },

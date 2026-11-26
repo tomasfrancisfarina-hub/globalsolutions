@@ -5,26 +5,36 @@ export const realEstateHospitality: Division = {
   id: "real-estate-hospitality",
   slug: "real-estate-hospitality",
   name: "Real Estate & Hospitality",
-  tagline: "Real estate assets and hospitality development",
+  tagline: "Marketing and specific advisory for the real estate and Hospitality sector",
   description:
-    "We advise on the development, acquisition, and management of real estate assets and hospitality projects. We combine market analysis, financial viability, and operational strategy to maximize the value of every asset.",
+    "We develop campaigns and content for companies in the real estate and Hospitality sector, also aimed at investor audiences.",
   vision:
-    "Real estate and hospitality assets require long-term vision and precise execution. We provide the strategy and support needed for every project to reach its full potential.",
+    "We help companies in the sector, through marketing and specific advisory, define their positioning and communicate their proposition to the audiences they want to reach.",
   capabilities: [
-    { id: "real-estate", name: "Real Estate", description: "Strategic real estate consulting and asset development." },
-    { id: "hospitality", name: "Hospitality", description: "Hospitality project strategy and management." },
+    {
+      id: "real-estate",
+      name: "Real Estate",
+      description:
+        "Marketing, communication and specific advisory for real estate companies.",
+    },
+    {
+      id: "hospitality",
+      name: "Hospitality",
+      description:
+        "Marketing, communication and specific advisory for Hospitality companies.",
+    },
   ],
   order: 6,
   featured: true,
   seo: {
-    title: "Real Estate & Hospitality Consulting",
+    title: "Real Estate & Hospitality — Marketing and advisory",
     description:
-      "Real estate and hospitality consulting. Asset development, financial viability, operational strategy, and project management for international markets.",
+      "Marketing, communication and specific advisory for the real estate and Hospitality sector, also aimed at investor audiences.",
     keywords: [
-      "real estate consulting",
-      "hospitality consulting",
-      "property development advisory",
-      "real estate strategy",
+      "real estate marketing",
+      "hospitality marketing",
+      "real estate campaigns",
+      "hospitality communication",
     ],
     markets: ["us", "eu", "ae"],
   },

@@ -4,23 +4,38 @@ import { getDefaultConversion } from "@/content/shared/conversion";
 export const realEstateHospitality: Division = {
   id: "real-estate-hospitality",
   slug: "real-estate-hospitality",
-  name: "Inmobiliario y Hospitalidad",
-  tagline: "Desarrollo y gestión de activos inmobiliarios y hospitalidad",
+  name: "Inmobiliario y Hospitality",
+  tagline: "Marketing y asesoría específica para el sector inmobiliario y Hospitality",
   description:
-    "Asesoramos en el desarrollo, adquisición y gestión de activos inmobiliarios y proyectos de hospitalidad. Combinamos análisis de mercado, viabilidad financiera y estrategia operativa para maximizar el valor de cada activo.",
+    "Desarrollamos campañas y contenidos para empresas del sector inmobiliario y Hospitality, también dirigidos a públicos inversores.",
   vision:
-    "Los activos inmobiliarios y de hospitalidad requieren visión a largo plazo y ejecución precisa. Aportamos la estrategia y el acompañamiento necesarios para que cada proyecto alcance su máximo potencial.",
+    "Ayudamos a las empresas del sector, con marketing y asesoría específica, a definir su posicionamiento y comunicar su propuesta a las audiencias que quieren alcanzar.",
   capabilities: [
-    { id: "real-estate", name: "Real Estate", description: "Consultoría inmobiliaria estratégica y desarrollo de activos." },
-    { id: "hospitality", name: "Hospitality", description: "Estrategia y gestión de proyectos de hospitalidad." },
+    {
+      id: "real-estate",
+      name: "Inmobiliario",
+      description:
+        "Marketing, comunicación y asesoría específica para empresas del sector inmobiliario.",
+    },
+    {
+      id: "hospitality",
+      name: "Hospitality",
+      description:
+        "Marketing, comunicación y asesoría específica para empresas del sector Hospitality.",
+    },
   ],
   order: 6,
   featured: true,
   seo: {
-    title: "Real Estate & Hospitality — Consultoría Inmobiliaria",
+    title: "Inmobiliario y Hospitality — Marketing y asesoría",
     description:
-      "Consultoría inmobiliaria y de hospitalidad. Desarrollo de activos, viabilidad financiera, estrategia operativa y gestión de proyectos inmobiliarios.",
-    keywords: ["consultoría inmobiliaria", "real estate consulting", "hospitalidad consultoría", "desarrollo inmobiliario"],
+      "Marketing, comunicación y asesoría específica para el sector inmobiliario y Hospitality, también dirigido a públicos inversores.",
+    keywords: [
+      "marketing inmobiliario",
+      "hospitality marketing",
+      "campañas inmobiliarias",
+      "comunicación hospitality",
+    ],
     markets: ["us", "eu", "ae"],
   },
   conversion: getDefaultConversion("es"),

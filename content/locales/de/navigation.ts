@@ -16,7 +16,7 @@ export const navigation: Navigation = {
         { label: "Unternehmensberatung", href: "/divisions/business-consulting" },
         { label: "Internationale Expansion", href: "/divisions/international-expansion" },
         { label: "Investments & Ventures", href: "/divisions/investment-ventures" },
-        { label: "Immobilien & Hospitality", href: "/divisions/real-estate-hospitality" },
+        { label: "Immobilien und Hospitality", href: "/divisions/real-estate-hospitality" },
       ],
     },
     {
