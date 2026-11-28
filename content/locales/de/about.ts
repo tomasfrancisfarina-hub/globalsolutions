@@ -45,5 +45,32 @@ export const aboutContent: AboutContent = {
       company: "Premium-Positionierung",
       status: "published",
     },
+    {
+      id: "testimonial-julian",
+      quote:
+        "Ich bin sehr zufrieden mit der Zusammenarbeit mit Global Solutions: Wir haben deutlich mehr verkauft. Ein Kunde hat mich gefragt, wer unsere Website gemacht hat und wer unsere Social-Media-Kampagnen betreut; ich habe ein Gespräch vereinbart, und daraus entstand die Empfehlung.",
+      author: "Julián",
+      role: "Unternehmer",
+      company: "Website und Kampagnen",
+      status: "published",
+    },
+    {
+      id: "testimonial-antonio",
+      quote:
+        "Ich bin sehr zufrieden mit dem Engagement und der Einsatzbereitschaft von Global Solutions. Man spürt die Begleitung und die Art zu arbeiten.",
+      author: "Antonio",
+      role: "Unternehmer",
+      company: "Mallorca",
+      status: "published",
+    },
+    {
+      id: "testimonial-david",
+      quote:
+        "Ich würde Global Solutions jederzeit empfehlen. Wir haben eine sehr synergetische Zusammenarbeit aufgebaut und gehen bereits mehrere weitere Projekte gemeinsam an.",
+      author: "David",
+      role: "Unternehmer",
+      company: "Laufende Projekte",
+      status: "published",
+    },
   ],
 };

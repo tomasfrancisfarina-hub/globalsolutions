@@ -45,5 +45,32 @@ export const aboutContent: AboutContent = {
       company: "Premium positioning",
       status: "published",
     },
+    {
+      id: "testimonial-julian",
+      quote:
+        "I am very happy working with Global Solutions: we have sold much more. A client asked me who built our website and who runs our social campaigns; I set up a meeting, and that is how the referral came about.",
+      author: "Julián",
+      role: "Entrepreneur",
+      company: "Website and campaigns",
+      status: "published",
+    },
+    {
+      id: "testimonial-antonio",
+      quote:
+        "I am very happy with Global Solutions’ commitment and willingness to help. You can feel the support and the way they work.",
+      author: "Antonio",
+      role: "Entrepreneur",
+      company: "Mallorca",
+      status: "published",
+    },
+    {
+      id: "testimonial-david",
+      quote:
+        "I would always recommend Global Solutions. We have built a highly synergistic working relationship and are already taking on several additional projects together.",
+      author: "David",
+      role: "Entrepreneur",
+      company: "Ongoing projects",
+      status: "published",
+    },
   ],
 };
