@@ -48,10 +48,10 @@ export const aboutContent: AboutContent = {
     {
       id: "testimonial-julian",
       quote:
-        "Estoy muy contento de trabajar con Global Solutions: hemos vendido mucho más. Un cliente me preguntó quién nos hizo la web y quién nos lleva las campañas de redes; concerté una reunión y de ahí surgió el referido.",
+        "Estoy muy contento de trabajar con Global Solutions. Hemos vendido mucho más. Un cliente me preguntó quién nos hizo la web y quién nos lleva las campañas de redes; concerté una reunión y de ahí surgió el referido.",
       author: "Julián",
       role: "Empresario",
-      company: "Web y campañas",
+      company: "",
       status: "published",
     },
     {
@@ -69,7 +69,7 @@ export const aboutContent: AboutContent = {
         "Recomendaría siempre a Global Solutions. Hemos construido una relación profesional muy sinérgica y ya estamos encarando varios proyectos adicionales juntos.",
       author: "David",
       role: "Empresario",
-      company: "Proyectos en curso",
+      company: "",
       status: "published",
     },
   ],

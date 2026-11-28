@@ -48,10 +48,10 @@ export const aboutContent: AboutContent = {
     {
       id: "testimonial-julian",
       quote:
-        "I am very happy working with Global Solutions: we have sold much more. A client asked me who built our website and who runs our social campaigns; I set up a meeting, and that is how the referral came about.",
+        "I am very happy working with Global Solutions. We have sold much more. A client asked me who built our website and who runs our social campaigns; I set up a meeting, and that is how the referral came about.",
       author: "Julián",
       role: "Entrepreneur",
-      company: "Website and campaigns",
+      company: "",
       status: "published",
     },
     {
@@ -69,7 +69,7 @@ export const aboutContent: AboutContent = {
         "I would always recommend Global Solutions. We have built a highly synergistic working relationship and are already taking on several additional projects together.",
       author: "David",
       role: "Entrepreneur",
-      company: "Ongoing projects",
+      company: "",
       status: "published",
     },
   ],

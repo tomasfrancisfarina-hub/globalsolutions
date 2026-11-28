@@ -68,21 +68,22 @@ export function AboutPageContent({
           <SlideUp>
             <h2 className="text-2xl font-medium md:text-3xl">{testimonialsTitle}</h2>
           </SlideUp>
-          <StaggerContainer className="mt-12 space-y-8 md:mt-16">
+          <StaggerContainer className="mt-10 border-t border-border md:mt-16">
             {content.testimonials.map((t) => (
               <StaggerItem key={t.id}>
-                <blockquote className="rounded-2xl border border-border p-6 sm:p-8 md:p-10">
-                  <div className="mb-6">
+                <blockquote className="grid gap-4 border-b border-border py-10 sm:gap-8 sm:py-12 md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.55fr)_minmax(0,0.7fr)] md:items-start md:gap-12 md:py-16">
+                  <div className="min-w-0">
                     <PlaceholderBadge status={t.status} locale={locale} />
-                  </div>
-                  <Text variant="lead" className="text-foreground">
-                    &ldquo;{t.quote}&rdquo;
-                  </Text>
-                  <footer className="mt-8">
-                    <p className="font-medium">{t.author}</p>
-                    <p className="mt-1 text-sm text-muted">
-                      {t.role}, {t.company}
+                    <p className="break-words text-[clamp(1.35rem,3.2vw,2.35rem)] font-medium leading-[1.12] tracking-tight">
+                      {t.author}
                     </p>
+                  </div>
+                  <p className="max-w-2xl text-[15px] leading-relaxed text-foreground sm:text-[17px] md:text-xl md:leading-[1.65]">
+                    &ldquo;{t.quote}&rdquo;
+                  </p>
+                  <footer className="min-w-0 text-[11px] uppercase leading-snug tracking-[0.12em] text-muted md:text-right md:text-[12px] md:tracking-[0.14em]">
+                    <p>{t.role}</p>
+                    {t.company ? <p className="mt-1.5">{t.company}</p> : null}
                   </footer>
                 </blockquote>
               </StaggerItem>
